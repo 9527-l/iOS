@@ -10,10 +10,25 @@
 		1A4FF8902560D2290074A52F /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FF88E2560D2290074A52F /* MBProgressHUD+MJ.m */; };
 		1A4FF8962560D2340074A52F /* BasicNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FF8952560D2340074A52F /* BasicNetWorking.m */; };
 		1A4FF89C2560D2FF0074A52F /* UIButton+CJFixMultiClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FF89B2560D2FE0074A52F /* UIButton+CJFixMultiClick.m */; };
-		1A4FF8A12560D3D10074A52F /* NSString in Resources */ = {isa = PBXBuildFile; fileRef = 1A4FF8A02560D3D10074A52F /* NSString */; };
+		1A4FF8C825612F590074A52F /* ZFTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FF8C725612F590074A52F /* ZFTabBarViewController.m */; };
+		1A4FF8CE25612F840074A52F /* ZFNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4FF8CD25612F840074A52F /* ZFNavigationController.m */; };
+		1A62934025613285007C638C /* ZFHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62933F25613285007C638C /* ZFHomeViewController.m */; };
+		1A62934625613293007C638C /* ZFMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62934525613293007C638C /* ZFMineViewController.m */; };
+		1A62936525613996007C638C /* NSString+CJAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62935B25613995007C638C /* NSString+CJAttributedString.m */; };
+		1A62936625613996007C638C /* NSString+CJEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62935C25613995007C638C /* NSString+CJEncoding.m */; };
+		1A62936725613996007C638C /* NSString+CJValidate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62935F25613995007C638C /* NSString+CJValidate.m */; };
+		1A62936825613996007C638C /* NSString+CJTextSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62936025613995007C638C /* NSString+CJTextSize.m */; };
+		1A62936925613996007C638C /* NSString+CJCut.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62936225613996007C638C /* NSString+CJCut.m */; };
+		1A62936A25613996007C638C /* NSString+CJEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62936425613996007C638C /* NSString+CJEncryption.m */; };
+		1A629374256139F1007C638C /* UIColor+CJHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A629372256139F1007C638C /* UIColor+CJHex.m */; };
+		1A62937B25613A59007C638C /* CJDateOtherUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62937925613A59007C638C /* CJDateOtherUtil.m */; };
+		1A62938225613B21007C638C /* CJButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62938125613B21007C638C /* CJButton.m */; };
+		1A62938825613B28007C638C /* CJBadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62938625613B28007C638C /* CJBadgeButton.m */; };
+		1A62939025613B35007C638C /* UIButton+CJStructure.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62938C25613B35007C638C /* UIButton+CJStructure.m */; };
+		1A62939125613B35007C638C /* UIButton+CJMoreProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62938F25613B35007C638C /* UIButton+CJMoreProperty.m */; };
+		1A62939825613B61007C638C /* CJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62939725613B61007C638C /* CJTextView.m */; };
 		487A4F72B7AE5A6F394E95A9 /* libPods-ZFZG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB204741BDAB74069B31C6 /* libPods-ZFZG.a */; };
 		8492215E255D701800C0669D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8492215D255D701800C0669D /* AppDelegate.m */; };
-		84922164255D701800C0669D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84922163255D701800C0669D /* ViewController.m */; };
 		84922167255D701800C0669D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84922165255D701800C0669D /* Main.storyboard */; };
 		84922169255D701A00C0669D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84922168255D701A00C0669D /* Assets.xcassets */; };
 		8492216C255D701A00C0669D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8492216A255D701A00C0669D /* LaunchScreen.storyboard */; };
@@ -46,13 +61,46 @@
 		1A4FF8952560D2340074A52F /* BasicNetWorking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicNetWorking.m; sourceTree = "<group>"; };
 		1A4FF89A2560D2FE0074A52F /* UIButton+CJFixMultiClick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CJFixMultiClick.h"; sourceTree = "<group>"; };
 		1A4FF89B2560D2FE0074A52F /* UIButton+CJFixMultiClick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CJFixMultiClick.m"; sourceTree = "<group>"; };
-		1A4FF8A02560D3D10074A52F /* NSString */ = {isa = PBXFileReference; lastKnownFileType = folder; path = NSString; sourceTree = "<group>"; };
+		1A4FF8C625612F590074A52F /* ZFTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFTabBarViewController.h; sourceTree = "<group>"; };
+		1A4FF8C725612F590074A52F /* ZFTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFTabBarViewController.m; sourceTree = "<group>"; };
+		1A4FF8CC25612F840074A52F /* ZFNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFNavigationController.h; sourceTree = "<group>"; };
+		1A4FF8CD25612F840074A52F /* ZFNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFNavigationController.m; sourceTree = "<group>"; };
+		1A62933E25613285007C638C /* ZFHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFHomeViewController.h; sourceTree = "<group>"; };
+		1A62933F25613285007C638C /* ZFHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFHomeViewController.m; sourceTree = "<group>"; };
+		1A62934425613293007C638C /* ZFMineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFMineViewController.h; sourceTree = "<group>"; };
+		1A62934525613293007C638C /* ZFMineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFMineViewController.m; sourceTree = "<group>"; };
+		1A62934A256133E1007C638C /* ZFZG.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFZG.pch; sourceTree = "<group>"; };
+		1A62935825613995007C638C /* NSString+CJTextSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CJTextSize.h"; sourceTree = "<group>"; };
+		1A62935925613995007C638C /* NSString+CJValidate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CJValidate.h"; sourceTree = "<group>"; };
+		1A62935A25613995007C638C /* NSString+CJEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CJEncryption.h"; sourceTree = "<group>"; };
+		1A62935B25613995007C638C /* NSString+CJAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CJAttributedString.m"; sourceTree = "<group>"; };
+		1A62935C25613995007C638C /* NSString+CJEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CJEncoding.m"; sourceTree = "<group>"; };
+		1A62935D25613995007C638C /* NSString+CJEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CJEncoding.h"; sourceTree = "<group>"; };
+		1A62935E25613995007C638C /* NSString+CJCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CJCategory.h"; sourceTree = "<group>"; };
+		1A62935F25613995007C638C /* NSString+CJValidate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CJValidate.m"; sourceTree = "<group>"; };
+		1A62936025613995007C638C /* NSString+CJTextSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CJTextSize.m"; sourceTree = "<group>"; };
+		1A62936125613996007C638C /* NSString+CJCut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CJCut.h"; sourceTree = "<group>"; };
+		1A62936225613996007C638C /* NSString+CJCut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CJCut.m"; sourceTree = "<group>"; };
+		1A62936325613996007C638C /* NSString+CJAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CJAttributedString.h"; sourceTree = "<group>"; };
+		1A62936425613996007C638C /* NSString+CJEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CJEncryption.m"; sourceTree = "<group>"; };
+		1A629372256139F1007C638C /* UIColor+CJHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CJHex.m"; sourceTree = "<group>"; };
+		1A629373256139F1007C638C /* UIColor+CJHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CJHex.h"; sourceTree = "<group>"; };
+		1A62937925613A59007C638C /* CJDateOtherUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJDateOtherUtil.m; sourceTree = "<group>"; };
+		1A62937A25613A59007C638C /* CJDateOtherUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJDateOtherUtil.h; sourceTree = "<group>"; };
+		1A62938025613B21007C638C /* CJButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJButton.h; sourceTree = "<group>"; };
+		1A62938125613B21007C638C /* CJButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJButton.m; sourceTree = "<group>"; };
+		1A62938625613B28007C638C /* CJBadgeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJBadgeButton.m; sourceTree = "<group>"; };
+		1A62938725613B28007C638C /* CJBadgeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJBadgeButton.h; sourceTree = "<group>"; };
+		1A62938C25613B35007C638C /* UIButton+CJStructure.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CJStructure.m"; sourceTree = "<group>"; };
+		1A62938D25613B35007C638C /* UIButton+CJMoreProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CJMoreProperty.h"; sourceTree = "<group>"; };
+		1A62938E25613B35007C638C /* UIButton+CJStructure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+CJStructure.h"; sourceTree = "<group>"; };
+		1A62938F25613B35007C638C /* UIButton+CJMoreProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+CJMoreProperty.m"; sourceTree = "<group>"; };
+		1A62939625613B61007C638C /* CJTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTextView.h; sourceTree = "<group>"; };
+		1A62939725613B61007C638C /* CJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTextView.m; sourceTree = "<group>"; };
 		753D9051166F5C716244C7A2 /* Pods-ZFZG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFZG.release.xcconfig"; path = "Target Support Files/Pods-ZFZG/Pods-ZFZG.release.xcconfig"; sourceTree = "<group>"; };
 		84922159255D701800C0669D /* ZFZG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFZG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8492215C255D701800C0669D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8492215D255D701800C0669D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		84922162255D701800C0669D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		84922163255D701800C0669D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		84922166255D701800C0669D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84922168255D701A00C0669D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8492216B255D701A00C0669D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,6 +152,12 @@
 		1A4FF88A2560D1E60074A52F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1A62938025613B21007C638C /* CJButton.h */,
+				1A62938125613B21007C638C /* CJButton.m */,
+				1A62938725613B28007C638C /* CJBadgeButton.h */,
+				1A62938625613B28007C638C /* CJBadgeButton.m */,
+				1A62939625613B61007C638C /* CJTextView.h */,
+				1A62939725613B61007C638C /* CJTextView.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -111,9 +165,11 @@
 		1A4FF88B2560D1F60074A52F /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				1A4FF8A02560D3D10074A52F /* NSString */,
-				1A4FF89A2560D2FE0074A52F /* UIButton+CJFixMultiClick.h */,
-				1A4FF89B2560D2FE0074A52F /* UIButton+CJFixMultiClick.m */,
+				1A62939525613B4A007C638C /* UITextView */,
+				1A62937F25613AE6007C638C /* UIButton */,
+				1A62937825613A1A007C638C /* NSDate */,
+				1A629371256139C0007C638C /* UIColor */,
+				1A62935725613977007C638C /* NSString */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -127,6 +183,105 @@
 				1A4FF88E2560D2290074A52F /* MBProgressHUD+MJ.m */,
 			);
 			path = NetWorks;
+			sourceTree = "<group>";
+		};
+		1A4FF8BE25612E4C0074A52F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1A62933D2561326C007C638C /* Mine */,
+				1A62933C25613253007C638C /* Home */,
+				1A4FF8C525612E840074A52F /* BaseViewController */,
+				8492215C255D701800C0669D /* AppDelegate.h */,
+				8492215D255D701800C0669D /* AppDelegate.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1A4FF8C525612E840074A52F /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A4FF8C625612F590074A52F /* ZFTabBarViewController.h */,
+				1A4FF8C725612F590074A52F /* ZFTabBarViewController.m */,
+				1A4FF8CC25612F840074A52F /* ZFNavigationController.h */,
+				1A4FF8CD25612F840074A52F /* ZFNavigationController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		1A62933C25613253007C638C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1A62933E25613285007C638C /* ZFHomeViewController.h */,
+				1A62933F25613285007C638C /* ZFHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1A62933D2561326C007C638C /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				1A62934425613293007C638C /* ZFMineViewController.h */,
+				1A62934525613293007C638C /* ZFMineViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		1A62935725613977007C638C /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				1A62936325613996007C638C /* NSString+CJAttributedString.h */,
+				1A62935B25613995007C638C /* NSString+CJAttributedString.m */,
+				1A62935E25613995007C638C /* NSString+CJCategory.h */,
+				1A62936125613996007C638C /* NSString+CJCut.h */,
+				1A62936225613996007C638C /* NSString+CJCut.m */,
+				1A62935D25613995007C638C /* NSString+CJEncoding.h */,
+				1A62935C25613995007C638C /* NSString+CJEncoding.m */,
+				1A62935A25613995007C638C /* NSString+CJEncryption.h */,
+				1A62936425613996007C638C /* NSString+CJEncryption.m */,
+				1A62935825613995007C638C /* NSString+CJTextSize.h */,
+				1A62936025613995007C638C /* NSString+CJTextSize.m */,
+				1A62935925613995007C638C /* NSString+CJValidate.h */,
+				1A62935F25613995007C638C /* NSString+CJValidate.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		1A629371256139C0007C638C /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				1A629373256139F1007C638C /* UIColor+CJHex.h */,
+				1A629372256139F1007C638C /* UIColor+CJHex.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		1A62937825613A1A007C638C /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				1A62937A25613A59007C638C /* CJDateOtherUtil.h */,
+				1A62937925613A59007C638C /* CJDateOtherUtil.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		1A62937F25613AE6007C638C /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				1A62938D25613B35007C638C /* UIButton+CJMoreProperty.h */,
+				1A62938F25613B35007C638C /* UIButton+CJMoreProperty.m */,
+				1A62938E25613B35007C638C /* UIButton+CJStructure.h */,
+				1A62938C25613B35007C638C /* UIButton+CJStructure.m */,
+				1A4FF89A2560D2FE0074A52F /* UIButton+CJFixMultiClick.h */,
+				1A4FF89B2560D2FE0074A52F /* UIButton+CJFixMultiClick.m */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		1A62939525613B4A007C638C /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITextView;
 			sourceTree = "<group>";
 		};
 		338D1CB802C1B1C3731A0BFC /* Pods */ = {
@@ -163,19 +318,17 @@
 		8492215B255D701800C0669D /* ZFZG */ = {
 			isa = PBXGroup;
 			children = (
+				1A4FF8BE25612E4C0074A52F /* Main */,
 				1A4FF88C2560D2070074A52F /* NetWorks */,
 				1A4FF88B2560D1F60074A52F /* Category */,
 				1A4FF88A2560D1E60074A52F /* Common */,
 				1A4FF8892560D1CC0074A52F /* Utils */,
-				8492215C255D701800C0669D /* AppDelegate.h */,
-				8492215D255D701800C0669D /* AppDelegate.m */,
-				84922162255D701800C0669D /* ViewController.h */,
-				84922163255D701800C0669D /* ViewController.m */,
 				84922165255D701800C0669D /* Main.storyboard */,
 				84922168255D701A00C0669D /* Assets.xcassets */,
 				8492216A255D701A00C0669D /* LaunchScreen.storyboard */,
 				8492216D255D701A00C0669D /* Info.plist */,
 				8492216E255D701A00C0669D /* main.m */,
+				1A62934A256133E1007C638C /* ZFZG.pch */,
 			);
 			path = ZFZG;
 			sourceTree = "<group>";
@@ -270,6 +423,7 @@
 		84922151255D701800C0669D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = ZF;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					84922158255D701800C0669D = {
@@ -310,7 +464,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A4FF8A12560D3D10074A52F /* NSString in Resources */,
 				8492216C255D701A00C0669D /* LaunchScreen.storyboard in Resources */,
 				84922169255D701A00C0669D /* Assets.xcassets in Resources */,
 				84922167255D701800C0669D /* Main.storyboard in Resources */,
@@ -380,11 +533,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A62938225613B21007C638C /* CJButton.m in Sources */,
+				1A62936825613996007C638C /* NSString+CJTextSize.m in Sources */,
 				1A4FF8902560D2290074A52F /* MBProgressHUD+MJ.m in Sources */,
+				1A62934025613285007C638C /* ZFHomeViewController.m in Sources */,
+				1A62937B25613A59007C638C /* CJDateOtherUtil.m in Sources */,
+				1A62939125613B35007C638C /* UIButton+CJMoreProperty.m in Sources */,
 				1A4FF8962560D2340074A52F /* BasicNetWorking.m in Sources */,
-				84922164255D701800C0669D /* ViewController.m in Sources */,
+				1A629374256139F1007C638C /* UIColor+CJHex.m in Sources */,
+				1A62936A25613996007C638C /* NSString+CJEncryption.m in Sources */,
 				8492215E255D701800C0669D /* AppDelegate.m in Sources */,
+				1A62936625613996007C638C /* NSString+CJEncoding.m in Sources */,
 				8492216F255D701A00C0669D /* main.m in Sources */,
+				1A62939825613B61007C638C /* CJTextView.m in Sources */,
+				1A62936925613996007C638C /* NSString+CJCut.m in Sources */,
+				1A62939025613B35007C638C /* UIButton+CJStructure.m in Sources */,
+				1A62936525613996007C638C /* NSString+CJAttributedString.m in Sources */,
+				1A62934625613293007C638C /* ZFMineViewController.m in Sources */,
+				1A4FF8C825612F590074A52F /* ZFTabBarViewController.m in Sources */,
+				1A62938825613B28007C638C /* CJBadgeButton.m in Sources */,
+				1A4FF8CE25612F840074A52F /* ZFNavigationController.m in Sources */,
+				1A62936725613996007C638C /* NSString+CJValidate.m in Sources */,
 				1A4FF89C2560D2FF0074A52F /* UIButton+CJFixMultiClick.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -561,6 +730,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQF525423X;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZFZG/ZFZG.pch";
 				INFOPLIST_FILE = ZFZG/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -583,6 +754,8 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQF525423X;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZFZG/ZFZG.pch";
 				INFOPLIST_FILE = ZFZG/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

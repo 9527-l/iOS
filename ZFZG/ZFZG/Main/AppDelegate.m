@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ZFTabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,12 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
-    UIViewController * vc = [[UIViewController alloc] init];
-    
-    UINavigationController * navi = [[UINavigationController alloc] initWithRootViewController:vc];
-    
-    self.window.rootViewController = navi;
+    ZFTabBarViewController * vc = [[ZFTabBarViewController alloc] init];
+    self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     return YES;
 }
