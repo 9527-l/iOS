@@ -1,0 +1,39 @@
+
+## 常用方法:
+## pod search xxxxx 【查找xxxxx相关的库】
+## pod install 【第一次安装使用】
+## pod update 【安装一次过后，更新】
+## pod outdated 【检查过期的库】
+
+platform :ios, '11.0' #手机的系统
+target 'ZFZG' do #工程名字
+     pod 'SDWebImage'
+     pod 'AFNetworking'
+     pod 'Masonry'
+     pod 'SVProgressHUD'
+     pod 'MJRefresh'
+     ## 键盘挡住输入框处理
+     pod 'IQKeyboardManager'
+     ##轮播
+     pod 'SDCycleScrollView'
+
+     ## iOS组件集合
+     pod 'YYModel'
+     pod 'YYText'
+
+
+     ## H5桥接
+     pod 'WebViewJavascriptBridge'
+     ## 输入限制
+     pod 'InputKit', '~> 1.1.15'
+     ## 权限请求
+     pod 'LBXPermission/Base'
+     pod 'LBXPermission/Camera'
+     pod 'LBXPermission/Photo'
+     pod 'LBXPermission/Reminder'
+     ##友盟
+     pod 'UMCCommon'
+     pod 'UMCAnalytics'
+
+     pod 'MBProgressHUD'
+end

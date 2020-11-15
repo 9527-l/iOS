@@ -1,0 +1,96 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - InputKit (1.1.15)
+  - IQKeyboardManager (6.5.5)
+  - LBXPermission/Base (1.0.5)
+  - LBXPermission/Camera (1.0.5)
+  - LBXPermission/Photo (1.0.5)
+  - LBXPermission/Reminder (1.0.5)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.4.3)
+  - SDCycleScrollView (1.80):
+    - SDWebImage (>= 5.0.0)
+  - SDWebImage (5.8.0):
+    - SDWebImage/Core (= 5.8.0)
+  - SDWebImage/Core (5.8.0)
+  - SVProgressHUD (2.2.5)
+  - UMCAnalytics (6.1.0):
+    - UMCCommon
+  - UMCCommon (2.1.4)
+  - WebViewJavascriptBridge (6.0.3)
+  - YYModel (1.0.4)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - AFNetworking
+  - InputKit (~> 1.1.15)
+  - IQKeyboardManager
+  - LBXPermission/Base
+  - LBXPermission/Camera
+  - LBXPermission/Photo
+  - LBXPermission/Reminder
+  - Masonry
+  - MBProgressHUD
+  - MJRefresh
+  - SDCycleScrollView
+  - SDWebImage
+  - SVProgressHUD
+  - UMCAnalytics
+  - UMCCommon
+  - WebViewJavascriptBridge
+  - YYModel
+  - YYText
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - InputKit
+    - IQKeyboardManager
+    - LBXPermission
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - SDCycleScrollView
+    - SDWebImage
+    - SVProgressHUD
+    - UMCAnalytics
+    - UMCCommon
+    - WebViewJavascriptBridge
+    - YYModel
+    - YYText
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  InputKit: b82938c2c684d285909cac9de150739aa4814d10
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  LBXPermission: e03503500e9540efb75d5f206b82a1a760fd0b26
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
+  SDCycleScrollView: b3c9a5ed840c771c4938978174c7c9d9feefeb96
+  SDWebImage: 84000f962cbfa70c07f19d2234cbfcf5d779b5dc
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  UMCAnalytics: 3503f179f7af932b30af9ac161ac11fb48fa72b6
+  UMCCommon: b0703b0053323f598e01670ea702b8eb1e66e611
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: a3dd932f13d8114e5d4352357033b15a0d139202
+
+COCOAPODS: 1.9.0
