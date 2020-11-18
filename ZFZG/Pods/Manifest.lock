@@ -20,6 +20,16 @@ PODS:
   - LBXPermission/Camera (1.0.5)
   - LBXPermission/Photo (1.0.5)
   - LBXPermission/Reminder (1.0.5)
+  - LBXScan/LBXNative (2.3):
+    - LBXScan/Types (~> 2.2)
+  - LBXScan/LBXZBar (2.3):
+    - LBXScan/Types (~> 2.2)
+    - ZBarSDK (~> 1.3.1)
+  - LBXScan/LBXZXing (2.3):
+    - LBXScan/Types (~> 2.2)
+  - LBXScan/Types (2.3)
+  - LBXScan/UI (2.3):
+    - LBXScan/Types (~> 2.2)
   - Masonry (1.1.0)
   - MBProgressHUD (1.2.0)
   - MJRefresh (3.4.3)
@@ -33,8 +43,10 @@ PODS:
     - UMCCommon
   - UMCCommon (2.1.4)
   - WebViewJavascriptBridge (6.0.3)
+  - WMPageController (2.5.2)
   - YYModel (1.0.4)
   - YYText (1.0.7)
+  - ZBarSDK (1.3.1)
 
 DEPENDENCIES:
   - AFNetworking
@@ -44,6 +56,10 @@ DEPENDENCIES:
   - LBXPermission/Camera
   - LBXPermission/Photo
   - LBXPermission/Reminder
+  - LBXScan/LBXNative (~> 2.3)
+  - LBXScan/LBXZBar (~> 2.3)
+  - LBXScan/LBXZXing (~> 2.3)
+  - LBXScan/UI (~> 2.3)
   - Masonry
   - MBProgressHUD
   - MJRefresh
@@ -53,6 +69,7 @@ DEPENDENCIES:
   - UMCAnalytics
   - UMCCommon
   - WebViewJavascriptBridge
+  - WMPageController
   - YYModel
   - YYText
 
@@ -62,6 +79,7 @@ SPEC REPOS:
     - InputKit
     - IQKeyboardManager
     - LBXPermission
+    - LBXScan
     - Masonry
     - MBProgressHUD
     - MJRefresh
@@ -71,14 +89,17 @@ SPEC REPOS:
     - UMCAnalytics
     - UMCCommon
     - WebViewJavascriptBridge
+    - WMPageController
     - YYModel
     - YYText
+    - ZBarSDK
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   InputKit: b82938c2c684d285909cac9de150739aa4814d10
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
   LBXPermission: e03503500e9540efb75d5f206b82a1a760fd0b26
+  LBXScan: e51449f0832d1fe17da632af0d22adeb3cfa3543
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MJRefresh: 53e3e3219f204425ee6d3e62e8733d3295944cd6
@@ -88,9 +109,11 @@ SPEC CHECKSUMS:
   UMCAnalytics: 3503f179f7af932b30af9ac161ac11fb48fa72b6
   UMCCommon: b0703b0053323f598e01670ea702b8eb1e66e611
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
+  WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
   YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+  ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
 
-PODFILE CHECKSUM: a3dd932f13d8114e5d4352357033b15a0d139202
+PODFILE CHECKSUM: 833fdfb42f3ed837579676593c6be018ba8266cc
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.10.0

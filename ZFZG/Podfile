@@ -36,4 +36,12 @@ target 'ZFZG' do #工程名字
      pod 'UMCAnalytics'
 
      pod 'MBProgressHUD'
+     
+     pod 'WMPageController' #类似网易顶部栏的标签
+         
+     #二维码扫描、相册图片扫描、生成条码，可以模仿支付宝、微信等UI,生成二维码和扫描码
+     pod 'LBXScan/LBXNative','~> 2.3'
+     pod 'LBXScan/LBXZXing','~> 2.3'
+     pod 'LBXScan/LBXZBar','~> 2.3'
+     pod 'LBXScan/UI','~> 2.3'
 end

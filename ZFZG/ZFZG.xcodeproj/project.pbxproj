@@ -142,30 +142,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A4FF8892560D1CC0074A52F /* Utils */ = {
+		1A4FF88A2560D1E60074A52F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		1A4FF88A2560D1E60074A52F /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				1A62938025613B21007C638C /* CJButton.h */,
-				1A62938125613B21007C638C /* CJButton.m */,
-				1A62938725613B28007C638C /* CJBadgeButton.h */,
-				1A62938625613B28007C638C /* CJBadgeButton.m */,
-				1A62939625613B61007C638C /* CJTextView.h */,
-				1A62939725613B61007C638C /* CJTextView.m */,
-			);
-			path = Common;
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		1A4FF88B2560D1F60074A52F /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				1A62939525613B4A007C638C /* UITextView */,
+				84635D8F256509110050FE15 /* HUD */,
+				84635D8E256509090050FE15 /* UITextView */,
 				1A62937F25613AE6007C638C /* UIButton */,
 				1A62937825613A1A007C638C /* NSDate */,
 				1A629371256139C0007C638C /* UIColor */,
@@ -179,8 +167,6 @@
 			children = (
 				1A4FF8942560D2340074A52F /* BasicNetWorking.h */,
 				1A4FF8952560D2340074A52F /* BasicNetWorking.m */,
-				1A4FF88F2560D2290074A52F /* MBProgressHUD+MJ.h */,
-				1A4FF88E2560D2290074A52F /* MBProgressHUD+MJ.m */,
 			);
 			path = NetWorks;
 			sourceTree = "<group>";
@@ -188,11 +174,9 @@
 		1A4FF8BE25612E4C0074A52F /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				84635D9925650A190050FE15 /* Base */,
 				1A62933D2561326C007C638C /* Mine */,
 				1A62933C25613253007C638C /* Home */,
-				1A4FF8C525612E840074A52F /* BaseViewController */,
-				8492215C255D701800C0669D /* AppDelegate.h */,
-				8492215D255D701800C0669D /* AppDelegate.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -277,13 +261,6 @@
 			path = UIButton;
 			sourceTree = "<group>";
 		};
-		1A62939525613B4A007C638C /* UITextView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UITextView;
-			sourceTree = "<group>";
-		};
 		338D1CB802C1B1C3731A0BFC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +268,100 @@
 				753D9051166F5C716244C7A2 /* Pods-ZFZG.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		84635D8A256505E50050FE15 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				84635D902565094A0050FE15 /* Subclass */,
+				84635D8D256506ED0050FE15 /* Const */,
+				84635D8C256506E10050FE15 /* Macros */,
+				1A4FF88A2560D1E60074A52F /* Tool */,
+				1A4FF88B2560D1F60074A52F /* Category */,
+				1A4FF88C2560D2070074A52F /* NetWorks */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		84635D8B256506AE0050FE15 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				8492215C255D701800C0669D /* AppDelegate.h */,
+				8492215D255D701800C0669D /* AppDelegate.m */,
+				84922165255D701800C0669D /* Main.storyboard */,
+				8492216A255D701A00C0669D /* LaunchScreen.storyboard */,
+				8492216D255D701A00C0669D /* Info.plist */,
+				8492216E255D701A00C0669D /* main.m */,
+				1A62934A256133E1007C638C /* ZFZG.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		84635D8C256506E10050FE15 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		84635D8D256506ED0050FE15 /* Const */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Const;
+			sourceTree = "<group>";
+		};
+		84635D8E256509090050FE15 /* UITextView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UITextView;
+			sourceTree = "<group>";
+		};
+		84635D8F256509110050FE15 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				1A4FF88F2560D2290074A52F /* MBProgressHUD+MJ.h */,
+				1A4FF88E2560D2290074A52F /* MBProgressHUD+MJ.m */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		84635D902565094A0050FE15 /* Subclass */ = {
+			isa = PBXGroup;
+			children = (
+				84635D92256509970050FE15 /* TextView */,
+				84635D91256509890050FE15 /* Button */,
+			);
+			path = Subclass;
+			sourceTree = "<group>";
+		};
+		84635D91256509890050FE15 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				1A62938025613B21007C638C /* CJButton.h */,
+				1A62938125613B21007C638C /* CJButton.m */,
+				1A62938725613B28007C638C /* CJBadgeButton.h */,
+				1A62938625613B28007C638C /* CJBadgeButton.m */,
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		84635D92256509970050FE15 /* TextView */ = {
+			isa = PBXGroup;
+			children = (
+				1A62939625613B61007C638C /* CJTextView.h */,
+				1A62939725613B61007C638C /* CJTextView.m */,
+			);
+			path = TextView;
+			sourceTree = "<group>";
+		};
+		84635D9925650A190050FE15 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				1A4FF8C525612E840074A52F /* BaseViewController */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		84922150255D701800C0669D = {
@@ -319,16 +390,9 @@
 			isa = PBXGroup;
 			children = (
 				1A4FF8BE25612E4C0074A52F /* Main */,
-				1A4FF88C2560D2070074A52F /* NetWorks */,
-				1A4FF88B2560D1F60074A52F /* Category */,
-				1A4FF88A2560D1E60074A52F /* Common */,
-				1A4FF8892560D1CC0074A52F /* Utils */,
-				84922165255D701800C0669D /* Main.storyboard */,
+				84635D8A256505E50050FE15 /* Expand */,
+				84635D8B256506AE0050FE15 /* Other */,
 				84922168255D701A00C0669D /* Assets.xcassets */,
-				8492216A255D701A00C0669D /* LaunchScreen.storyboard */,
-				8492216D255D701A00C0669D /* Info.plist */,
-				8492216E255D701A00C0669D /* main.m */,
-				1A62934A256133E1007C638C /* ZFZG.pch */,
 			);
 			path = ZFZG;
 			sourceTree = "<group>";
@@ -660,6 +724,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/ZFZG/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -713,6 +778,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/ZFZG/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -731,8 +797,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQF525423X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/ZFZG/ZFZG.pch";
-				INFOPLIST_FILE = ZFZG/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZFZG/Other/ZFZG.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/ZFZG/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -755,8 +821,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQF525423X;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/ZFZG/ZFZG.pch";
-				INFOPLIST_FILE = ZFZG/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ZFZG/Other/ZFZG.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/ZFZG/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
