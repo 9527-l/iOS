@@ -1,21 +1,20 @@
 //
-//  ZFMineViewController.m
+//  ZFBaseViewController.m
 //  ZFZG
 //
-//  Created by 李胜 on 2020/11/15.
+//  Created by Lee on 2020/11/18.
 //
 
-#import "ZFMineViewController.h"
+#import "ZFBaseViewController.h"
 
-@interface ZFMineViewController ()
+@interface ZFBaseViewController ()
 
 @end
 
-@implementation ZFMineViewController
+@implementation ZFBaseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
 }
 
