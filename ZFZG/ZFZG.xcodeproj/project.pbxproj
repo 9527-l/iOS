@@ -34,6 +34,8 @@
 		84635E0E256512640050FE15 /* ZFMineHeaderViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84635E0C256512640050FE15 /* ZFMineHeaderViewCell.xib */; };
 		84635E14256516260050FE15 /* ZFBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84635E13256516260050FE15 /* ZFBaseTableViewController.m */; };
 		84635E1A256518090050FE15 /* ZFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84635E19256518090050FE15 /* ZFBaseViewController.m */; };
+		84635E26256527150050FE15 /* ZFMineListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84635E25256527150050FE15 /* ZFMineListModel.m */; };
+		84635E2C2565278E0050FE15 /* ZFMineUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84635E2B2565278E0050FE15 /* ZFMineUserInfoModel.m */; };
 		8492215E255D701800C0669D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8492215D255D701800C0669D /* AppDelegate.m */; };
 		84922167255D701800C0669D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84922165255D701800C0669D /* Main.storyboard */; };
 		84922169255D701A00C0669D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84922168255D701A00C0669D /* Assets.xcassets */; };
@@ -116,6 +118,10 @@
 		84635E19256518090050FE15 /* ZFBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFBaseViewController.m; sourceTree = "<group>"; };
 		84635E1F256519810050FE15 /* ZFConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFConst.h; sourceTree = "<group>"; };
 		84635E202565199F0050FE15 /* ZFMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFMacros.h; sourceTree = "<group>"; };
+		84635E24256527150050FE15 /* ZFMineListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFMineListModel.h; sourceTree = "<group>"; };
+		84635E25256527150050FE15 /* ZFMineListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFMineListModel.m; sourceTree = "<group>"; };
+		84635E2A2565278E0050FE15 /* ZFMineUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFMineUserInfoModel.h; sourceTree = "<group>"; };
+		84635E2B2565278E0050FE15 /* ZFMineUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFMineUserInfoModel.m; sourceTree = "<group>"; };
 		84922159255D701800C0669D /* ZFZG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFZG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8492215C255D701800C0669D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8492215D255D701800C0669D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -414,6 +420,10 @@
 		84635DFB256511F60050FE15 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84635E24256527150050FE15 /* ZFMineListModel.h */,
+				84635E25256527150050FE15 /* ZFMineListModel.m */,
+				84635E2A2565278E0050FE15 /* ZFMineUserInfoModel.h */,
+				84635E2B2565278E0050FE15 /* ZFMineUserInfoModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -670,6 +680,7 @@
 				1A62939825613B61007C638C /* CJTextView.m in Sources */,
 				84635E0D256512640050FE15 /* ZFMineHeaderViewCell.m in Sources */,
 				1A62936925613996007C638C /* NSString+CJCut.m in Sources */,
+				84635E2C2565278E0050FE15 /* ZFMineUserInfoModel.m in Sources */,
 				1A62939025613B35007C638C /* UIButton+CJStructure.m in Sources */,
 				1A62936525613996007C638C /* NSString+CJAttributedString.m in Sources */,
 				1A62934625613293007C638C /* ZFMineViewController.m in Sources */,
@@ -678,6 +689,7 @@
 				1A4FF8CE25612F840074A52F /* ZFNavigationController.m in Sources */,
 				1A62936725613996007C638C /* NSString+CJValidate.m in Sources */,
 				1A4FF89C2560D2FF0074A52F /* UIButton+CJFixMultiClick.m in Sources */,
+				84635E26256527150050FE15 /* ZFMineListModel.m in Sources */,
 				84635E14256516260050FE15 /* ZFBaseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
