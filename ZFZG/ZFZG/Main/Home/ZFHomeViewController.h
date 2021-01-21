@@ -6,10 +6,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZFBaseTableViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZFHomeViewController : UIViewController
+@interface ZFHomeViewController : ZFBaseTableViewController
 
 @end
 

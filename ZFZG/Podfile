@@ -16,12 +16,9 @@ target 'ZFZG' do #工程名字
      pod 'IQKeyboardManager'
      ##轮播
      pod 'SDCycleScrollView'
-
      ## iOS组件集合
      pod 'YYModel'
      pod 'YYText'
-
-
      ## H5桥接
      pod 'WebViewJavascriptBridge'
      ## 输入限制
@@ -44,4 +41,6 @@ target 'ZFZG' do #工程名字
      pod 'LBXScan/LBXZXing','~> 2.3'
      pod 'LBXScan/LBXZBar','~> 2.3'
      pod 'LBXScan/UI','~> 2.3'
+     
+     pod "RTRootNavigationController"
 end

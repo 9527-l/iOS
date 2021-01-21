@@ -21,6 +21,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     [self setUpTableView];
 //    []
+    
 }
 
 
@@ -43,7 +44,7 @@
     return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return nil;
+    return [[UITableViewCell alloc] init];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     

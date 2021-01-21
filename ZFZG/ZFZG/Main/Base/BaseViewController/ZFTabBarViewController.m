@@ -22,12 +22,12 @@
 }
 
 - (void)setupUI{
-    [self addChildViewController:[[ZFHomeViewController alloc]init]  imageNamed:@"toolbar_home" title:@"首页"];
-    [self addChildViewController:[[ZFMineViewController alloc] init] imageNamed:@"toolbar_me" title:@"我的"];
+    [self addChildViewController:[[ZFHomeViewController alloc] init]  imageNamed:@"home" title:@"首页"];
+    [self addChildViewController:[[ZFMineViewController alloc] init] imageNamed:@"management" title:@"我的"];
 }
 - (void)addChildViewController:(UIViewController *)childController imageNamed:(NSString *)imageName title:(NSString *)title{
     //包裹一个自定义的导航
-    ZFNavigationController * nav = [[ZFNavigationController alloc]initWithRootViewController:childController];
+    ZFNavigationController * nav = [[ZFNavigationController alloc]initWithRootViewControllerNoWrapping:childController];
     //设置tabBarItem的title
     childController.title = title;
     //设置文字样式
@@ -35,15 +35,16 @@
     textAtts[NSForegroundColorAttributeName] = [UIColor grayColor];
     
     NSMutableDictionary *selectTextAtts = [NSMutableDictionary dictionary];
-    selectTextAtts[NSForegroundColorAttributeName] = [UIColor purpleColor];
+    selectTextAtts[NSForegroundColorAttributeName] = MainColorBlue;
 
     [childController.tabBarItem setTitleTextAttributes:textAtts forState:UIControlStateNormal];
     [childController.tabBarItem setTitleTextAttributes:selectTextAtts forState:UIControlStateSelected];
     
     //设置tabBarItem的图标
     //声明：这张图片按照原来的样子显示出来，不要自动渲染成其他颜色（默认蓝色）
-    childController.tabBarItem.image = [UIImage imageNamed:imageName];
-    childController.tabBarItem.selectedImage = [[UIImage imageNamed:[NSString stringWithFormat:@"%@_sel", imageName]]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    UIImage *normalImage = [UIImage createNewImage:[UIImage imageNamed:imageName] multiple:0.2];
+    childController.tabBarItem.image = normalImage;
+    childController.tabBarItem.selectedImage = [UIImage createNewImage:[[UIImage imageNamed:[NSString stringWithFormat:@"%@_select", imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] multiple:0.2];
     
     [self addChildViewController:nav];
     

@@ -6,7 +6,8 @@
 //
 
 #import "ZFHomeViewController.h"
-
+#import "ZFMineListViewCell.h"
+#import "ZFMineHeaderViewCell.h"
 @interface ZFHomeViewController ()
 
 @end
@@ -15,18 +16,41 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
-    // Do any additional setup after loading the view.
+    [self setUpTableView];
+    
+}
+- (void)setUpNavBarView{
+    UILabel *navBar = [[UILabel alloc] init];
+    navBar.text = @"进件";
+    [self.view addSubview:navBar];
+    [navBar mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.equalTo(self.view);
+        make.height.mas_equalTo(44);
+    }];
+}
+- (void)setUpTableView{
+    [self.view addSubview:self.tableView];
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.left.right.equalTo(self.view);
+        make.top.equalTo(self.view).offset(44);
+    }];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZFMineListViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([ZFMineListViewCell class])];
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZFMineHeaderViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([ZFMineHeaderViewCell class])];
+}
+- (void)createData{
+    
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 1;
 }
-*/
-
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 1;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return [[UITableViewCell alloc] init];
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 @end

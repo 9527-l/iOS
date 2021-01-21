@@ -28,6 +28,8 @@
 		1A62939125613B35007C638C /* UIButton+CJMoreProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62938F25613B35007C638C /* UIButton+CJMoreProperty.m */; };
 		1A62939825613B61007C638C /* CJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62939725613B61007C638C /* CJTextView.m */; };
 		487A4F72B7AE5A6F394E95A9 /* libPods-ZFZG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB204741BDAB74069B31C6 /* libPods-ZFZG.a */; };
+		8461146625B97863009986F5 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461146525B97863009986F5 /* UIImage+Scale.m */; };
+		8461148625B997BF009986F5 /* ZFNavgationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461148525B997BF009986F5 /* ZFNavgationBarView.m */; };
 		84635E022565124E0050FE15 /* ZFMineListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84635E002565124E0050FE15 /* ZFMineListViewCell.m */; };
 		84635E032565124E0050FE15 /* ZFMineListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84635E012565124E0050FE15 /* ZFMineListViewCell.xib */; };
 		84635E0D256512640050FE15 /* ZFMineHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84635E0B256512640050FE15 /* ZFMineHeaderViewCell.m */; };
@@ -106,6 +108,10 @@
 		1A62939625613B61007C638C /* CJTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTextView.h; sourceTree = "<group>"; };
 		1A62939725613B61007C638C /* CJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTextView.m; sourceTree = "<group>"; };
 		753D9051166F5C716244C7A2 /* Pods-ZFZG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFZG.release.xcconfig"; path = "Target Support Files/Pods-ZFZG/Pods-ZFZG.release.xcconfig"; sourceTree = "<group>"; };
+		8461146425B97863009986F5 /* UIImage+Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
+		8461146525B97863009986F5 /* UIImage+Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
+		8461148425B997BF009986F5 /* ZFNavgationBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFNavgationBarView.h; sourceTree = "<group>"; };
+		8461148525B997BF009986F5 /* ZFNavgationBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFNavgationBarView.m; sourceTree = "<group>"; };
 		84635DFF2565124E0050FE15 /* ZFMineListViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFMineListViewCell.h; sourceTree = "<group>"; };
 		84635E002565124E0050FE15 /* ZFMineListViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFMineListViewCell.m; sourceTree = "<group>"; };
 		84635E012565124E0050FE15 /* ZFMineListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFMineListViewCell.xib; sourceTree = "<group>"; };
@@ -166,18 +172,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A4FF88A2560D1E60074A52F /* Tool */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tool;
-			sourceTree = "<group>";
-		};
 		1A4FF88B2560D1F60074A52F /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				8461146325B97817009986F5 /* UIImage */,
 				84635D8F256509110050FE15 /* HUD */,
-				84635D8E256509090050FE15 /* UITextView */,
 				1A62937F25613AE6007C638C /* UIButton */,
 				1A62937825613A1A007C638C /* NSDate */,
 				1A629371256139C0007C638C /* UIColor */,
@@ -299,13 +298,21 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8461146325B97817009986F5 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				8461146425B97863009986F5 /* UIImage+Scale.h */,
+				8461146525B97863009986F5 /* UIImage+Scale.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		84635D8A256505E50050FE15 /* Expand */ = {
 			isa = PBXGroup;
 			children = (
 				84635D902565094A0050FE15 /* Subclass */,
 				84635D8D256506ED0050FE15 /* Const */,
 				84635D8C256506E10050FE15 /* Macros */,
-				1A4FF88A2560D1E60074A52F /* Tool */,
 				1A4FF88B2560D1F60074A52F /* Category */,
 				1A4FF88C2560D2070074A52F /* NetWorks */,
 			);
@@ -340,13 +347,6 @@
 				84635E1F256519810050FE15 /* ZFConst.h */,
 			);
 			path = Const;
-			sourceTree = "<group>";
-		};
-		84635D8E256509090050FE15 /* UITextView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UITextView;
 			sourceTree = "<group>";
 		};
 		84635D8F256509110050FE15 /* HUD */ = {
@@ -391,6 +391,8 @@
 			isa = PBXGroup;
 			children = (
 				1A4FF8C525612E840074A52F /* BaseViewController */,
+				8461148425B997BF009986F5 /* ZFNavgationBarView.h */,
+				8461148525B997BF009986F5 /* ZFNavgationBarView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -665,12 +667,14 @@
 			files = (
 				1A62938225613B21007C638C /* CJButton.m in Sources */,
 				1A62936825613996007C638C /* NSString+CJTextSize.m in Sources */,
+				8461148625B997BF009986F5 /* ZFNavgationBarView.m in Sources */,
 				1A4FF8902560D2290074A52F /* MBProgressHUD+MJ.m in Sources */,
 				1A62934025613285007C638C /* ZFHomeViewController.m in Sources */,
 				84635E022565124E0050FE15 /* ZFMineListViewCell.m in Sources */,
 				1A62937B25613A59007C638C /* CJDateOtherUtil.m in Sources */,
 				1A62939125613B35007C638C /* UIButton+CJMoreProperty.m in Sources */,
 				84635E1A256518090050FE15 /* ZFBaseViewController.m in Sources */,
+				8461146625B97863009986F5 /* UIImage+Scale.m in Sources */,
 				1A4FF8962560D2340074A52F /* BasicNetWorking.m in Sources */,
 				1A629374256139F1007C638C /* UIColor+CJHex.m in Sources */,
 				1A62936A25613996007C638C /* NSString+CJEncryption.m in Sources */,
@@ -871,15 +875,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZFZG/Other/ZFZG.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ZFZG/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zfzg.www.ls;
+				PRODUCT_BUNDLE_IDENTIFIER = net.qtopay.jjb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -895,15 +899,15 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/ZFZG/Other/ZFZG.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ZFZG/Other/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zfzg.www.ls;
+				PRODUCT_BUNDLE_IDENTIFIER = net.qtopay.jjb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
