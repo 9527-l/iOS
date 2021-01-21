@@ -9,7 +9,7 @@
 #import <RTRootNavigationController.h>
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZFNavigationController : RTRootNavigationController
+@interface ZFNavigationController : UINavigationController
 
 @end
 

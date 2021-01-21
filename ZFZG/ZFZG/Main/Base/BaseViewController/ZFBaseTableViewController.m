@@ -20,15 +20,6 @@
     
 }
 
-- (void)setUpNavBarView{
-    UILabel *navBar = [[UILabel alloc] init];
-    navBar.text = @"进件";
-    [self.view addSubview:navBar];
-    [navBar mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.left.right.equalTo(self.view);
-        make.height.mas_equalTo(44);
-    }];
-}
 - (void)addRefreshHeaderView{
     WeakSelf(self)
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

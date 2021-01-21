@@ -15,14 +15,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUpNavBarView];
 }
 - (void)loadData{
     
 }
-- (void)setUpNavBarView{
-    
-}
+
 /*
 #pragma mark - Navigation
 

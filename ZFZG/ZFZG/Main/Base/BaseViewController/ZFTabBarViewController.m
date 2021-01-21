@@ -27,7 +27,7 @@
 }
 - (void)addChildViewController:(UIViewController *)childController imageNamed:(NSString *)imageName title:(NSString *)title{
     //包裹一个自定义的导航
-    ZFNavigationController * nav = [[ZFNavigationController alloc]initWithRootViewControllerNoWrapping:childController];
+    ZFNavigationController * nav = [[ZFNavigationController alloc] initWithRootViewController:childController];
     //设置tabBarItem的title
     childController.title = title;
     //设置文字样式
