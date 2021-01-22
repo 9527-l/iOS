@@ -15,19 +15,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    设置导航栏通用样式
+    [self setNavBarView];
+//    设置tabBar隐藏顶部黑线
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 10.0) {
+        self.tabBarController.tabBar.subviews[0].subviews[1].hidden = YES;
+    }
+    
 }
 - (void)loadData{
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setNavBarView{
+    self.navigationController.navigationBar.barTintColor = MainColorBlue;
+    UIImageView *lineView = [self findBottomLineInView:self.navigationController.navigationBar];
+    if (lineView) {
+        lineView.hidden = YES;
+    }
 }
-*/
 
+- (UIImageView *)findBottomLineInView:(UIView *)view {
+    if ([view isKindOfClass:UIImageView.class] && view.bounds.size.height <= 1.0) {
+        return (UIImageView *)view;
+    }
+    for (UIView *subview in view.subviews) {
+        UIImageView *imageView = [self findBottomLineInView:subview];
+        if (imageView) {
+            return imageView;
+        }
+    }
+    return nil;
+}
 @end

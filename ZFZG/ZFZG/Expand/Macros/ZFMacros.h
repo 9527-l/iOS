@@ -19,7 +19,7 @@
 #define Screen_Height         ([UIScreen mainScreen].bounds.size.height)
 
 #define kIs_iphone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define kIs_iPhoneX kScreenWidth >= 375.0f && kScreenHeight >= 812.0f && kIs_iphone
+#define kIs_iPhoneX Screen_Width >= 375.0f && Screen_Height >= 812.0f && kIs_iphone
  
 
 /*状态栏高度*/

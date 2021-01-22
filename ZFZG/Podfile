@@ -42,4 +42,5 @@ target 'ZFZG' do #工程名字
      pod 'LBXScan/LBXZBar','~> 2.3'
      pod 'LBXScan/UI','~> 2.3'
      
+     pod "RTRootNavigationController"
 end

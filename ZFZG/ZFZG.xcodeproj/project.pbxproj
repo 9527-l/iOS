@@ -30,6 +30,12 @@
 		487A4F72B7AE5A6F394E95A9 /* libPods-ZFZG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB204741BDAB74069B31C6 /* libPods-ZFZG.a */; };
 		8461146625B97863009986F5 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461146525B97863009986F5 /* UIImage+Scale.m */; };
 		8461148625B997BF009986F5 /* ZFNavgationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461148525B997BF009986F5 /* ZFNavgationBarView.m */; };
+		846114CE25BA7FFD009986F5 /* ZFHomeOneViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846114CC25BA7FFD009986F5 /* ZFHomeOneViewCell.m */; };
+		846114CF25BA7FFD009986F5 /* ZFHomeOneViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846114CD25BA7FFD009986F5 /* ZFHomeOneViewCell.xib */; };
+		846114D925BA800D009986F5 /* ZFHomeTwoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846114D725BA800D009986F5 /* ZFHomeTwoViewCell.m */; };
+		846114DA25BA800D009986F5 /* ZFHomeTwoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846114D825BA800D009986F5 /* ZFHomeTwoViewCell.xib */; };
+		846114E125BA8023009986F5 /* ZFHomeThreeViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846114DF25BA8023009986F5 /* ZFHomeThreeViewCell.m */; };
+		846114E225BA8023009986F5 /* ZFHomeThreeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846114E025BA8023009986F5 /* ZFHomeThreeViewCell.xib */; };
 		84635E022565124E0050FE15 /* ZFMineListViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84635E002565124E0050FE15 /* ZFMineListViewCell.m */; };
 		84635E032565124E0050FE15 /* ZFMineListViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84635E012565124E0050FE15 /* ZFMineListViewCell.xib */; };
 		84635E0D256512640050FE15 /* ZFMineHeaderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84635E0B256512640050FE15 /* ZFMineHeaderViewCell.m */; };
@@ -112,6 +118,15 @@
 		8461146525B97863009986F5 /* UIImage+Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 		8461148425B997BF009986F5 /* ZFNavgationBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFNavgationBarView.h; sourceTree = "<group>"; };
 		8461148525B997BF009986F5 /* ZFNavgationBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFNavgationBarView.m; sourceTree = "<group>"; };
+		846114CB25BA7FFD009986F5 /* ZFHomeOneViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFHomeOneViewCell.h; sourceTree = "<group>"; };
+		846114CC25BA7FFD009986F5 /* ZFHomeOneViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFHomeOneViewCell.m; sourceTree = "<group>"; };
+		846114CD25BA7FFD009986F5 /* ZFHomeOneViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFHomeOneViewCell.xib; sourceTree = "<group>"; };
+		846114D625BA800D009986F5 /* ZFHomeTwoViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFHomeTwoViewCell.h; sourceTree = "<group>"; };
+		846114D725BA800D009986F5 /* ZFHomeTwoViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFHomeTwoViewCell.m; sourceTree = "<group>"; };
+		846114D825BA800D009986F5 /* ZFHomeTwoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFHomeTwoViewCell.xib; sourceTree = "<group>"; };
+		846114DE25BA8023009986F5 /* ZFHomeThreeViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFHomeThreeViewCell.h; sourceTree = "<group>"; };
+		846114DF25BA8023009986F5 /* ZFHomeThreeViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFHomeThreeViewCell.m; sourceTree = "<group>"; };
+		846114E025BA8023009986F5 /* ZFHomeThreeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFHomeThreeViewCell.xib; sourceTree = "<group>"; };
 		84635DFF2565124E0050FE15 /* ZFMineListViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFMineListViewCell.h; sourceTree = "<group>"; };
 		84635E002565124E0050FE15 /* ZFMineListViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFMineListViewCell.m; sourceTree = "<group>"; };
 		84635E012565124E0050FE15 /* ZFMineListViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFMineListViewCell.xib; sourceTree = "<group>"; };
@@ -222,6 +237,8 @@
 		1A62933C25613253007C638C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				846114CA25BA7FD1009986F5 /* Model */,
+				846114C925BA7FC7009986F5 /* View */,
 				1A62933E25613285007C638C /* ZFHomeViewController.h */,
 				1A62933F25613285007C638C /* ZFHomeViewController.m */,
 			);
@@ -305,6 +322,29 @@
 				8461146525B97863009986F5 /* UIImage+Scale.m */,
 			);
 			path = UIImage;
+			sourceTree = "<group>";
+		};
+		846114C925BA7FC7009986F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				846114CB25BA7FFD009986F5 /* ZFHomeOneViewCell.h */,
+				846114CC25BA7FFD009986F5 /* ZFHomeOneViewCell.m */,
+				846114CD25BA7FFD009986F5 /* ZFHomeOneViewCell.xib */,
+				846114D625BA800D009986F5 /* ZFHomeTwoViewCell.h */,
+				846114D725BA800D009986F5 /* ZFHomeTwoViewCell.m */,
+				846114D825BA800D009986F5 /* ZFHomeTwoViewCell.xib */,
+				846114DE25BA8023009986F5 /* ZFHomeThreeViewCell.h */,
+				846114DF25BA8023009986F5 /* ZFHomeThreeViewCell.m */,
+				846114E025BA8023009986F5 /* ZFHomeThreeViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		846114CA25BA7FD1009986F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		84635D8A256505E50050FE15 /* Expand */ = {
@@ -594,11 +634,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846114CF25BA7FFD009986F5 /* ZFHomeOneViewCell.xib in Resources */,
 				84635E0E256512640050FE15 /* ZFMineHeaderViewCell.xib in Resources */,
 				8492216C255D701A00C0669D /* LaunchScreen.storyboard in Resources */,
 				84922169255D701A00C0669D /* Assets.xcassets in Resources */,
+				846114E225BA8023009986F5 /* ZFHomeThreeViewCell.xib in Resources */,
 				84922167255D701800C0669D /* Main.storyboard in Resources */,
 				84635E032565124E0050FE15 /* ZFMineListViewCell.xib in Resources */,
+				846114DA25BA800D009986F5 /* ZFHomeTwoViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -677,17 +720,20 @@
 				8461146625B97863009986F5 /* UIImage+Scale.m in Sources */,
 				1A4FF8962560D2340074A52F /* BasicNetWorking.m in Sources */,
 				1A629374256139F1007C638C /* UIColor+CJHex.m in Sources */,
+				846114D925BA800D009986F5 /* ZFHomeTwoViewCell.m in Sources */,
 				1A62936A25613996007C638C /* NSString+CJEncryption.m in Sources */,
 				8492215E255D701800C0669D /* AppDelegate.m in Sources */,
 				1A62936625613996007C638C /* NSString+CJEncoding.m in Sources */,
 				8492216F255D701A00C0669D /* main.m in Sources */,
 				1A62939825613B61007C638C /* CJTextView.m in Sources */,
 				84635E0D256512640050FE15 /* ZFMineHeaderViewCell.m in Sources */,
+				846114CE25BA7FFD009986F5 /* ZFHomeOneViewCell.m in Sources */,
 				1A62936925613996007C638C /* NSString+CJCut.m in Sources */,
 				84635E2C2565278E0050FE15 /* ZFMineUserInfoModel.m in Sources */,
 				1A62939025613B35007C638C /* UIButton+CJStructure.m in Sources */,
 				1A62936525613996007C638C /* NSString+CJAttributedString.m in Sources */,
 				1A62934625613293007C638C /* ZFMineViewController.m in Sources */,
+				846114E125BA8023009986F5 /* ZFHomeThreeViewCell.m in Sources */,
 				1A4FF8C825612F590074A52F /* ZFTabBarViewController.m in Sources */,
 				1A62938825613B28007C638C /* CJBadgeButton.m in Sources */,
 				1A4FF8CE25612F840074A52F /* ZFNavigationController.m in Sources */,

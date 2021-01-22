@@ -9,7 +9,7 @@
 #import "ZFHomeViewController.h"
 #import "ZFMineViewController.h"
 #import "ZFNavigationController.h"
-
+#import <RTRootNavigationController.h>
 @interface ZFTabBarViewController ()
 
 @end
@@ -24,10 +24,12 @@
 - (void)setupUI{
     [self addChildViewController:[[ZFHomeViewController alloc] init]  imageNamed:@"home" title:@"首页"];
     [self addChildViewController:[[ZFMineViewController alloc] init] imageNamed:@"management" title:@"我的"];
+    self.tabBar.barTintColor = [UIColor whiteColor];
 }
 - (void)addChildViewController:(UIViewController *)childController imageNamed:(NSString *)imageName title:(NSString *)title{
     //包裹一个自定义的导航
-    ZFNavigationController * nav = [[ZFNavigationController alloc] initWithRootViewController:childController];
+//    ZFNavigationController * nav = [[ZFNavigationController alloc] initWithRootViewControllerNoWrapping:childController];
+    RTContainerNavigationController * nav = [[RTContainerNavigationController alloc] initWithRootViewController:childController];
     //设置tabBarItem的title
     childController.title = title;
     //设置文字样式
