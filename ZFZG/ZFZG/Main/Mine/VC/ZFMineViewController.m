@@ -22,13 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    [self.view addSubview:self.headerView];
 }
 - (void)setNavBarView{
     self.navigationController.navigationBar.hidden = YES;
     
 }
 
+- (ZFMineListView *)createListViewWithImageName:(NSString *)iconName title:(NSString *)title showArrow:(BOOL)showArrow{
+    ZFMineListView *view = [[ZFMineListView alloc] init];
+    return view;
+}
 
 - (UIScrollView *)scrollerView{
     if (!_scrollerView) {
@@ -36,5 +40,10 @@
     }
     return _scrollerView;
 }
-
+- (ZFMineHeaderView *)headerView{
+    if (!_headerView) {
+        _headerView = [[ZFMineHeaderView alloc] init];
+    }
+    return _headerView;
+}
 @end
