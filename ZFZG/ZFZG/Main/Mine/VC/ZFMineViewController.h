@@ -5,11 +5,11 @@
 //  Created by 李胜 on 2020/11/15.
 //
 
-#import "ZFBaseTableViewController.h"
+#import "ZFBaseViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZFMineViewController : ZFBaseTableViewController
+@interface ZFMineViewController : ZFBaseViewController
 
 @end
 

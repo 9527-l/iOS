@@ -6,11 +6,14 @@
 //
 
 #import "ZFMineViewController.h"
-#import "ZFMineListViewCell.h"
-#import "ZFMineHeaderViewCell.h"
+#import "ZFMineListView.h"
+#import "ZFMineHeaderView.h"
 
 
 @interface ZFMineViewController ()
+
+@property (nonatomic, strong) UIScrollView *scrollerView;
+@property (nonatomic, strong) ZFMineHeaderView *headerView;
 
 @end
 
@@ -19,35 +22,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self setUpTableView];
-//    []
+    
+}
+- (void)setNavBarView{
+    self.navigationController.navigationBar.hidden = YES;
     
 }
 
 
-- (void)setUpTableView{
-    [self.view addSubview:self.tableView];
-    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.equalTo(self.view);
-    }];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZFMineListViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([ZFMineListViewCell class])];
-    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([ZFMineHeaderViewCell class]) bundle:nil] forCellReuseIdentifier:NSStringFromClass([ZFMineHeaderViewCell class])];
-}
-- (void)createData{
-    
-}
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 1;
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [[UITableViewCell alloc] init];
-}
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+- (UIScrollView *)scrollerView{
+    if (!_scrollerView) {
+        _scrollerView = [[UIScrollView alloc] init];
+    }
+    return _scrollerView;
 }
 
 @end
