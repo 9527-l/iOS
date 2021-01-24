@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import <UIViewController+RTRootNavigationController.h>
+#import <RTRootNavigationController.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

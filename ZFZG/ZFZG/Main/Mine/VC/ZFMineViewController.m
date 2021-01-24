@@ -9,6 +9,7 @@
 #import "ZFContactUsViewController.h"
 #import "ZFChangePwdViewController.h"
 #import "ZFFeedBackViewController.h"
+#import "ZFLoginViewController.h"
 
 #import "ZFMineListView.h"
 #import "ZFMineHeaderView.h"
@@ -131,7 +132,16 @@ typedef enum : NSUInteger {
         }
             break;
         case ExitClickEvent:
+        {
             
+            ZFLoginViewController *vc = [[ZFLoginViewController alloc] init];
+            RTContainerNavigationController *navVC = [[RTContainerNavigationController alloc] initWithRootViewController:vc];
+            RTRootNavigationController *rootVC = [[RTRootNavigationController alloc] initWithRootViewControllerNoWrapping:navVC];
+            rootVC.modalPresentationStyle = UIModalPresentationFullScreen;
+            [self presentViewController:rootVC animated:YES completion:^{
+                            
+            }];
+        }
             break;
         default:
             break;

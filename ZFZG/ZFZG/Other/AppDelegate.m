@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    ZFTabBarViewController * vc = [[ZFTabBarViewController alloc] init];
+    ZFTabBarViewController *vc = [[ZFTabBarViewController alloc] init];
     self.window.rootViewController = [[ZFNavigationController alloc] initWithRootViewControllerNoWrapping:vc];;
     [self.window makeKeyAndVisible];
     
