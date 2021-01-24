@@ -41,6 +41,6 @@
 
 
 //颜色
-#define MainColorBlue CJColorFromRGBA(27, 113, 223, 1)
+#define MainColorBlue CJColorFromRGBA(9, 103, 232, 1)
 
 #endif /* ZFMacros_h */

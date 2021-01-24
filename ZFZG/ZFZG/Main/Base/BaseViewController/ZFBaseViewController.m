@@ -28,10 +28,18 @@
 }
 - (void)setNavBarView{
     self.navigationController.navigationBar.barTintColor = MainColorBlue;
+    [self.navigationController.navigationBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:19], NSForegroundColorAttributeName:[UIColor whiteColor]}];
     UIImageView *lineView = [self findBottomLineInView:self.navigationController.navigationBar];
     if (lineView) {
         lineView.hidden = YES;
     }
+}
+
+- (UIBarButtonItem *)rt_customBackItemWithTarget:(id)target action:(SEL)action{
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setImage:[UIImage imageNamed:@"navi_black_back"] forState:UIControlStateNormal];
+    [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 
 - (UIImageView *)findBottomLineInView:(UIView *)view {

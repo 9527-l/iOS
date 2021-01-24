@@ -43,4 +43,5 @@ target 'ZFZG' do #工程名字
      pod 'LBXScan/UI','~> 2.3'
      
      pod "RTRootNavigationController"
+     pod 'JXCategoryView'
 end

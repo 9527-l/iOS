@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addRefreshfooterView;
 
 - (void)loadMoreData;
+- (void)setUpTableView;
 
 @end
 

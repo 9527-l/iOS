@@ -8,6 +8,7 @@
 #import "AppDelegate.h"
 #import "ZFTabBarViewController.h"
 #import "ZFNavigationController.h"
+#import <IQKeyboardManager.h>
 @interface AppDelegate ()
 
 @end
@@ -20,6 +21,8 @@
     ZFTabBarViewController * vc = [[ZFTabBarViewController alloc] init];
     self.window.rootViewController = [[ZFNavigationController alloc] initWithRootViewControllerNoWrapping:vc];;
     [self.window makeKeyAndVisible];
+    
+    [[IQKeyboardManager sharedManager] setEnable:YES];
     return YES;
 }
 

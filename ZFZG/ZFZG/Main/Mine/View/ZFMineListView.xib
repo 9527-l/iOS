@@ -11,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZFMineListView">
             <rect key="frame" x="0.0" y="0.0" width="462" height="83"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6KX-ri-l6x">
-                    <rect key="frame" x="15" y="26.5" width="30" height="30"/>
+                    <rect key="frame" x="30" y="31.5" width="20" height="20"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="MG9-yx-8WQ"/>
-                        <constraint firstAttribute="width" constant="30" id="YJC-Pn-em4"/>
+                        <constraint firstAttribute="height" constant="20" id="MG9-yx-8WQ"/>
+                        <constraint firstAttribute="width" constant="20" id="YJC-Pn-em4"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="MBw-mm-f0N">
@@ -30,24 +30,50 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEE-qZ-WwS">
-                    <rect key="frame" x="55" y="31" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
+                    <rect key="frame" x="70" y="32" width="39" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vX9-me-meh">
+                    <rect key="frame" x="70" y="82" width="377" height="1"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="HTt-Hg-J7V"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5e7-Oa-8Wj">
+                    <rect key="frame" x="0.0" y="0.0" width="462" height="83"/>
+                    <connections>
+                        <action selector="viewDidCilck:" destination="iN0-l3-epB" eventType="touchUpInside" id="GDq-n7-hRc"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="vX9-me-meh" secondAttribute="bottom" id="EbC-zS-HIo"/>
+                <constraint firstAttribute="trailing" secondItem="5e7-Oa-8Wj" secondAttribute="trailing" id="P1Z-6F-Dj9"/>
+                <constraint firstItem="vX9-me-meh" firstAttribute="leading" secondItem="AEE-qZ-WwS" secondAttribute="leading" id="Uyk-cU-hMU"/>
+                <constraint firstItem="vX9-me-meh" firstAttribute="trailing" secondItem="MBw-mm-f0N" secondAttribute="trailing" id="XyN-Db-ao9"/>
+                <constraint firstItem="5e7-Oa-8Wj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bSq-ju-A6R"/>
                 <constraint firstItem="MBw-mm-f0N" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bZW-p4-Oqu"/>
+                <constraint firstAttribute="bottom" secondItem="5e7-Oa-8Wj" secondAttribute="bottom" id="eZo-Id-8fA"/>
                 <constraint firstItem="AEE-qZ-WwS" firstAttribute="centerY" secondItem="6KX-ri-l6x" secondAttribute="centerY" id="ehE-eW-fT1"/>
                 <constraint firstAttribute="trailing" secondItem="MBw-mm-f0N" secondAttribute="trailing" constant="15" id="k6O-so-iu3"/>
+                <constraint firstItem="5e7-Oa-8Wj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kgF-z4-PYa"/>
                 <constraint firstItem="6KX-ri-l6x" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lRu-j1-gHD"/>
-                <constraint firstItem="AEE-qZ-WwS" firstAttribute="leading" secondItem="6KX-ri-l6x" secondAttribute="trailing" constant="10" id="paO-vK-fLw"/>
-                <constraint firstItem="6KX-ri-l6x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="zM3-BT-EY1"/>
+                <constraint firstItem="AEE-qZ-WwS" firstAttribute="leading" secondItem="6KX-ri-l6x" secondAttribute="trailing" constant="20" id="paO-vK-fLw"/>
+                <constraint firstItem="6KX-ri-l6x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="zM3-BT-EY1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="150.72463768115944" y="74.665178571428569"/>
+            <connections>
+                <outlet property="arrowImageView" destination="MBw-mm-f0N" id="UQ2-Qx-w7e"/>
+                <outlet property="iconImageView" destination="6KX-ri-l6x" id="FIS-V0-zJ0"/>
+                <outlet property="sepLineView" destination="vX9-me-meh" id="dHo-AO-SFb"/>
+                <outlet property="titleLab" destination="AEE-qZ-WwS" id="6PX-D2-HCe"/>
+            </connections>
+            <point key="canvasLocation" x="-161" y="-24"/>
         </view>
     </objects>
     <resources>

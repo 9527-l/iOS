@@ -1,13 +1,13 @@
 //
-//  ZFHomeThreeViewCell.m
+//  ZFBusinessInfoViewCell.m
 //  ZFZG
 //
-//  Created by Lee on 2021/1/22.
+//  Created by Lee on 2021/1/24.
 //
 
-#import "ZFHomeThreeViewCell.h"
+#import "ZFBusinessInfoViewCell.h"
 
-@implementation ZFHomeThreeViewCell
+@implementation ZFBusinessInfoViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -18,11 +18,6 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
-}
-- (IBAction)addUserBtnDidClick:(UIButton *)sender {
-    if (self.btnDidClickBlock) {
-        self.btnDidClickBlock();
-    }
 }
 
 @end

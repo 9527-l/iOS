@@ -28,6 +28,13 @@
 		1A62939125613B35007C638C /* UIButton+CJMoreProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62938F25613B35007C638C /* UIButton+CJMoreProperty.m */; };
 		1A62939825613B61007C638C /* CJTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A62939725613B61007C638C /* CJTextView.m */; };
 		487A4F72B7AE5A6F394E95A9 /* libPods-ZFZG.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FACB204741BDAB74069B31C6 /* libPods-ZFZG.a */; };
+		845CE15725BD5EC4006A4F8A /* ZFQueryInViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CE15525BD5EC4006A4F8A /* ZFQueryInViewCell.m */; };
+		845CE15825BD5EC4006A4F8A /* ZFQueryInViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845CE15625BD5EC4006A4F8A /* ZFQueryInViewCell.xib */; };
+		845CE15E25BD722F006A4F8A /* ZFBusinessInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CE15D25BD722F006A4F8A /* ZFBusinessInfoViewController.m */; };
+		845CE16625BD725A006A4F8A /* ZFBusinessInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CE16425BD725A006A4F8A /* ZFBusinessInfoViewCell.m */; };
+		845CE16725BD725A006A4F8A /* ZFBusinessInfoViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845CE16525BD725A006A4F8A /* ZFBusinessInfoViewCell.xib */; };
+		845CE17125BD7C70006A4F8A /* ZFBusinessRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CE16F25BD7C70006A4F8A /* ZFBusinessRegistrationViewController.m */; };
+		845CE17225BD7C70006A4F8A /* ZFBusinessRegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845CE17025BD7C70006A4F8A /* ZFBusinessRegistrationViewController.xib */; };
 		8461146625B97863009986F5 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461146525B97863009986F5 /* UIImage+Scale.m */; };
 		8461148625B997BF009986F5 /* ZFNavgationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461148525B997BF009986F5 /* ZFNavgationBarView.m */; };
 		846114CE25BA7FFD009986F5 /* ZFHomeOneViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846114CC25BA7FFD009986F5 /* ZFHomeOneViewCell.m */; };
@@ -48,6 +55,15 @@
 		84635E1A256518090050FE15 /* ZFBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84635E19256518090050FE15 /* ZFBaseViewController.m */; };
 		84635E26256527150050FE15 /* ZFMineListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84635E25256527150050FE15 /* ZFMineListModel.m */; };
 		84635E2C2565278E0050FE15 /* ZFMineUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84635E2B2565278E0050FE15 /* ZFMineUserInfoModel.m */; };
+		8464BF2625BC715B007E9519 /* ZFContactUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464BF2525BC715B007E9519 /* ZFContactUsViewController.m */; };
+		8464BF2E25BC724D007E9519 /* ZFContactUsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464BF2C25BC724D007E9519 /* ZFContactUsViewCell.m */; };
+		8464BF2F25BC724D007E9519 /* ZFContactUsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8464BF2D25BC724D007E9519 /* ZFContactUsViewCell.xib */; };
+		8464BF5325BC9DA9007E9519 /* ZFChangePwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464BF5125BC9DA9007E9519 /* ZFChangePwdViewController.m */; };
+		8464BF5425BC9DA9007E9519 /* ZFChangePwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8464BF5225BC9DA9007E9519 /* ZFChangePwdViewController.xib */; };
+		8464BF5B25BCA1FB007E9519 /* ZFFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464BF5925BCA1FB007E9519 /* ZFFeedBackViewController.m */; };
+		8464BF5C25BCA1FB007E9519 /* ZFFeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8464BF5A25BCA1FB007E9519 /* ZFFeedBackViewController.xib */; };
+		8464BF7E25BD233D007E9519 /* ZFQueryInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464BF7D25BD233D007E9519 /* ZFQueryInViewController.m */; };
+		8464BF8425BD265C007E9519 /* ZFQueryInListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464BF8325BD265C007E9519 /* ZFQueryInListViewController.m */; };
 		8492215E255D701800C0669D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8492215D255D701800C0669D /* AppDelegate.m */; };
 		84922167255D701800C0669D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84922165255D701800C0669D /* Main.storyboard */; };
 		84922169255D701A00C0669D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84922168255D701A00C0669D /* Assets.xcassets */; };
@@ -118,6 +134,17 @@
 		1A62939625613B61007C638C /* CJTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CJTextView.h; sourceTree = "<group>"; };
 		1A62939725613B61007C638C /* CJTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CJTextView.m; sourceTree = "<group>"; };
 		753D9051166F5C716244C7A2 /* Pods-ZFZG.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFZG.release.xcconfig"; path = "Target Support Files/Pods-ZFZG/Pods-ZFZG.release.xcconfig"; sourceTree = "<group>"; };
+		845CE15425BD5EC4006A4F8A /* ZFQueryInViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFQueryInViewCell.h; sourceTree = "<group>"; };
+		845CE15525BD5EC4006A4F8A /* ZFQueryInViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFQueryInViewCell.m; sourceTree = "<group>"; };
+		845CE15625BD5EC4006A4F8A /* ZFQueryInViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFQueryInViewCell.xib; sourceTree = "<group>"; };
+		845CE15C25BD722F006A4F8A /* ZFBusinessInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFBusinessInfoViewController.h; sourceTree = "<group>"; };
+		845CE15D25BD722F006A4F8A /* ZFBusinessInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFBusinessInfoViewController.m; sourceTree = "<group>"; };
+		845CE16325BD725A006A4F8A /* ZFBusinessInfoViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFBusinessInfoViewCell.h; sourceTree = "<group>"; };
+		845CE16425BD725A006A4F8A /* ZFBusinessInfoViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFBusinessInfoViewCell.m; sourceTree = "<group>"; };
+		845CE16525BD725A006A4F8A /* ZFBusinessInfoViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFBusinessInfoViewCell.xib; sourceTree = "<group>"; };
+		845CE16E25BD7C70006A4F8A /* ZFBusinessRegistrationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFBusinessRegistrationViewController.h; sourceTree = "<group>"; };
+		845CE16F25BD7C70006A4F8A /* ZFBusinessRegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFBusinessRegistrationViewController.m; sourceTree = "<group>"; };
+		845CE17025BD7C70006A4F8A /* ZFBusinessRegistrationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFBusinessRegistrationViewController.xib; sourceTree = "<group>"; };
 		8461146425B97863009986F5 /* UIImage+Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
 		8461146525B97863009986F5 /* UIImage+Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
 		8461148425B997BF009986F5 /* ZFNavgationBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFNavgationBarView.h; sourceTree = "<group>"; };
@@ -153,6 +180,21 @@
 		84635E25256527150050FE15 /* ZFMineListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFMineListModel.m; sourceTree = "<group>"; };
 		84635E2A2565278E0050FE15 /* ZFMineUserInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFMineUserInfoModel.h; sourceTree = "<group>"; };
 		84635E2B2565278E0050FE15 /* ZFMineUserInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFMineUserInfoModel.m; sourceTree = "<group>"; };
+		8464BF2425BC715B007E9519 /* ZFContactUsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFContactUsViewController.h; sourceTree = "<group>"; };
+		8464BF2525BC715B007E9519 /* ZFContactUsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFContactUsViewController.m; sourceTree = "<group>"; };
+		8464BF2B25BC724D007E9519 /* ZFContactUsViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFContactUsViewCell.h; sourceTree = "<group>"; };
+		8464BF2C25BC724D007E9519 /* ZFContactUsViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFContactUsViewCell.m; sourceTree = "<group>"; };
+		8464BF2D25BC724D007E9519 /* ZFContactUsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFContactUsViewCell.xib; sourceTree = "<group>"; };
+		8464BF5025BC9DA9007E9519 /* ZFChangePwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFChangePwdViewController.h; sourceTree = "<group>"; };
+		8464BF5125BC9DA9007E9519 /* ZFChangePwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFChangePwdViewController.m; sourceTree = "<group>"; };
+		8464BF5225BC9DA9007E9519 /* ZFChangePwdViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFChangePwdViewController.xib; sourceTree = "<group>"; };
+		8464BF5825BCA1FB007E9519 /* ZFFeedBackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFFeedBackViewController.h; sourceTree = "<group>"; };
+		8464BF5925BCA1FB007E9519 /* ZFFeedBackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFFeedBackViewController.m; sourceTree = "<group>"; };
+		8464BF5A25BCA1FB007E9519 /* ZFFeedBackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFFeedBackViewController.xib; sourceTree = "<group>"; };
+		8464BF7C25BD233D007E9519 /* ZFQueryInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFQueryInViewController.h; sourceTree = "<group>"; };
+		8464BF7D25BD233D007E9519 /* ZFQueryInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFQueryInViewController.m; sourceTree = "<group>"; };
+		8464BF8225BD265C007E9519 /* ZFQueryInListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFQueryInListViewController.h; sourceTree = "<group>"; };
+		8464BF8325BD265C007E9519 /* ZFQueryInListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFQueryInListViewController.m; sourceTree = "<group>"; };
 		84922159255D701800C0669D /* ZFZG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFZG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8492215C255D701800C0669D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8492215D255D701800C0669D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -251,6 +293,15 @@
 				846114C925BA7FC7009986F5 /* View */,
 				1A62933E25613285007C638C /* ZFHomeViewController.h */,
 				1A62933F25613285007C638C /* ZFHomeViewController.m */,
+				8464BF7C25BD233D007E9519 /* ZFQueryInViewController.h */,
+				8464BF7D25BD233D007E9519 /* ZFQueryInViewController.m */,
+				8464BF8225BD265C007E9519 /* ZFQueryInListViewController.h */,
+				8464BF8325BD265C007E9519 /* ZFQueryInListViewController.m */,
+				845CE15C25BD722F006A4F8A /* ZFBusinessInfoViewController.h */,
+				845CE15D25BD722F006A4F8A /* ZFBusinessInfoViewController.m */,
+				845CE16E25BD7C70006A4F8A /* ZFBusinessRegistrationViewController.h */,
+				845CE16F25BD7C70006A4F8A /* ZFBusinessRegistrationViewController.m */,
+				845CE17025BD7C70006A4F8A /* ZFBusinessRegistrationViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -325,6 +376,26 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		845CE15325BD5E9F006A4F8A /* QueryIn */ = {
+			isa = PBXGroup;
+			children = (
+				845CE15425BD5EC4006A4F8A /* ZFQueryInViewCell.h */,
+				845CE15525BD5EC4006A4F8A /* ZFQueryInViewCell.m */,
+				845CE15625BD5EC4006A4F8A /* ZFQueryInViewCell.xib */,
+			);
+			path = QueryIn;
+			sourceTree = "<group>";
+		};
+		845CE16225BD7238006A4F8A /* BusinessInfo */ = {
+			isa = PBXGroup;
+			children = (
+				845CE16325BD725A006A4F8A /* ZFBusinessInfoViewCell.h */,
+				845CE16425BD725A006A4F8A /* ZFBusinessInfoViewCell.m */,
+				845CE16525BD725A006A4F8A /* ZFBusinessInfoViewCell.xib */,
+			);
+			path = BusinessInfo;
+			sourceTree = "<group>";
+		};
 		8461146325B97817009986F5 /* UIImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +408,8 @@
 		846114C925BA7FC7009986F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				845CE16225BD7238006A4F8A /* BusinessInfo */,
+				845CE15325BD5E9F006A4F8A /* QueryIn */,
 				846114CB25BA7FFD009986F5 /* ZFHomeOneViewCell.h */,
 				846114CC25BA7FFD009986F5 /* ZFHomeOneViewCell.m */,
 				846114CD25BA7FFD009986F5 /* ZFHomeOneViewCell.xib */,
@@ -452,6 +525,14 @@
 			children = (
 				1A62934425613293007C638C /* ZFMineViewController.h */,
 				1A62934525613293007C638C /* ZFMineViewController.m */,
+				8464BF2425BC715B007E9519 /* ZFContactUsViewController.h */,
+				8464BF2525BC715B007E9519 /* ZFContactUsViewController.m */,
+				8464BF5025BC9DA9007E9519 /* ZFChangePwdViewController.h */,
+				8464BF5125BC9DA9007E9519 /* ZFChangePwdViewController.m */,
+				8464BF5225BC9DA9007E9519 /* ZFChangePwdViewController.xib */,
+				8464BF5825BCA1FB007E9519 /* ZFFeedBackViewController.h */,
+				8464BF5925BCA1FB007E9519 /* ZFFeedBackViewController.m */,
+				8464BF5A25BCA1FB007E9519 /* ZFFeedBackViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -459,6 +540,7 @@
 		84635DFA256511ED0050FE15 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8464BF2A25BC7227007E9519 /* ContactUsCell */,
 				84635DFF2565124E0050FE15 /* ZFMineListViewCell.h */,
 				84635E002565124E0050FE15 /* ZFMineListViewCell.m */,
 				84635E012565124E0050FE15 /* ZFMineListViewCell.xib */,
@@ -484,6 +566,16 @@
 				84635E2B2565278E0050FE15 /* ZFMineUserInfoModel.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		8464BF2A25BC7227007E9519 /* ContactUsCell */ = {
+			isa = PBXGroup;
+			children = (
+				8464BF2B25BC724D007E9519 /* ZFContactUsViewCell.h */,
+				8464BF2C25BC724D007E9519 /* ZFContactUsViewCell.m */,
+				8464BF2D25BC724D007E9519 /* ZFContactUsViewCell.xib */,
+			);
+			path = ContactUsCell;
 			sourceTree = "<group>";
 		};
 		84922150255D701800C0669D = {
@@ -654,12 +746,18 @@
 				846114CF25BA7FFD009986F5 /* ZFHomeOneViewCell.xib in Resources */,
 				84635E0E256512640050FE15 /* ZFMineHeaderViewCell.xib in Resources */,
 				8492216C255D701A00C0669D /* LaunchScreen.storyboard in Resources */,
+				845CE15825BD5EC4006A4F8A /* ZFQueryInViewCell.xib in Resources */,
 				846114F125BB01AA009986F5 /* ZFMineListView.xib in Resources */,
+				8464BF5C25BCA1FB007E9519 /* ZFFeedBackViewController.xib in Resources */,
 				84922169255D701A00C0669D /* Assets.xcassets in Resources */,
 				846114E225BA8023009986F5 /* ZFHomeThreeViewCell.xib in Resources */,
 				84922167255D701800C0669D /* Main.storyboard in Resources */,
+				845CE16725BD725A006A4F8A /* ZFBusinessInfoViewCell.xib in Resources */,
 				84635E032565124E0050FE15 /* ZFMineListViewCell.xib in Resources */,
+				8464BF2F25BC724D007E9519 /* ZFContactUsViewCell.xib in Resources */,
+				8464BF5425BC9DA9007E9519 /* ZFChangePwdViewController.xib in Resources */,
 				846114DA25BA800D009986F5 /* ZFHomeTwoViewCell.xib in Resources */,
+				845CE17225BD7C70006A4F8A /* ZFBusinessRegistrationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,7 +825,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A62938225613B21007C638C /* CJButton.m in Sources */,
+				8464BF2625BC715B007E9519 /* ZFContactUsViewController.m in Sources */,
 				1A62936825613996007C638C /* NSString+CJTextSize.m in Sources */,
+				845CE15E25BD722F006A4F8A /* ZFBusinessInfoViewController.m in Sources */,
 				8461148625B997BF009986F5 /* ZFNavgationBarView.m in Sources */,
 				1A4FF8902560D2290074A52F /* MBProgressHUD+MJ.m in Sources */,
 				1A62934025613285007C638C /* ZFHomeViewController.m in Sources */,
@@ -741,6 +841,7 @@
 				846114D925BA800D009986F5 /* ZFHomeTwoViewCell.m in Sources */,
 				1A62936A25613996007C638C /* NSString+CJEncryption.m in Sources */,
 				8492215E255D701800C0669D /* AppDelegate.m in Sources */,
+				8464BF5B25BCA1FB007E9519 /* ZFFeedBackViewController.m in Sources */,
 				1A62936625613996007C638C /* NSString+CJEncoding.m in Sources */,
 				8492216F255D701A00C0669D /* main.m in Sources */,
 				1A62939825613B61007C638C /* CJTextView.m in Sources */,
@@ -748,18 +849,25 @@
 				846114CE25BA7FFD009986F5 /* ZFHomeOneViewCell.m in Sources */,
 				846114F725BB0296009986F5 /* ZFMineHeaderView.m in Sources */,
 				1A62936925613996007C638C /* NSString+CJCut.m in Sources */,
+				8464BF7E25BD233D007E9519 /* ZFQueryInViewController.m in Sources */,
 				846114EC25BAFC06009986F5 /* ZFMineListView.m in Sources */,
 				84635E2C2565278E0050FE15 /* ZFMineUserInfoModel.m in Sources */,
 				1A62939025613B35007C638C /* UIButton+CJStructure.m in Sources */,
+				845CE15725BD5EC4006A4F8A /* ZFQueryInViewCell.m in Sources */,
 				1A62936525613996007C638C /* NSString+CJAttributedString.m in Sources */,
 				1A62934625613293007C638C /* ZFMineViewController.m in Sources */,
 				846114E125BA8023009986F5 /* ZFHomeThreeViewCell.m in Sources */,
+				845CE17125BD7C70006A4F8A /* ZFBusinessRegistrationViewController.m in Sources */,
 				1A4FF8C825612F590074A52F /* ZFTabBarViewController.m in Sources */,
+				8464BF5325BC9DA9007E9519 /* ZFChangePwdViewController.m in Sources */,
+				8464BF2E25BC724D007E9519 /* ZFContactUsViewCell.m in Sources */,
 				1A62938825613B28007C638C /* CJBadgeButton.m in Sources */,
+				8464BF8425BD265C007E9519 /* ZFQueryInListViewController.m in Sources */,
 				1A4FF8CE25612F840074A52F /* ZFNavigationController.m in Sources */,
 				1A62936725613996007C638C /* NSString+CJValidate.m in Sources */,
 				1A4FF89C2560D2FF0074A52F /* UIButton+CJFixMultiClick.m in Sources */,
 				84635E26256527150050FE15 /* ZFMineListModel.m in Sources */,
+				845CE16625BD725A006A4F8A /* ZFBusinessInfoViewCell.m in Sources */,
 				84635E14256516260050FE15 /* ZFBaseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

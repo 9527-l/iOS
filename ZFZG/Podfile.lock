@@ -16,6 +16,7 @@ PODS:
     - AFNetworking/NSURLSession
   - InputKit (1.1.15)
   - IQKeyboardManager (6.5.5)
+  - JXCategoryView (1.5.8)
   - LBXPermission/Base (1.0.5)
   - LBXPermission/Camera (1.0.5)
   - LBXPermission/Photo (1.0.5)
@@ -55,6 +56,7 @@ DEPENDENCIES:
   - AFNetworking
   - InputKit (~> 1.1.15)
   - IQKeyboardManager
+  - JXCategoryView
   - LBXPermission/Base
   - LBXPermission/Camera
   - LBXPermission/Photo
@@ -82,6 +84,7 @@ SPEC REPOS:
     - AFNetworking
     - InputKit
     - IQKeyboardManager
+    - JXCategoryView
     - LBXPermission
     - LBXScan
     - Masonry
@@ -103,6 +106,7 @@ SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   InputKit: b82938c2c684d285909cac9de150739aa4814d10
   IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  JXCategoryView: 778a620f76070d6598fd8d7239991b8da8326170
   LBXPermission: e03503500e9540efb75d5f206b82a1a760fd0b26
   LBXScan: e51449f0832d1fe17da632af0d22adeb3cfa3543
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -120,6 +124,6 @@ SPEC CHECKSUMS:
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
   ZBarSDK: 4c1b5daeb7d6cc67dc9355e690af0230a661f6ec
 
-PODFILE CHECKSUM: 584a495ceaf6447e3835946cca50bb2ba2fc0c73
+PODFILE CHECKSUM: 1085be1bf0feecc2e71da91c7b42cbf1785de477
 
 COCOAPODS: 1.10.0

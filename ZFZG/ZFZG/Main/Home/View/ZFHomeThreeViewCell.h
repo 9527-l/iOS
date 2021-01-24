@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZFHomeThreeViewCell : UITableViewCell
-
+@property (nonatomic, copy) void (^btnDidClickBlock)(void);
 @end
 
 NS_ASSUME_NONNULL_END

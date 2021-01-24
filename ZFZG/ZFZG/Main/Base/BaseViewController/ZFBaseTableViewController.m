@@ -15,11 +15,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUpTableView];
     self.pageNo = 0;
     self.pageSize = 20;
     
 }
-
+- (void)setUpTableView{
+    
+}
 - (void)addRefreshHeaderView{
     WeakSelf(self)
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{

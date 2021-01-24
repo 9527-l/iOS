@@ -7,14 +7,27 @@
 
 #import "ZFMineHeaderView.h"
 
+@interface ZFMineHeaderView ()
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLab;
+@property (weak, nonatomic) IBOutlet UILabel *codeLab;
+@property (weak, nonatomic) IBOutlet UIImageView *arrowImageView;
+@property (weak, nonatomic) IBOutlet UIButton *btn;
+
+@end
+
 @implementation ZFMineHeaderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (instancetype)init{
+    if (self = [super init]) {
+        self = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
+    }
+    return  self;
 }
-*/
+- (IBAction)viewDidClick:(UIButton *)sender {
+    if (self.viewDidClickBlock) {
+        self.viewDidClickBlock();
+    }
+}
 
 @end

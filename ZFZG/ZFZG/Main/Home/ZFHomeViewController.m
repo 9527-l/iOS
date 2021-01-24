@@ -6,6 +6,9 @@
 //
 
 #import "ZFHomeViewController.h"
+#import "ZFQueryInViewController.h"
+#import "ZFBusinessRegistrationViewController.h"
+
 #import "ZFHomeOneViewCell.h"
 #import "ZFHomeTwoViewCell.h"
 #import "ZFHomeThreeViewCell.h"
@@ -17,10 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setUpTableView];
-    
-    
-    
 }
 
 - (void)setNavBarView{
@@ -31,6 +30,7 @@
     [btn setTitle:@"进件" forState:UIControlStateNormal];
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     btn.titleLabel.font = [UIFont boldSystemFontOfSize:32];
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     
     self.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
@@ -69,11 +69,24 @@
         cell1.indexPath = indexPath;
         cell = cell1;
     }else{
-        cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ZFHomeThreeViewCell class]) forIndexPath:indexPath];
+        ZFHomeThreeViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ZFHomeThreeViewCell class]) forIndexPath:indexPath];
+//        cell1.btnDidClickBlock = ^{
+//            
+//        };
+        cell = cell1;
     }
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row >=1 && indexPath.row <= 4) {
+        ZFQueryInViewController *vc = [[ZFQueryInViewController alloc] init];
+        [vc setSelectedIndex:indexPath.row - 1];
+        [self.navigationController pushViewController:vc animated:YES];
+        
+    }else if (indexPath.row == 5){
+        ZFBusinessRegistrationViewController *vc = [[ZFBusinessRegistrationViewController alloc] init];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
     NSLog(@"1111111111");
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
