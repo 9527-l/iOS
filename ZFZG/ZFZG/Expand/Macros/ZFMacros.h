@@ -9,6 +9,18 @@
 #define ZFMacros_h
 
 /*
+ ************* 项目环境配置 *************
+ */
+#define HOST_TYPE 0  //0开发  1灰度  2正式
+#if HOST_TYPE == 0
+#define kHOSTURL @"http://test-api.qtopay.net/"
+#elif HOST_TYPE == 1
+#define kHOSTURL @""
+#elif HOST_TYPE == 2
+#define kHOSTURL @"https://api.qtopay.net/"
+#endif
+
+/*
  弱引用/强引用
  */
 #define WeakSelf(type)    __weak typeof(type) weak##type = type;

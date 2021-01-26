@@ -19,10 +19,28 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     ZFTabBarViewController *vc = [[ZFTabBarViewController alloc] init];
-    self.window.rootViewController = [[ZFNavigationController alloc] initWithRootViewControllerNoWrapping:vc];;
+    ZFNavigationController *rootVC = [[ZFNavigationController alloc] initWithRootViewControllerNoWrapping:vc];
+    self.window.rootViewController = rootVC;
     [self.window makeKeyAndVisible];
     
     [[IQKeyboardManager sharedManager] setEnable:YES];
+    
+    id token = [ZFSaveValueTool getDefaults:auth_token];
+    if ([NSObject isBlank:token]) {
+        [ZFPresentLoginVcTool presentLoginVC:rootVC];
+    }else{
+        NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
+        [parameters setValue:[ZFSaveValueTool getToken] forKey:@"auth_token"];
+        [parameters setValue:[ZFSaveValueTool getAuthToken] forKey:@"refresh_token"];
+        [[BasicNetWorking sharedSessionManager] GET:auth parameters:parameters success:^(id responseObject) {
+                    
+                
+        } failure:^(NSError *error) {
+                    
+                
+        }];
+    }
+    
     return YES;
 }
 

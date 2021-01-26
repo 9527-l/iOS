@@ -68,6 +68,33 @@
 }
 
 - (IBAction)loginBtnDidClick:(UIButton *)sender {
+    if ([NSObject isBlank:self.phoneNumField.text] || [NSObject isBlank:self.pwdField.text]) {
+        [MBProgressHUD showToast:@"手机号或密码不能为空"];
+        return;
+    }
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
+    [parameters setValue:self.phoneNumField.text forKey:@"username"];
+    [parameters setValue:self.pwdField.text forKey:@"password"];
+    WeakSelf(self);
+    [[BasicNetWorking sharedSessionManager] POST:loginUrl parameters:parameters success:^(id responseObject) {
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        NSString *tokenStr = data[@"auth_token"];
+        if (data.count > 0 && ![NSObject isBlank:tokenStr]) {
+            NSString *refreshTokenStr = data[@"refresh_token"];
+            [ZFSaveValueTool saveDefaults:auth_token Value:tokenStr];
+            if (![NSObject isBlank:refreshTokenStr]) {
+                [ZFSaveValueTool saveDefaults:refresh_token Value:refreshTokenStr];
+            }
+            [weakself dismissViewControllerAnimated:YES completion:^{
+                            
+            }];
+        }else{
+            [MBProgressHUD showToast:@"获取token失败"];
+        }
+        
+    } failure:^(NSError *error) {
+            
+    }];
 }
 - (IBAction)forgotBtnDidClick:(UIButton *)sender {
     ZFForgotPwdGetCodeViewController *vc = [[ZFForgotPwdGetCodeViewController alloc] init];

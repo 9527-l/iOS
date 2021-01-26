@@ -22,16 +22,19 @@
 - (instancetype)initWithBaseURL:(NSString *)url {
     self = [super initWithBaseURL:[NSURL URLWithString:url]];
     if (self) {
+        // 请求序列化
+        self.requestSerializer = [AFJSONRequestSerializer serializer];
         // 请求超时设定
         self.requestSerializer.timeoutInterval = 30;
         // 请求头设定
-        [self.requestSerializer setValue:@"application/x-www-form-urlencoded; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-//        [self.requestSerializer setValue:@"2" forHTTPHeaderField:@"interface_version"];
-        //    上传普通的格式
-        self.requestSerializer = [AFHTTPRequestSerializer serializer];
-        //    收到数据的格式(data)  注意 ：不加这句会报错Request failed: unacceptable content-type: text/plain”错误，因为我们要获取text/plain类型数据
-        self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", nil];
-        
+        [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+        [self.requestSerializer setValue:@"xmlhttprequest" forHTTPHeaderField:@"X-Requested-With"];
+        [self.requestSerializer setValue:@"application/json,text/javascript" forHTTPHeaderField:@"accept"];
+        if (![NSObject isBlank:[ZFSaveValueTool getToken]]) {
+            [self.requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@",[ZFSaveValueTool getToken]] forHTTPHeaderField:@"Authorization"];
+        }
+
+        // 响应序列化
         self.responseSerializer = [AFJSONResponseSerializer serializer];
         self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/html", nil];
         // 安全策略 - 无条件信任
@@ -44,31 +47,45 @@
 
 - (void)GET:(NSString *)urlString parameters:(id)parameters success:(void (^) (id responseObject))success failure:(void (^) (NSError *error))failure
 {
-    [MBProgressHUD showMessage:@"拼命加载中..."];
     [self GET:urlString parameters:parameters headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (success) {
             success(responseObject);
         }
-        [MBProgressHUD hideHUD];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
             failure(error);
         }
-        [MBProgressHUD hideHUD];
     }];
 }
 
 - (void)POST:(NSString *)urlString parameters:(id)parameters success:(void (^)(id responseObject))success failure:(void (^) (NSError *error))failure
 {
-    [MBProgressHUD showMessage:@"拼命加载中..."];
+    
     [self POST:urlString parameters:parameters headers:nil progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
-        if (success ) {
-            success(responseObject);
+        if ([responseObject isKindOfClass:[NSDictionary class]]) {
+            BOOL successValue = [responseObject[@"success"] boolValue];
+            if (successValue) {
+                if (success) {
+                    success(responseObject);
+                }
+            }else{
+                [MBProgressHUD showToast:responseObject[@"message"]];
+                if (failure) {
+                    NSString *domain = @"com.MyCompany.MyApplication.ErrorDomain";
+                    NSString *desc = responseObject[@"message"];
+                    NSDictionary *userInfo = @{NSLocalizedDescriptionKey : desc };
+                    NSError *error = [NSError errorWithDomain:domain code:-101 userInfo:userInfo];
+                    failure(error);
+                }
+            }
         }
-        [MBProgressHUD hideHUD];
+        
+
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        [MBProgressHUD hideHUD];
-        [MBProgressHUD showToast:error.userInfo[@"msg"]];
+        if (error.code == -1001) {
+            [MBProgressHUD showToast:@"请求超时，请稍后重试！"];
+        }
+        
         if (failure) {
             failure(error);
         }
@@ -85,7 +102,6 @@
         [MBProgressHUD showError:[NSString stringWithFormat:@"%@为空",imageArray]];
         return;
     }
-    [MBProgressHUD showMessage:@"拼命加载中..."];
     [self POST:urlString parameters:parameters headers:nil constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         for (int i = 0; i < imageArray.count; i++) {
         NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
@@ -101,12 +117,10 @@
         if (successs) {
             successs(responseObject);
         }
-        [MBProgressHUD hideHUD];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         if (failure) {
             failure(error);
         }
-        [MBProgressHUD hideHUD];
     }];
 }
 

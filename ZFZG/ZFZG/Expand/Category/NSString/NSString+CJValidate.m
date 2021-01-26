@@ -18,15 +18,8 @@
 //}
 
 ///判断自己是否为空
-- (BOOL)cj_isBlank {
-    if ([self isKindOfClass:[NSNull class]]) {
-        return YES;
-    }
-    if (self.length == 0) {
-        return YES;
-    }
-    return NO;
-}
+//- (BOOL)cj_isBlank {
+//}
 
 
 #pragma mark - 数字、字母、整型、浮点型的判断

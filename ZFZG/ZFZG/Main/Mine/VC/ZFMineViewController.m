@@ -133,14 +133,8 @@ typedef enum : NSUInteger {
             break;
         case ExitClickEvent:
         {
-            
-            ZFLoginViewController *vc = [[ZFLoginViewController alloc] init];
-            RTContainerNavigationController *navVC = [[RTContainerNavigationController alloc] initWithRootViewController:vc];
-            RTRootNavigationController *rootVC = [[RTRootNavigationController alloc] initWithRootViewControllerNoWrapping:navVC];
-            rootVC.modalPresentationStyle = UIModalPresentationFullScreen;
-            [self presentViewController:rootVC animated:YES completion:^{
-                            
-            }];
+            [ZFPresentLoginVcTool presentLoginVC:self];
+            [ZFSaveValueTool userLoginOut];
         }
             break;
         default:

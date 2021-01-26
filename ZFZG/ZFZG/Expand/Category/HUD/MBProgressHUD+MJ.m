@@ -70,8 +70,10 @@
 + (void)showToast:(NSString *)message{
     MBProgressHUD *hud = [self showMessage:message];
     hud.mode = MBProgressHUDModeText;
+//    hud.tintColor = [UIColor whiteColor];
+    hud.label.textColor = [UIColor whiteColor];
     hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
-    hud.bezelView.backgroundColor = CJColorFromRGBA(0, 0, 0, 0.3);
+    hud.bezelView.backgroundColor = CJColorFromRGBA(0, 0, 0, 0.6);
     [hud hideAnimated:YES afterDelay:2];
 }
 + (void)hideHUDForView:(UIView *)view

@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, CJAreaType) {
 //- (BOOL)cj_isEmpty;
 
 ///判断自己是否为空
-- (BOOL)cj_isBlank;
+//- (BOOL)cj_isBlank;
 
 
 

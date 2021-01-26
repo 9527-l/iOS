@@ -31,7 +31,7 @@
     self.sureBtn.layer.masksToBounds = YES;
 }
 - (IBAction)codeBtnDidClick:(UIButton *)sender {
-    if ([self.phoneField.text cj_isBlank]) {
+    if ([NSObject isBlank:self.phoneField.text]) {
         [MBProgressHUD showToast:@"请输入手机号"];
         return;
     }
@@ -39,7 +39,7 @@
     [self countDown];
 }
 - (IBAction)sureBtnDidClick:(UIButton *)sender {
-    if ([self.phoneField.text cj_isBlank] || [self.codeField.text cj_isBlank]) {
+    if ([NSObject isBlank:self.phoneField.text] || [NSObject isBlank:self.codeField.text]) {
         [MBProgressHUD showToast:@"请输入手机号或验证码"];
         return;
     }
