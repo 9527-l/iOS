@@ -15,12 +15,12 @@
     static BasicNetWorking *manager = nil;
     static dispatch_once_t pred;
     dispatch_once(&pred, ^{
-        manager = [[self alloc] initWithBaseURL:nil];
+        manager = [[self alloc] initWithBaseURL:kHOSTURL];
     });
     return manager;
 }
-- (instancetype)initWithBaseURL:(NSURL *)url {
-    self = [super initWithBaseURL:url];
+- (instancetype)initWithBaseURL:(NSString *)url {
+    self = [super initWithBaseURL:[NSURL URLWithString:url]];
     if (self) {
         // 请求超时设定
         self.requestSerializer.timeoutInterval = 30;
@@ -67,10 +67,12 @@
         }
         [MBProgressHUD hideHUD];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        [MBProgressHUD hideHUD];
+        [MBProgressHUD showToast:error.userInfo[@"msg"]];
         if (failure) {
             failure(error);
         }
-        [MBProgressHUD hideHUD];
+        
     }];
 }
 - (void)uploadMorePost:(NSString *)urlString parameters:(id)parameters UploadImage:(NSArray *)imageArray ImageKey:(NSArray *)imageKeys success:(void (^)(id responseObject))successs failure:(void (^)(NSError *error))failure

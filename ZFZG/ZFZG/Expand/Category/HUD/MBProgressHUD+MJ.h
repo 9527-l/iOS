@@ -19,7 +19,7 @@
 + (void)showAlert:(NSString *)alert;
 
 + (MBProgressHUD *)showMessage:(NSString *)message;
-
++ (void)showToast:(NSString *)message;
 + (void)hideHUDForView:(UIView *)view;
 + (void)hideHUD;
 

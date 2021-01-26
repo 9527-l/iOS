@@ -6,7 +6,6 @@
 //
 
 #import "ZFBaseTableViewController.h"
-#import "ZFNavgationBarView.h"
 @interface ZFBaseTableViewController ()
 
 @end

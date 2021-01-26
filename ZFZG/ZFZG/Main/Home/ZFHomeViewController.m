@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadData];
 }
 
 - (void)setNavBarView{
@@ -50,10 +51,9 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor cjColorAlphaWithHexString:@"f2f2f2"];
 }
-- (void)createData{
-    
+- (void)loadData{
+//    [BasicNetWorking sharedSessionManager] get
 }
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }

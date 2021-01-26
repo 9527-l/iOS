@@ -42,7 +42,6 @@
 		845CE19225BDD6A8006A4F8A /* ZFForgotPwdInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 845CE19025BDD6A8006A4F8A /* ZFForgotPwdInputViewController.m */; };
 		845CE19325BDD6A8006A4F8A /* ZFForgotPwdInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 845CE19125BDD6A8006A4F8A /* ZFForgotPwdInputViewController.xib */; };
 		8461146625B97863009986F5 /* UIImage+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461146525B97863009986F5 /* UIImage+Scale.m */; };
-		8461148625B997BF009986F5 /* ZFNavgationBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8461148525B997BF009986F5 /* ZFNavgationBarView.m */; };
 		846114CE25BA7FFD009986F5 /* ZFHomeOneViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846114CC25BA7FFD009986F5 /* ZFHomeOneViewCell.m */; };
 		846114CF25BA7FFD009986F5 /* ZFHomeOneViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 846114CD25BA7FFD009986F5 /* ZFHomeOneViewCell.xib */; };
 		846114D925BA800D009986F5 /* ZFHomeTwoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 846114D725BA800D009986F5 /* ZFHomeTwoViewCell.m */; };
@@ -70,6 +69,7 @@
 		8464BF5C25BCA1FB007E9519 /* ZFFeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8464BF5A25BCA1FB007E9519 /* ZFFeedBackViewController.xib */; };
 		8464BF7E25BD233D007E9519 /* ZFQueryInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464BF7D25BD233D007E9519 /* ZFQueryInViewController.m */; };
 		8464BF8425BD265C007E9519 /* ZFQueryInListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8464BF8325BD265C007E9519 /* ZFQueryInListViewController.m */; };
+		8485EBA725C0368F003F6396 /* ZFAPIAdress.m in Sources */ = {isa = PBXBuildFile; fileRef = 8485EBA625C0368F003F6396 /* ZFAPIAdress.m */; };
 		8492215E255D701800C0669D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8492215D255D701800C0669D /* AppDelegate.m */; };
 		84922167255D701800C0669D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84922165255D701800C0669D /* Main.storyboard */; };
 		84922169255D701A00C0669D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84922168255D701A00C0669D /* Assets.xcassets */; };
@@ -162,8 +162,6 @@
 		845CE19125BDD6A8006A4F8A /* ZFForgotPwdInputViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFForgotPwdInputViewController.xib; sourceTree = "<group>"; };
 		8461146425B97863009986F5 /* UIImage+Scale.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Scale.h"; sourceTree = "<group>"; };
 		8461146525B97863009986F5 /* UIImage+Scale.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Scale.m"; sourceTree = "<group>"; };
-		8461148425B997BF009986F5 /* ZFNavgationBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFNavgationBarView.h; sourceTree = "<group>"; };
-		8461148525B997BF009986F5 /* ZFNavgationBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFNavgationBarView.m; sourceTree = "<group>"; };
 		846114CB25BA7FFD009986F5 /* ZFHomeOneViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFHomeOneViewCell.h; sourceTree = "<group>"; };
 		846114CC25BA7FFD009986F5 /* ZFHomeOneViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFHomeOneViewCell.m; sourceTree = "<group>"; };
 		846114CD25BA7FFD009986F5 /* ZFHomeOneViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZFHomeOneViewCell.xib; sourceTree = "<group>"; };
@@ -210,6 +208,8 @@
 		8464BF7D25BD233D007E9519 /* ZFQueryInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFQueryInViewController.m; sourceTree = "<group>"; };
 		8464BF8225BD265C007E9519 /* ZFQueryInListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFQueryInListViewController.h; sourceTree = "<group>"; };
 		8464BF8325BD265C007E9519 /* ZFQueryInListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFQueryInListViewController.m; sourceTree = "<group>"; };
+		8485EBA525C0368F003F6396 /* ZFAPIAdress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFAPIAdress.h; sourceTree = "<group>"; };
+		8485EBA625C0368F003F6396 /* ZFAPIAdress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFAPIAdress.m; sourceTree = "<group>"; };
 		84922159255D701800C0669D /* ZFZG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFZG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8492215C255D701800C0669D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8492215D255D701800C0669D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -272,6 +272,8 @@
 			children = (
 				1A4FF8942560D2340074A52F /* BasicNetWorking.h */,
 				1A4FF8952560D2340074A52F /* BasicNetWorking.m */,
+				8485EBA525C0368F003F6396 /* ZFAPIAdress.h */,
+				8485EBA625C0368F003F6396 /* ZFAPIAdress.m */,
 			);
 			path = NetWorks;
 			sourceTree = "<group>";
@@ -546,8 +548,6 @@
 			isa = PBXGroup;
 			children = (
 				1A4FF8C525612E840074A52F /* BaseViewController */,
-				8461148425B997BF009986F5 /* ZFNavgationBarView.h */,
-				8461148525B997BF009986F5 /* ZFNavgationBarView.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -864,7 +864,6 @@
 				1A62936825613996007C638C /* NSString+CJTextSize.m in Sources */,
 				845CE15E25BD722F006A4F8A /* ZFBusinessInfoViewController.m in Sources */,
 				845CE17D25BDB33A006A4F8A /* ZFLoginViewController.m in Sources */,
-				8461148625B997BF009986F5 /* ZFNavgationBarView.m in Sources */,
 				1A4FF8902560D2290074A52F /* MBProgressHUD+MJ.m in Sources */,
 				1A62934025613285007C638C /* ZFHomeViewController.m in Sources */,
 				845CE18A25BDD689006A4F8A /* ZFForgotPwdGetCodeViewController.m in Sources */,
@@ -880,6 +879,7 @@
 				8492215E255D701800C0669D /* AppDelegate.m in Sources */,
 				8464BF5B25BCA1FB007E9519 /* ZFFeedBackViewController.m in Sources */,
 				1A62936625613996007C638C /* NSString+CJEncoding.m in Sources */,
+				8485EBA725C0368F003F6396 /* ZFAPIAdress.m in Sources */,
 				8492216F255D701A00C0669D /* main.m in Sources */,
 				1A62939825613B61007C638C /* CJTextView.m in Sources */,
 				84635E0D256512640050FE15 /* ZFMineHeaderViewCell.m in Sources */,

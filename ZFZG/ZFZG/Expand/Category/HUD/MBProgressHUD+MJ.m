@@ -67,7 +67,13 @@
 {
     return [self showMessage:message toView:nil];
 }
-
++ (void)showToast:(NSString *)message{
+    MBProgressHUD *hud = [self showMessage:message];
+    hud.mode = MBProgressHUDModeText;
+    hud.bezelView.style = MBProgressHUDBackgroundStyleSolidColor;
+    hud.bezelView.backgroundColor = CJColorFromRGBA(0, 0, 0, 0.3);
+    [hud hideAnimated:YES afterDelay:2];
+}
 + (void)hideHUDForView:(UIView *)view
 {
     [self hideHUDForView:view animated:YES];

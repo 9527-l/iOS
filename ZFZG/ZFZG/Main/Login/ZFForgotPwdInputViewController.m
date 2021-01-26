@@ -8,6 +8,9 @@
 #import "ZFForgotPwdInputViewController.h"
 
 @interface ZFForgotPwdInputViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *pwd1;
+@property (weak, nonatomic) IBOutlet UITextField *pwd2;
+@property (weak, nonatomic) IBOutlet UIButton *sureBtn;
 
 @end
 
@@ -15,17 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-}
+    self.sureBtn.layer.cornerRadius = 8;
+    self.sureBtn.layer.masksToBounds = YES;
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
-*/
+-(void)setNavBarView{
+    [super setNavBarView];
+    self.navigationItem.title = @"忘记密码";
+}
+- (IBAction)sureBtnDidClick:(UIButton *)sender {
+    
+}
 
 @end

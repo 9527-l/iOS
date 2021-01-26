@@ -6,6 +6,7 @@
 //
 
 #import "ZFLoginViewController.h"
+#import "ZFForgotPwdGetCodeViewController.h"
 
 @interface ZFLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumField;
@@ -69,6 +70,8 @@
 - (IBAction)loginBtnDidClick:(UIButton *)sender {
 }
 - (IBAction)forgotBtnDidClick:(UIButton *)sender {
+    ZFForgotPwdGetCodeViewController *vc = [[ZFForgotPwdGetCodeViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

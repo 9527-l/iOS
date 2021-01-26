@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZFForgotPwdInputViewController : ZFBaseViewController
-
+@property (strong, nonatomic) NSString *phoneNum;
 @end
 
 NS_ASSUME_NONNULL_END

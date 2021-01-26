@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZFBaseViewController : UIViewController
 
+/// 啥也没干，子类自由实现
 - (void)loadData;
 
 /// 基类里设置导航栏字体颜色，隐藏底部黑线，设置导航栏背景色
