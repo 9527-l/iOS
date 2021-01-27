@@ -84,6 +84,8 @@
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (error.code == -1001) {
             [MBProgressHUD showToast:@"请求超时，请稍后重试！"];
+        }else{
+            [MBProgressHUD showToast:@"网络请求失败，请稍后重试！"];
         }
         
         if (failure) {

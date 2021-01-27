@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZFHomeTwoViewCell : UITableViewCell
 @property (nonatomic, strong) NSIndexPath *indexPath;
+@property (weak, nonatomic) IBOutlet UILabel *countLab;
 @end
 
 NS_ASSUME_NONNULL_END

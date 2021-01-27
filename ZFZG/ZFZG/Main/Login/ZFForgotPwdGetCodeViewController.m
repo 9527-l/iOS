@@ -35,18 +35,48 @@
         [MBProgressHUD showToast:@"请输入手机号"];
         return;
     }
-//        请求接口，成功则计时，失败则提示
-    [self countDown];
+    //        请求接口，成功则计时，失败则提示
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
+    [parameters setValue:self.phoneField.text forKey:@"mobile"];
+    WeakSelf(self)
+    [[BasicNetWorking sharedSessionManager] POST:smscode parameters:parameters success:^(id responseObject) {
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            [MBProgressHUD showToast:[NSString stringWithFormat:@"%@", data[@"msg"]]];
+            [weakself countDown];
+        }
+    } failure:^(NSError *error) {
+            
+    }];
 }
 - (IBAction)sureBtnDidClick:(UIButton *)sender {
     if ([NSObject isBlank:self.phoneField.text] || [NSObject isBlank:self.codeField.text]) {
         [MBProgressHUD showToast:@"请输入手机号或验证码"];
         return;
     }
-    ZFForgotPwdInputViewController *vc = [[ZFForgotPwdInputViewController alloc] init];
-    vc.phoneNum = self.phoneField.text;
-    [self.navigationController pushViewController:vc animated:YES];
-}
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
+    [parameters setValue:self.phoneField.text forKey:@"mobile"];
+    [parameters setValue:self.codeField.text forKey:@"code"];
+    WeakSelf(self)
+    [[BasicNetWorking sharedSessionManager] POST:passwordMobile parameters:parameters success:^(id responseObject) {
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            NSString *resetUrl = [NSString stringWithFormat:@"%@", data[@"reset_url"]];
+            if (![NSObject isBlank:resetUrl]) {
+                ZFForgotPwdInputViewController *vc = [[ZFForgotPwdInputViewController alloc] init];
+                vc.phoneNum = self.phoneField.text;
+                vc.resetUrl = resetUrl;
+                [weakself.navigationController pushViewController:vc animated:YES];
+
+            }
+            
+        }
+    } failure:^(NSError *error) {
+            
+    }];
+
+    
+    }
 
 - (void)countDown {
     __block int timeout = 59; //倒计时时间

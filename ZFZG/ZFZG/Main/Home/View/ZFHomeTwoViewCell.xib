@@ -34,8 +34,8 @@
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHi-i6-LyT">
-                                <rect key="frame" x="260.5" y="38" width="39.5" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SHi-i6-LyT">
+                                <rect key="frame" x="290" y="38" width="10" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -72,7 +72,7 @@
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="bgView" destination="gcc-CN-6qf" id="XDf-lk-thc"/>
-                <outlet property="countLab" destination="SHi-i6-LyT" id="whV-4d-goY"/>
+                <outlet property="countLab" destination="SHi-i6-LyT" id="AWe-jC-g39"/>
                 <outlet property="iconImageView" destination="mDU-KN-m26" id="Z5Q-qe-mcY"/>
                 <outlet property="titleLab" destination="m57-ze-7YI" id="dHG-0W-oNt"/>
             </connections>

@@ -10,6 +10,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZFHomeOneViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *mCountLab;
+@property (weak, nonatomic) IBOutlet UILabel *nCountLab;
+@property (weak, nonatomic) IBOutlet UILabel *yCountLab;
 
 @end
 

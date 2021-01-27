@@ -27,5 +27,23 @@
     [super setNavBarView];
     self.navigationItem.title = @"修改密码";
 }
+- (IBAction)sureBtnDidClick:(UIButton *)sender {
+    if ([NSObject isBlank:self.oldPwdField.text] || [NSObject isBlank:self.pwdField.text] || [NSObject isBlank:self.againPwdField.text]) {
+        [MBProgressHUD showToast:@"请输入密码"];
+        return;
+    }
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
+    [parameters setValue:self.oldPwdField.text forKey:@"old_password"];
+    [parameters setValue:self.pwdField.text forKey:@"password"];
+    [parameters setValue:self.againPwdField.text forKey:@"password_confirmation"];
+    WeakSelf(self);
+    [[BasicNetWorking sharedSessionManager] POST:userChangePwd parameters:parameters success:^(id responseObject) {
+        [MBProgressHUD showToast:@"密码修改成功，请重新登录"];
+        [weakself.navigationController popViewControllerAnimated:NO];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"ChangePwd" object:nil];
+    } failure:^(NSError *error) {
+        
+    }];
+}
 
 @end

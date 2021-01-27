@@ -37,6 +37,7 @@ typedef enum : NSUInteger {
     self.view.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self setUpUI];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLoginOut) name:@"ChangePwd" object:nil];
     
 }
 - (void)viewDidAppear:(BOOL)animated{
@@ -133,16 +134,22 @@ typedef enum : NSUInteger {
             break;
         case ExitClickEvent:
         {
-            [ZFPresentLoginVcTool presentLoginVC:self];
-            [ZFSaveValueTool userLoginOut];
+            [self userLoginOut];
         }
             break;
         default:
             break;
     }
-    NSLog(@"点击事件是%zd", type);
 }
+- (void)userLoginOut{
+    [[BasicNetWorking sharedSessionManager] POST:logout parameters:nil success:^(id responseObject) {
+        [ZFPresentLoginVcTool presentLoginVC:self];
+        [ZFSaveValueTool userLoginOut];
+    } failure:^(NSError *error) {
+            
+    }];
 
+}
 - (ZFMineListView *)createListViewWithImageName:(NSString *)iconName title:(NSString *)title showArrow:(BOOL)showArrow event:(EventType)event{
     ZFMineListView *view = [[ZFMineListView alloc] init];
     WeakSelf(self);

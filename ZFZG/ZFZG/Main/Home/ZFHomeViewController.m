@@ -14,15 +14,26 @@
 #import "ZFHomeThreeViewCell.h"
 @interface ZFHomeViewController ()
 
+@property (strong, nonatomic) UILabel *mGrowthLab;
+@property (strong, nonatomic) UILabel *nGrowthLab;
+@property (strong, nonatomic) UILabel *yGrowthLab;
+
+@property (strong, nonatomic) UILabel *lab1;
+@property (strong, nonatomic) UILabel *lab2;
+@property (strong, nonatomic) UILabel *lab3;
+@property (strong, nonatomic) UILabel *lab4;
+
 @end
 
 @implementation ZFHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self loadData];
 }
-
 - (void)setNavBarView{
     [super setNavBarView];
     self.navigationItem.title = @"";
@@ -52,7 +63,89 @@
     self.tableView.backgroundColor = [UIColor cjColorAlphaWithHexString:@"f2f2f2"];
 }
 - (void)loadData{
-//    [BasicNetWorking sharedSessionManager] get
+    WeakSelf(self)
+//    status:签约状态 0=待提交 1=成功 2=失败 3=待审核
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
+    [parameters setValue:@"0" forKey:@"status"];
+    [[BasicNetWorking sharedSessionManager] GET:merchantNum parameters:parameters success:^(id responseObject) {
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            weakself.lab4.text = data[@"count"] ? [NSString stringWithFormat:@"%@",  data[@"count"]] : @"0";
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+    
+    [parameters setValue:@"1" forKey:@"status"];
+    [[BasicNetWorking sharedSessionManager] GET:merchantNum parameters:parameters success:^(id responseObject) {
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            weakself.lab1.text = data[@"count"] ? [NSString stringWithFormat:@"%@",  data[@"count"]] : @"0";
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+    
+    [parameters setValue:@"2" forKey:@"status"];
+    [[BasicNetWorking sharedSessionManager] GET:merchantNum parameters:parameters success:^(id responseObject) {
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            weakself.lab3.text = data[@"count"] ? [NSString stringWithFormat:@"%@",  data[@"count"]] : @"0";
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+    
+    [parameters setValue:@"3" forKey:@"status"];
+    [[BasicNetWorking sharedSessionManager] GET:merchantNum parameters:parameters success:^(id responseObject) {
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            weakself.lab2.text = data[@"count"] ? [NSString stringWithFormat:@"%@",  data[@"count"]] : @"0";
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+    
+    [parameters setValue:@"1" forKey:@"status"];
+    
+//    今天
+    [parameters setValue:[[NSDate date] formatYMDWithSeparate:@"-"] forKey:@"start_date"];
+    [parameters setValue:[[NSDate date] formatYMDWithSeparate:@"-"] forKey:@"end_date"];
+    [[BasicNetWorking sharedSessionManager] GET:merchantNum parameters:parameters success:^(id responseObject) {
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            weakself.nGrowthLab.text = data[@"count"] ? [NSString stringWithFormat:@"%@",  data[@"count"]] : @"0";
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+//    昨天
+    [parameters setValue:[[NSDate dateYesterday] formatYMDWithSeparate:@"-"] forKey:@"start_date"];
+    [parameters setValue:[[NSDate dateYesterday] formatYMDWithSeparate:@"-"] forKey:@"end_date"];
+    [[BasicNetWorking sharedSessionManager] GET:merchantNum parameters:parameters success:^(id responseObject) {
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            weakself.yGrowthLab.text = data[@"count"] ? [NSString stringWithFormat:@"%@",  data[@"count"]] : @"0";
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+//    本月
+    NSString *endData = [[NSDate date] formatYMDWithSeparate:@"-"];
+    NSString *startDate = [NSString stringWithFormat:@"%lu-%02lu-01", [NSDate date].year, [NSDate date].month];
+    [parameters setValue:startDate forKey:@"start_date"];
+    [parameters setValue:endData forKey:@"end_date"];
+    [[BasicNetWorking sharedSessionManager] GET:merchantNum parameters:parameters success:^(id responseObject) {
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            weakself.mGrowthLab.text = data[@"count"] ? [NSString stringWithFormat:@"%@",  data[@"count"]] : @"0";
+        }
+    } failure:^(NSError *error) {
+        
+    }];
+
+
+
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
@@ -63,10 +156,30 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     if (indexPath.row == 0) {
-        cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ZFHomeOneViewCell class]) forIndexPath:indexPath];
+        ZFHomeOneViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ZFHomeOneViewCell class]) forIndexPath:indexPath];
+        self.mGrowthLab = cell1.mCountLab;
+        self.nGrowthLab = cell1.nCountLab;
+        self.yGrowthLab = cell1.yCountLab;
+        cell = cell1;
     }else if (indexPath.row <= 4){
         ZFHomeTwoViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ZFHomeTwoViewCell class]) forIndexPath:indexPath];
         cell1.indexPath = indexPath;
+        switch (indexPath.row) {
+            case 1:
+                self.lab1 = cell1.countLab;
+                break;
+            case 2:
+                self.lab2 = cell1.countLab;
+                break;
+            case 3:
+                self.lab3 = cell1.countLab;
+                break;
+            case 4:
+                self.lab4 = cell1.countLab;
+                break;
+            default:
+                break;
+        }
         cell = cell1;
     }else{
         ZFHomeThreeViewCell *cell1 = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ZFHomeThreeViewCell class]) forIndexPath:indexPath];
@@ -87,7 +200,6 @@
         ZFBusinessRegistrationViewController *vc = [[ZFBusinessRegistrationViewController alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
-    NSLog(@"1111111111");
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     CGFloat height = 0.0001;

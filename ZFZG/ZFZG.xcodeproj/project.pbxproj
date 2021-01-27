@@ -73,6 +73,9 @@
 		8485EBBA25C06F84003F6396 /* ZFPresentLoginVcTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8485EBB925C06F84003F6396 /* ZFPresentLoginVcTool.m */; };
 		8485EBC025C072B9003F6396 /* NSObject+ZFNull.m in Sources */ = {isa = PBXBuildFile; fileRef = 8485EBBF25C072B9003F6396 /* NSObject+ZFNull.m */; };
 		8485EBC625C0862F003F6396 /* ZFGetDataFromResponseTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8485EBC525C0862F003F6396 /* ZFGetDataFromResponseTool.m */; };
+		8485EBD025C11A8F003F6396 /* NSDate+Relation.m in Sources */ = {isa = PBXBuildFile; fileRef = 8485EBCA25C11A8E003F6396 /* NSDate+Relation.m */; };
+		8485EBD125C11A8F003F6396 /* NSDate+TLChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 8485EBCE25C11A8F003F6396 /* NSDate+TLChat.m */; };
+		8485EBD225C11A8F003F6396 /* NSDate+Extensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8485EBCF25C11A8F003F6396 /* NSDate+Extensions.m */; };
 		8492215E255D701800C0669D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8492215D255D701800C0669D /* AppDelegate.m */; };
 		84922167255D701800C0669D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84922165255D701800C0669D /* Main.storyboard */; };
 		84922169255D701A00C0669D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84922168255D701A00C0669D /* Assets.xcassets */; };
@@ -219,6 +222,12 @@
 		8485EBBF25C072B9003F6396 /* NSObject+ZFNull.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZFNull.m"; sourceTree = "<group>"; };
 		8485EBC425C0862F003F6396 /* ZFGetDataFromResponseTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFGetDataFromResponseTool.h; sourceTree = "<group>"; };
 		8485EBC525C0862F003F6396 /* ZFGetDataFromResponseTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFGetDataFromResponseTool.m; sourceTree = "<group>"; };
+		8485EBCA25C11A8E003F6396 /* NSDate+Relation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Relation.m"; sourceTree = "<group>"; };
+		8485EBCB25C11A8F003F6396 /* NSDate+Relation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Relation.h"; sourceTree = "<group>"; };
+		8485EBCC25C11A8F003F6396 /* NSDate+TLChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+TLChat.h"; sourceTree = "<group>"; };
+		8485EBCD25C11A8F003F6396 /* NSDate+Extensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extensions.h"; sourceTree = "<group>"; };
+		8485EBCE25C11A8F003F6396 /* NSDate+TLChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+TLChat.m"; sourceTree = "<group>"; };
+		8485EBCF25C11A8F003F6396 /* NSDate+Extensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extensions.m"; sourceTree = "<group>"; };
 		84922159255D701800C0669D /* ZFZG.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZFZG.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8492215C255D701800C0669D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8492215D255D701800C0669D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -375,6 +384,12 @@
 		1A62937825613A1A007C638C /* NSDate */ = {
 			isa = PBXGroup;
 			children = (
+				8485EBCD25C11A8F003F6396 /* NSDate+Extensions.h */,
+				8485EBCF25C11A8F003F6396 /* NSDate+Extensions.m */,
+				8485EBCB25C11A8F003F6396 /* NSDate+Relation.h */,
+				8485EBCA25C11A8E003F6396 /* NSDate+Relation.m */,
+				8485EBCC25C11A8F003F6396 /* NSDate+TLChat.h */,
+				8485EBCE25C11A8F003F6396 /* NSDate+TLChat.m */,
 				1A62937A25613A59007C638C /* CJDateOtherUtil.h */,
 				1A62937925613A59007C638C /* CJDateOtherUtil.m */,
 			);
@@ -888,8 +903,10 @@
 				1A62936825613996007C638C /* NSString+CJTextSize.m in Sources */,
 				845CE15E25BD722F006A4F8A /* ZFBusinessInfoViewController.m in Sources */,
 				845CE17D25BDB33A006A4F8A /* ZFLoginViewController.m in Sources */,
+				8485EBD225C11A8F003F6396 /* NSDate+Extensions.m in Sources */,
 				1A4FF8902560D2290074A52F /* MBProgressHUD+MJ.m in Sources */,
 				1A62934025613285007C638C /* ZFHomeViewController.m in Sources */,
+				8485EBD025C11A8F003F6396 /* NSDate+Relation.m in Sources */,
 				845CE18A25BDD689006A4F8A /* ZFForgotPwdGetCodeViewController.m in Sources */,
 				84635E022565124E0050FE15 /* ZFMineListViewCell.m in Sources */,
 				1A62937B25613A59007C638C /* CJDateOtherUtil.m in Sources */,
@@ -917,6 +934,7 @@
 				8485EBAE25C069FE003F6396 /* ZFSaveValueTool.m in Sources */,
 				845CE15725BD5EC4006A4F8A /* ZFQueryInViewCell.m in Sources */,
 				1A62936525613996007C638C /* NSString+CJAttributedString.m in Sources */,
+				8485EBD125C11A8F003F6396 /* NSDate+TLChat.m in Sources */,
 				1A62934625613293007C638C /* ZFMineViewController.m in Sources */,
 				846114E125BA8023009986F5 /* ZFHomeThreeViewCell.m in Sources */,
 				845CE17125BD7C70006A4F8A /* ZFBusinessRegistrationViewController.m in Sources */,

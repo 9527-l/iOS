@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZFForgotPwdInputViewController">
             <connections>
+                <outlet property="phoneNumLab" destination="wpw-yV-1Sq" id="PkI-me-4rH"/>
                 <outlet property="pwd1" destination="Bph-82-Ajx" id="hFb-HP-Yo1"/>
                 <outlet property="pwd2" destination="IfA-5y-fLf" id="NpU-cq-9ai"/>
                 <outlet property="sureBtn" destination="WCZ-pU-oZP" id="ahg-CJ-TYI"/>
