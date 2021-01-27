@@ -18,8 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addRefreshHeaderView;
 - (void)addRefreshfooterView;
+- (void)endRefresh;
 
-/// 增加页码，调用loadData
+/// 增加页码，调用loadData,一般不需要子类重写，如果有特殊要求可以重写这个方法
 - (void)loadMoreData;
 - (void)setUpTableView;
 

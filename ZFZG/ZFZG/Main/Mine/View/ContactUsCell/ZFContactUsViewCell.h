@@ -10,6 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZFContactUsViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *rightLab;
 @property (nonatomic, strong) NSIndexPath *indexPath;
 @end
 

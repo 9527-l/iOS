@@ -39,6 +39,9 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setImage:[UIImage imageNamed:@"navi_black_back"] forState:UIControlStateNormal];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    btn.frame = CGRectMake(-10, 0, 40, 40);
+    [btn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }
 

@@ -60,6 +60,12 @@
     [self.bottomBtn setTitle:bottomBtnTitle forState:UIControlStateNormal];
     [self.bottomBtn setTitleColor:bottomBtnTitleColor forState:UIControlStateNormal];
 }
+
+- (void)setModel:(ZFQueryInListModel *)model{
+    _model = model;
+    self.topLab.text = model.outer_mer_name;
+    self.bottomLab.text = model.updated_at;
+}
 - (IBAction)topBtnDidClick:(UIButton *)sender {
 }
 - (IBAction)bottomBtnDidClick:(UIButton *)sender {

@@ -10,6 +10,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZFMineHeaderView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *nameLab;
+
 @property (nonatomic, copy) void (^viewDidClickBlock)(void);
 @end
 

@@ -8,13 +8,15 @@
 #import "ZFContactUsViewController.h"
 #import "ZFContactUsViewCell.h"
 @interface ZFContactUsViewController ()
-
+@property (strong, nonatomic) UILabel *nameLab;
+@property (strong, nonatomic) UILabel *phoneLab;
 @end
 
 @implementation ZFContactUsViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self loadData];
 }
 
 - (void)setNavBarView{
@@ -35,7 +37,18 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor cjColorAlphaWithHexString:@"f2f2f2"];
 }
-
+- (void)loadData{
+    WeakSelf(self);
+    [[BasicNetWorking sharedSessionManager] GET:manageContacte parameters:nil success:^(id responseObject) {
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            weakself.phoneLab.text = data[@"phone"];
+            weakself.nameLab.text = data[@"name"];
+        }
+    } failure:^(NSError *error) {
+            
+    }];
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
 }
@@ -45,6 +58,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     ZFContactUsViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ZFContactUsViewCell class]) forIndexPath:indexPath];
     cell.indexPath = indexPath;
+    if (indexPath.section == 0) {
+        self.nameLab = cell.rightLab;
+    }else{
+        self.phoneLab = cell.rightLab;
+    }
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

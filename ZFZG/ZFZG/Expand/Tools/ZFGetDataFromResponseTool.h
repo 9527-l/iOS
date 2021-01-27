@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZFGetDataFromResponseTool : NSObject
 + (NSDictionary *)getData:(id)responseObject;
++ (NSArray *)getDataArr:(id)responseObject;
 @end
 
 NS_ASSUME_NONNULL_END

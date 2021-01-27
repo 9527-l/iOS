@@ -36,6 +36,15 @@
         [weakself loadMoreData];
     }];
 }
+- (void)endRefresh{
+    if ([self.tableView.mj_footer isRefreshing]) {
+        [self.tableView.mj_footer endRefreshing];
+    }
+    if ([self.tableView.mj_header isRefreshing]) {
+        [self.tableView.mj_header endRefreshing];
+    }
+}
+
 - (void)loadMoreData{
     self.pageNo ++;
     [self loadData];

@@ -83,6 +83,7 @@
 		8492216F255D701A00C0669D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8492216E255D701A00C0669D /* main.m */; };
 		84922179255D701A00C0669D /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84922178255D701A00C0669D /* ____Tests.m */; };
 		84922184255D701A00C0669D /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84922183255D701A00C0669D /* ____UITests.m */; };
+		84F0AB3825C1C19E002A669A /* ZFQueryInListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AB3725C1C19E002A669A /* ZFQueryInListModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -242,6 +243,8 @@
 		8492217F255D701A00C0669D /* ZFZGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZFZGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84922183255D701A00C0669D /* ____UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____UITests.m"; sourceTree = "<group>"; };
 		84922185255D701A00C0669D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F0AB3625C1C19E002A669A /* ZFQueryInListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFQueryInListModel.h; sourceTree = "<group>"; };
+		84F0AB3725C1C19E002A669A /* ZFQueryInListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFQueryInListModel.m; sourceTree = "<group>"; };
 		EA45AB208BAAD1791EA86318 /* Pods-ZFZG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFZG.debug.xcconfig"; path = "Target Support Files/Pods-ZFZG/Pods-ZFZG.debug.xcconfig"; sourceTree = "<group>"; };
 		FACB204741BDAB74069B31C6 /* libPods-ZFZG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZFZG.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -484,6 +487,8 @@
 		846114CA25BA7FD1009986F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				84F0AB3625C1C19E002A669A /* ZFQueryInListModel.h */,
+				84F0AB3725C1C19E002A669A /* ZFQueryInListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -930,6 +935,7 @@
 				846114EC25BAFC06009986F5 /* ZFMineListView.m in Sources */,
 				84635E2C2565278E0050FE15 /* ZFMineUserInfoModel.m in Sources */,
 				8485EBBA25C06F84003F6396 /* ZFPresentLoginVcTool.m in Sources */,
+				84F0AB3825C1C19E002A669A /* ZFQueryInListModel.m in Sources */,
 				1A62939025613B35007C638C /* UIButton+CJStructure.m in Sources */,
 				8485EBAE25C069FE003F6396 /* ZFSaveValueTool.m in Sources */,
 				845CE15725BD5EC4006A4F8A /* ZFQueryInViewCell.m in Sources */,

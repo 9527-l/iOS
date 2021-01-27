@@ -160,8 +160,13 @@ typedef enum : NSUInteger {
     return view;
 }
 - (void)loadData{
+    WeakSelf(self)
     [[BasicNetWorking sharedSessionManager] GET:me parameters:nil success:^(id responseObject) {
-            
+        NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            NSString *userName = data[@"agent"][@"user_nick_name"];
+            weakself.headerView.nameLab.text = userName;
+        }
         } failure:^(NSError *error) {
             
         }];

@@ -193,7 +193,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.row >=1 && indexPath.row <= 4) {
         ZFQueryInViewController *vc = [[ZFQueryInViewController alloc] init];
-        [vc setSelectedIndex:indexPath.row - 1];
+        NSInteger selectIndex = 0;
+        switch (indexPath.row) {
+            case 1:
+                selectIndex = 2;
+                break;
+            case 2:
+                selectIndex = 1;
+                break;
+            case 3:
+                selectIndex = 3;
+                break;
+            case 4:
+                selectIndex = 0;
+                break;
+            default:
+                break;
+        }
+        [vc setSelectedIndex:selectIndex];
         [self.navigationController pushViewController:vc animated:YES];
         
     }else if (indexPath.row == 5){

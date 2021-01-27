@@ -57,11 +57,23 @@ NS_ASSUME_NONNULL_BEGIN
 //            }
 //        }
 //    }
+//@property (nonatomic, assign) BOOL isShowArrow;
+//@property (nonatomic, copy) NSString *id;
+//@property (nonatomic, copy) NSString *username;
+//@property (nonatomic, copy) NSString *mobile;
+//@property (nonatomic, copy) NSString *email;
+//@property (nonatomic, copy) NSString *account;
+//@property (nonatomic, copy) NSString *code;
+//@property (nonatomic, assign) BOOL isShowArrow;
+//@property (nonatomic, copy) NSString *icon;
+//@property (nonatomic, copy) NSString *account;
+//@property (nonatomic, copy) NSString *code;
+//@property (nonatomic, assign) BOOL isShowArrow;
+//@property (nonatomic, copy) NSString *icon;
+//@property (nonatomic, copy) NSString *account;
+//@property (nonatomic, copy) NSString *code;
+//@property (nonatomic, assign) BOOL isShowArrow;
 
-@property (nonatomic, copy) NSString *icon;
-@property (nonatomic, copy) NSString *account;
-@property (nonatomic, copy) NSString *code;
-@property (nonatomic, assign) BOOL isShowArrow;
 @end
 
 NS_ASSUME_NONNULL_END

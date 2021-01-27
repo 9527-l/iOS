@@ -13,8 +13,8 @@
  */
 
 #import <UIKit/UIKit.h>
-
-@interface CJTextView : UITextView
+#import <TXLimitedTextView.h>
+@interface CJTextView : TXLimitedTextView
 
 @property (nonatomic, strong) NSString *placeholder;        /**< 占位文字 */
 @property (nonatomic, strong) UIColor *placeholderColor;    /**< 占位文字颜色 */

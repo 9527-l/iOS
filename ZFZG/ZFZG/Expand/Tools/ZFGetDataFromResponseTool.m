@@ -15,4 +15,11 @@
     }
     return dict;
 }
++ (NSArray *)getDataArr:(id)responseObject{
+    NSArray *arr = [NSArray array];
+    if ([responseObject isKindOfClass:[NSDictionary class]]) {
+        arr = (NSArray *)responseObject[@"data"];
+    }
+    return arr;
+}
 @end

@@ -9,7 +9,7 @@
 
 @interface ZFContactUsViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *leftLab;
-@property (weak, nonatomic) IBOutlet UILabel *rightLab;
+
 
 @end
 
@@ -27,13 +27,13 @@
         case 0:
         {
             self.leftLab.text = @"服务商名称 : ";
-            self.rightLab.text = @"中付支付";
+//            self.rightLab.text = @"中付支付";
         }
             break;
         case 1:
         {
             self.leftLab.text = @"服务商电话 : ";
-            self.rightLab.text = @"4007006889";
+            self.rightLab.text = @"00000000";
         }
             break;
         default:

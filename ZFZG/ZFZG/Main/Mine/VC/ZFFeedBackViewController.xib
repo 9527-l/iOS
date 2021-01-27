@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZFFeedBackViewController">
             <connections>
+                <outlet property="commitBtn" destination="P7g-7f-IA1" id="tna-IX-1MA"/>
                 <outlet property="contentCountLab" destination="WU6-JQ-Ek7" id="UYK-z3-LjY"/>
                 <outlet property="contentTitleLab" destination="YvP-91-mu3" id="jeK-8h-3hH"/>
                 <outlet property="contentView" destination="otX-6M-xiu" id="IDf-7K-Fel"/>
@@ -67,7 +68,7 @@
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="240/240" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU6-JQ-Ek7">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/240" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WU6-JQ-Ek7">
                             <rect key="frame" x="319" y="170" width="75" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="agZ-5f-c0M"/>
@@ -87,16 +88,33 @@
                         <constraint firstItem="YvP-91-mu3" firstAttribute="leading" secondItem="otX-6M-xiu" secondAttribute="leading" constant="20" id="sRS-T0-hBn"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7g-7f-IA1">
+                    <rect key="frame" x="20" y="374" width="374" height="50"/>
+                    <color key="backgroundColor" red="0.035294117649999998" green="0.4039215686" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="cue-qL-7ax"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="提交">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="commitBtnDidClick:" destination="-1" eventType="touchUpInside" id="YIq-j8-PIg"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="QkP-Fj-rBw" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="17Q-Ce-zUv"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="QkP-Fj-rBw" secondAttribute="trailing" constant="20" id="3dT-ik-M9v"/>
+                <constraint firstItem="P7g-7f-IA1" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="20" id="D8N-qs-Qtq"/>
                 <constraint firstItem="HA4-gQ-HO1" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="bTz-fZ-SRz"/>
                 <constraint firstItem="otX-6M-xiu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ejm-OF-0jS"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="otX-6M-xiu" secondAttribute="trailing" id="fEv-5S-tgE"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="HA4-gQ-HO1" secondAttribute="trailing" id="ljO-T9-e8U"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="P7g-7f-IA1" secondAttribute="trailing" constant="20" id="rJP-dn-e8j"/>
+                <constraint firstItem="P7g-7f-IA1" firstAttribute="top" secondItem="otX-6M-xiu" secondAttribute="bottom" constant="30" id="vbd-Qn-t8u"/>
                 <constraint firstItem="otX-6M-xiu" firstAttribute="top" secondItem="HA4-gQ-HO1" secondAttribute="bottom" constant="10" id="vko-rj-DeK"/>
                 <constraint firstItem="HA4-gQ-HO1" firstAttribute="top" secondItem="QkP-Fj-rBw" secondAttribute="bottom" id="wqE-BA-Gj6"/>
                 <constraint firstItem="QkP-Fj-rBw" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="xJc-bV-k1p"/>

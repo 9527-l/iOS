@@ -31,6 +31,12 @@ static NSString *userChangePwd = @"user/change-pwd";
 static NSString *logout = @"logout";
 /// 登录用户信息
 static NSString *me = @"me";
+/// 联系我们
+static NSString *manageContacte = @"manage/contact";
+/// 投诉建议
+static NSString *manageAddadvise = @"manage/addadvise";
+/// 查询进件列表
+static NSString *merchantSigninList = @"merchant/signin-list";
 #endif /* ZFConst_h */
 
 

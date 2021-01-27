@@ -6,13 +6,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ZFQueryInListModel.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZFQueryInViewCell : UITableViewCell
 @property (nonatomic, assign) NSInteger cellTag;
 @property (nonatomic, copy) void(^topBtnDidClickBlock)(void);
 @property (nonatomic, copy) void(^bottomBtnDidClickBlock)(void);
+
+@property (nonatomic, strong) ZFQueryInListModel *model;
 @end
 
 NS_ASSUME_NONNULL_END
