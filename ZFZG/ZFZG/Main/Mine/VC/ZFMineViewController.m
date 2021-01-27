@@ -38,7 +38,7 @@ typedef enum : NSUInteger {
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self setUpUI];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLoginOut) name:@"ChangePwd" object:nil];
-    
+    [self loadData];
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -159,11 +159,17 @@ typedef enum : NSUInteger {
     [view setUIWithImageName:iconName title:title showArrow:showArrow];
     return view;
 }
+- (void)loadData{
+    [[BasicNetWorking sharedSessionManager] GET:me parameters:nil success:^(id responseObject) {
+            
+        } failure:^(NSError *error) {
+            
+        }];
+}
 
 - (UIScrollView *)scrollerView{
     if (!_scrollerView) {
         _scrollerView = [[UIScrollView alloc] init];
-//        _scrollerView.automaticallyAdjustsScrollIndicatorInsets = NO;
         _scrollerView.backgroundColor = [UIColor cjColorAlphaWithHexString:@"f2f2f2"];
     }
     return _scrollerView;

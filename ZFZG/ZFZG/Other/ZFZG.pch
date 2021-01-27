@@ -26,5 +26,6 @@
 #import "NSDate+Relation.h"
 #import "NSDate+Extensions.h"
 #import "NSDate+TLChat.h"
+#import <YYModel.h>
 
 #endif /* ZFZG_pch */

@@ -17,6 +17,9 @@
     dispatch_once(&pred, ^{
         manager = [[self alloc] initWithBaseURL:kHOSTURL];
     });
+    if (![NSObject isBlank:[ZFSaveValueTool getToken]]) {
+        [manager.requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@",[ZFSaveValueTool getToken]] forHTTPHeaderField:@"Authorization"];
+    }
     return manager;
 }
 - (instancetype)initWithBaseURL:(NSString *)url {
@@ -30,9 +33,6 @@
         [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
         [self.requestSerializer setValue:@"xmlhttprequest" forHTTPHeaderField:@"X-Requested-With"];
         [self.requestSerializer setValue:@"application/json,text/javascript" forHTTPHeaderField:@"accept"];
-        if (![NSObject isBlank:[ZFSaveValueTool getToken]]) {
-            [self.requestSerializer setValue:[NSString stringWithFormat:@"Bearer %@",[ZFSaveValueTool getToken]] forHTTPHeaderField:@"Authorization"];
-        }
 
         // 响应序列化
         self.responseSerializer = [AFJSONResponseSerializer serializer];

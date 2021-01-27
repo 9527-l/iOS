@@ -29,6 +29,8 @@ static NSString *passwordMobile = @"password/mobile";
 static NSString *userChangePwd = @"user/change-pwd";
 /// 用户退出登录
 static NSString *logout = @"logout";
+/// 登录用户信息
+static NSString *me = @"me";
 #endif /* ZFConst_h */
 
 
