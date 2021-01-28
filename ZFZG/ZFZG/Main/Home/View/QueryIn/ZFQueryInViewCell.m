@@ -12,6 +12,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *bottomLab;
 @property (weak, nonatomic) IBOutlet UIButton *topBtn;
 @property (weak, nonatomic) IBOutlet UIButton *bottomBtn;
+@property (weak, nonatomic) IBOutlet UILabel *msgLab;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *msgTopCon;
 
 @end
 
@@ -25,9 +27,10 @@
 - (void)setCellTag:(NSInteger)cellTag{
     _cellTag = cellTag;
     UIColor *color = CJColorFromRGBA(220, 160, 104, 1.0);
-//    [UIColor colorWithRed:220 green:160 blue:104 alpha:1.0];
     UIColor *color1 = CJColorFromRGBA(35, 100, 190, 1.0);
-//    [UIColor colorWithRed:35 green:100 blue:190 alpha:1.0];
+    UIColor *color2 = CJColorFromRGBA(210, 62, 65, 1.0);
+    self.topBtn.userInteractionEnabled = YES;
+    self.bottomBtn.userInteractionEnabled = YES;
     switch (cellTag) {
         case 0:
         {
@@ -36,7 +39,10 @@
             break;
         case 1:
         {
-            [self setBtnTitle:@"等待审核" bottomBtnTitle:@"查看详情" topBtnTitleColor:color bottomBtnTitleColor:color];
+            [self setBtnTitle:@"提交中" bottomBtnTitle:@"请等待" topBtnTitleColor:color bottomBtnTitleColor:color];
+            self.topBtn.userInteractionEnabled = false;
+            self.bottomBtn.userInteractionEnabled = false;
+
         }
             break;
         case 2:
@@ -46,7 +52,7 @@
             break;
         case 3:
         {
-            [self setBtnTitle:@"审核失败" bottomBtnTitle:@"查看详情" topBtnTitleColor:color1 bottomBtnTitleColor:color1];
+            [self setBtnTitle:@"审核失败" bottomBtnTitle:@"修改提交" topBtnTitleColor:color2 bottomBtnTitleColor:color2];
         }
             break;
         default:
@@ -65,15 +71,19 @@
     _model = model;
     self.topLab.text = model.outer_mer_name;
     self.bottomLab.text = model.updated_at;
+    self.msgLab.text = model.error_msg;
+    if (model.error_msg.length == 0) {
+        self.msgTopCon.constant = 0;
+    }else{
+        self.msgTopCon.constant = 5;
+    }
 }
-- (IBAction)topBtnDidClick:(UIButton *)sender {
-}
-- (IBAction)bottomBtnDidClick:(UIButton *)sender {
-    if (self.cellTag == 3) {
+
+- (IBAction)btnDidClick:(UIButton *)sender {
+    if (self.cellTag == 2) {
         if (self.bottomBtnDidClickBlock) {
-            self.bottomBtnDidClickBlock();
+            self.bottomBtnDidClickBlock(self.model);
         }
-        
     }
 }
 @end

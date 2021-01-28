@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self loadData];
 }
 - (void)setNavBarView{
     [super setNavBarView];
@@ -34,7 +34,17 @@
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.tableView.backgroundColor = [UIColor cjColorAlphaWithHexString:@"f2f2f2"];
 }
-
+- (void)loadData{
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
+    if (![NSObject isBlank:self.outer_device_no]) {
+        [parameters setValue:self.outer_device_no forKey:@"outer_device_no"];
+    }
+    [[BasicNetWorking sharedSessionManager] GET:agentMerchant parameters:parameters success:^(id responseObject) {
+            
+        } failure:^(NSError *error) {
+            
+        }];
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;
 }

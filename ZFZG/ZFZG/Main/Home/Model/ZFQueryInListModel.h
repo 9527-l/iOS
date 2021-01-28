@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nonatomic) NSString *outer_mer_id;
 @property (copy, nonatomic) NSString *outer_mer_name;
 @property (copy, nonatomic) NSString *outer_device_no;
+@property (copy, nonatomic) NSString *error_msg;
 @property (copy, nonatomic) NSString *uid;
 @property (copy, nonatomic) NSString *status;
 @property (copy, nonatomic) NSString *created_at;

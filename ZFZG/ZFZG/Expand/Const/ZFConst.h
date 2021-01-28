@@ -37,6 +37,8 @@ static NSString *manageContacte = @"manage/contact";
 static NSString *manageAddadvise = @"manage/addadvise";
 /// 查询进件列表
 static NSString *merchantSigninList = @"merchant/signin-list";
+/// 查询商户信息
+static NSString *agentMerchant = @"agent/merchant";
 #endif /* ZFConst_h */
 
 
