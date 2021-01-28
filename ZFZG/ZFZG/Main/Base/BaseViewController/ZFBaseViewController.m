@@ -41,6 +41,7 @@
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
     btn.frame = CGRectMake(-10, 0, 40, 40);
     [btn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
+//    btn.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     return [[UIBarButtonItem alloc] initWithCustomView:btn];
 }

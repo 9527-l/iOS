@@ -84,6 +84,8 @@
 		84922179255D701A00C0669D /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84922178255D701A00C0669D /* ____Tests.m */; };
 		84922184255D701A00C0669D /* ____UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84922183255D701A00C0669D /* ____UITests.m */; };
 		84F0AB3825C1C19E002A669A /* ZFQueryInListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AB3725C1C19E002A669A /* ZFQueryInListModel.m */; };
+		84F0AB5E25C30BEE002A669A /* ZFBusinessInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AB5D25C30BEE002A669A /* ZFBusinessInfoModel.m */; };
+		84F0AB6425C30E2D002A669A /* ZFBusinessListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84F0AB6325C30E2D002A669A /* ZFBusinessListModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -245,6 +247,10 @@
 		84922185255D701A00C0669D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		84F0AB3625C1C19E002A669A /* ZFQueryInListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFQueryInListModel.h; sourceTree = "<group>"; };
 		84F0AB3725C1C19E002A669A /* ZFQueryInListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFQueryInListModel.m; sourceTree = "<group>"; };
+		84F0AB5C25C30BEE002A669A /* ZFBusinessInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFBusinessInfoModel.h; sourceTree = "<group>"; };
+		84F0AB5D25C30BEE002A669A /* ZFBusinessInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFBusinessInfoModel.m; sourceTree = "<group>"; };
+		84F0AB6225C30E2D002A669A /* ZFBusinessListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFBusinessListModel.h; sourceTree = "<group>"; };
+		84F0AB6325C30E2D002A669A /* ZFBusinessListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFBusinessListModel.m; sourceTree = "<group>"; };
 		EA45AB208BAAD1791EA86318 /* Pods-ZFZG.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZFZG.debug.xcconfig"; path = "Target Support Files/Pods-ZFZG/Pods-ZFZG.debug.xcconfig"; sourceTree = "<group>"; };
 		FACB204741BDAB74069B31C6 /* libPods-ZFZG.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZFZG.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -489,6 +495,10 @@
 			children = (
 				84F0AB3625C1C19E002A669A /* ZFQueryInListModel.h */,
 				84F0AB3725C1C19E002A669A /* ZFQueryInListModel.m */,
+				84F0AB5C25C30BEE002A669A /* ZFBusinessInfoModel.h */,
+				84F0AB5D25C30BEE002A669A /* ZFBusinessInfoModel.m */,
+				84F0AB6225C30E2D002A669A /* ZFBusinessListModel.h */,
+				84F0AB6325C30E2D002A669A /* ZFBusinessListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -926,7 +936,9 @@
 				8464BF5B25BCA1FB007E9519 /* ZFFeedBackViewController.m in Sources */,
 				1A62936625613996007C638C /* NSString+CJEncoding.m in Sources */,
 				8492216F255D701A00C0669D /* main.m in Sources */,
+				84F0AB6425C30E2D002A669A /* ZFBusinessListModel.m in Sources */,
 				1A62939825613B61007C638C /* CJTextView.m in Sources */,
+				84F0AB5E25C30BEE002A669A /* ZFBusinessInfoModel.m in Sources */,
 				84635E0D256512640050FE15 /* ZFMineHeaderViewCell.m in Sources */,
 				846114CE25BA7FFD009986F5 /* ZFHomeOneViewCell.m in Sources */,
 				846114F725BB0296009986F5 /* ZFMineHeaderView.m in Sources */,

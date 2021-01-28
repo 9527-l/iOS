@@ -7,6 +7,13 @@
 
 #import "ZFBusinessInfoViewCell.h"
 
+@interface ZFBusinessInfoViewCell ()
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *leftLab;
+@property (weak, nonatomic) IBOutlet UILabel *rightLab;
+
+@end
+
 @implementation ZFBusinessInfoViewCell
 
 - (void)awakeFromNib {
@@ -19,5 +26,10 @@
 
     // Configure the view for the selected state
 }
-
+- (void)setModel:(ZFBusinessListModel *)model{
+    _model = model;
+    self.iconImageView.image = [UIImage imageNamed:model.iconImageName];
+    self.leftLab.text = model.leftStr;
+    self.rightLab.text = model.rightStr;
+}
 @end
