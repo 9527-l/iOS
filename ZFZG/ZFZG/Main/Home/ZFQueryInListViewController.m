@@ -9,7 +9,8 @@
 #import "ZFBusinessInfoViewController.h"
 #import "ZFQueryInViewCell.h"
 #import "ZFQueryInListModel.h"
-@interface ZFQueryInListViewController ()
+#import "ZFMerchantManager.h"
+@interface ZFQueryInListViewController ()<ZFMerchantManagerDelegate>
 
 @end
 
@@ -17,9 +18,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadData];
     [self addRefreshHeaderView];
     [self addRefreshfooterView];
+    [ZFMerchantManager shareManager].delegate = self;
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self loadData];
 }
 - (void)setUpTableView{
     [self.view addSubview:self.tableView];
@@ -74,15 +79,32 @@
         [weakself endRefresh];
     }];
 }
-- (void)pushToOtherVC:(Class)vcClass model:(ZFQueryInListModel *)model{
+- (void)pushToOtherVCWithModel:(ZFQueryInListModel *)model tag:(NSInteger)tag{
     
-    if ([vcClass isEqual:[ZFBusinessInfoViewController class]]) {
+    if (tag == 2) {
         ZFBusinessInfoViewController *vc = [[ZFBusinessInfoViewController alloc] init];
         vc.outer_device_no = model.outer_device_no;
         [self.navigationController pushViewController:vc animated:YES];
+    }else if (tag == 0){
+//        待提交
+        [self commitInfoWithOuterMerId:model.outer_mer_id];
+    }else if (tag == 3){
+//        失败
+        [self commitInfoWithOuterMerId:model.outer_mer_id];
     }
 }
+- (void)commitInfoWithOuterMerId:(NSString *)outer_mer_id{
+    [[BasicNetWorking sharedSessionManager] GET:me parameters:nil success:^(id responseObject) {
+    NSDictionary *data = [ZFGetDataFromResponseTool getData:responseObject];
+        if (data.count) {
+            NSString *uid = data[@"agent"][@"uid"];
+            [[ZFMerchantManager shareManager] changeInfoWithAccount:@"xieguangsheng" merchantCode:outer_mer_id viewController:self other:[NSString stringWithFormat:@"%@", uid]];
+        }
+    } failure:^(NSError *error) {
+        
+    }];
 
+}
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return self.dataSourceArr.count;
 }
@@ -96,8 +118,8 @@
     cell.cellTag = self.index;
     cell.model = [self.dataSourceArr objectAtIndex:indexPath.section];
     WeakSelf(self);
-    cell.bottomBtnDidClickBlock = ^(ZFQueryInListModel * _Nonnull model) {
-        [weakself pushToOtherVC:[ZFBusinessInfoViewController class] model:model];
+    cell.bottomBtnDidClickBlock = ^(ZFQueryInListModel * _Nonnull model, NSInteger cellTag) {
+        [weakself pushToOtherVCWithModel:model tag:cellTag];
     };
     return cell;
 }
@@ -118,6 +140,31 @@
 
 - (UIView *)listView {
     return self.view;
+}
+
+- (void)merchantManagerReturnSuccess:(NSDictionary *)merchantInfo other:(NSString *)other{
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
+    [parameters setValue:merchantInfo[@"merchantCode"] forKey:@"outer_mer_id"];
+    [parameters setValue:merchantInfo[@"merchantName"] forKey:@"outer_mer_name"];
+    NSString *merchantStepProgess = merchantInfo[@"merchantStepProgess"];
+    if ([merchantStepProgess isEqual:@"0"] || [merchantStepProgess isEqual:@"2"]) {
+        [parameters setValue:@"0" forKey:@"status"];
+    }else if ([merchantStepProgess isEqual:@"1"] || [merchantStepProgess isEqual:@"3"]) {
+        [parameters setValue:@"1" forKey:@"status"];
+    }
+    
+    WeakSelf(self);
+    [[BasicNetWorking sharedSessionManager] POST:merchantSignin parameters:parameters success:^(id responseObject) {
+        [weakself dismissViewControllerAnimated:YES completion:nil];
+//        界面数据刷新
+//        [weakself loadData];
+        } failure:^(NSError *error) {
+//            保存数据，再次打开app时上传
+        }];
+}
+- (void)merchantManagerReturnError:(NSString *)msg{
+    [MBProgressHUD showToast:msg];
+//    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end
 

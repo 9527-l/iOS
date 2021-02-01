@@ -55,12 +55,12 @@
 - (void)dealDataWithModel:(ZFBusinessInfoModel *)model{
     NSMutableArray *arr1 = [NSMutableArray arrayWithCapacity:2];
     ZFBusinessListModel *model1 = [ZFBusinessListModel businessListModelWithIconImageName:@"001" leftStr:@"机器编号" rightStr:model.outer_device_no];
-    ZFBusinessListModel *model2 = [ZFBusinessListModel businessListModelWithIconImageName:@"002" leftStr:@"终端编号" rightStr:@""];
-    ZFBusinessListModel *model3 = [ZFBusinessListModel businessListModelWithIconImageName:@"003" leftStr:@"商户编号" rightStr:@""];
-    ZFBusinessListModel *model4 = [ZFBusinessListModel businessListModelWithIconImageName:@"004" leftStr:@"商户名称" rightStr:@""];
+    ZFBusinessListModel *model2 = [ZFBusinessListModel businessListModelWithIconImageName:@"002" leftStr:@"终端编号" rightStr:model.terminal];
+    ZFBusinessListModel *model3 = [ZFBusinessListModel businessListModelWithIconImageName:@"003" leftStr:@"商户编号" rightStr:model.outer_mer_id];
+    ZFBusinessListModel *model4 = [ZFBusinessListModel businessListModelWithIconImageName:@"004" leftStr:@"商户名称" rightStr:model.outer_mer_name];
     ZFBusinessListModel *model5 = [ZFBusinessListModel businessListModelWithIconImageName:@"005" leftStr:@"联系人" rightStr:model.concat_name];
     ZFBusinessListModel *model6 = [ZFBusinessListModel businessListModelWithIconImageName:@"006" leftStr:@"联系电话" rightStr:model.concat_phone];
-    ZFBusinessListModel *model7 = [ZFBusinessListModel businessListModelWithIconImageName:@"007" leftStr:@"所属区域" rightStr:@""];
+    ZFBusinessListModel *model7 = [ZFBusinessListModel businessListModelWithIconImageName:@"007" leftStr:@"所属区域" rightStr:model.city];
     [arr1 addObject:model1];
     [arr1 addObject:model2];
     [arr1 addObject:model3];
@@ -70,7 +70,7 @@
     [arr1 addObject:model7];
     
     NSMutableArray *arr2 = [NSMutableArray arrayWithCapacity:2];
-    ZFBusinessListModel *model8 = [ZFBusinessListModel businessListModelWithIconImageName:@"008" leftStr:@"刷卡费率" rightStr:model.sign_fee];
+    ZFBusinessListModel *model8 = [ZFBusinessListModel businessListModelWithIconImageName:@"008" leftStr:@"刷卡费率" rightStr:[NSString stringWithFormat:@"%.2f%%", [model.sign_fee floatValue] * 100]];
     ZFBusinessListModel *model9 = [ZFBusinessListModel businessListModelWithIconImageName:@"009" leftStr:@"提现费" rightStr:model.withdraw_fee];
     [arr2 addObject:model8];
     [arr2 addObject:model9];

@@ -7,15 +7,15 @@
 
 platform :ios, '11.0' #手机的系统
 target 'ZFZG' do #工程名字
-     pod 'SDWebImage'
-     pod 'AFNetworking'
+#     pod 'SDWebImage'
+#     pod 'AFNetworking', '~> 3.2.1'
      pod 'Masonry'
      pod 'SVProgressHUD'
      pod 'MJRefresh'
      ## 键盘挡住输入框处理
-     pod 'IQKeyboardManager'
+#     pod 'IQKeyboardManager'
      ##轮播
-     pod 'SDCycleScrollView'
+#     pod 'SDCycleScrollView'
      ## iOS组件集合
      pod 'YYModel'
      pod 'YYText'
@@ -29,19 +29,20 @@ target 'ZFZG' do #工程名字
      pod 'LBXPermission/Photo'
      pod 'LBXPermission/Reminder'
      ##友盟
-     pod 'UMCCommon'
-     pod 'UMCAnalytics'
+#     pod 'UMCCommon'
+#     pod 'UMCAnalytics'
 
-     pod 'MBProgressHUD'
+#     pod 'MBProgressHUD'
      
      pod 'WMPageController' #类似网易顶部栏的标签
          
      #二维码扫描、相册图片扫描、生成条码，可以模仿支付宝、微信等UI,生成二维码和扫描码
-     pod 'LBXScan/LBXNative','~> 2.3'
-     pod 'LBXScan/LBXZXing','~> 2.3'
-     pod 'LBXScan/LBXZBar','~> 2.3'
-     pod 'LBXScan/UI','~> 2.3'
+     pod 'LBXScan/LBXNative'
+#     pod 'LBXZBarSDK'
+     pod 'LBXScan/UI'
+#     pod 'LBXScan/LBXZXing'
      
-     pod "RTRootNavigationController"
+     pod 'RTRootNavigationController'
      pod 'JXCategoryView'
+#     pod 'TZImagePickerController'
 end

@@ -39,6 +39,10 @@ static NSString *manageAddadvise = @"manage/addadvise";
 static NSString *merchantSigninList = @"merchant/signin-list";
 /// 查询商户信息
 static NSString *agentMerchant = @"agent/merchant";
+/// 新增商户
+static NSString *merchantEdit = @"merchant/edit";
+/// 进件保存
+static NSString *merchantSignin = @"merchant/signin";
 #endif /* ZFConst_h */
 
 

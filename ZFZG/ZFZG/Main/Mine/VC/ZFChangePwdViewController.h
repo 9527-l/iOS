@@ -5,11 +5,11 @@
 //  Created by Lee on 2021/1/24.
 //
 
-#import "ZFBaseViewController.h"
+#import "ZFBaseAppViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ZFChangePwdViewController : ZFBaseViewController
+@interface ZFChangePwdViewController : ZFBaseAppViewController
 
 @end
 

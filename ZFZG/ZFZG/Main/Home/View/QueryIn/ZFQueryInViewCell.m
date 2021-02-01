@@ -80,10 +80,9 @@
 }
 
 - (IBAction)btnDidClick:(UIButton *)sender {
-    if (self.cellTag == 2) {
-        if (self.bottomBtnDidClickBlock) {
-            self.bottomBtnDidClickBlock(self.model);
-        }
+    if (self.bottomBtnDidClickBlock) {
+        self.bottomBtnDidClickBlock(self.model, self.cellTag);
     }
+
 }
 @end

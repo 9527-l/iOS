@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZFQueryInViewCell : UITableViewCell
 @property (nonatomic, assign) NSInteger cellTag;
-@property (nonatomic, copy) void(^bottomBtnDidClickBlock)(ZFQueryInListModel *model);
+@property (nonatomic, copy) void(^bottomBtnDidClickBlock)(ZFQueryInListModel *model, NSInteger cellTag);
 
 @property (nonatomic, strong) ZFQueryInListModel *model;
 @end

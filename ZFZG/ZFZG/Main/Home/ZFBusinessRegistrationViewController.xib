@@ -39,9 +39,15 @@
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6k-r9-akw">
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="015" translatesAutoresizingMaskIntoConstraints="NO" id="RgQ-d5-GZw">
+                            <rect key="frame" x="384" y="15" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="8Xs-l1-IvD"/>
+                                <constraint firstAttribute="width" constant="20" id="w80-A5-20E"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6k-r9-akw">
                             <rect key="frame" x="374" y="0.0" width="40" height="50"/>
-                            <state key="normal" title="扫"/>
                             <connections>
                                 <action selector="scanBtnDidClick:" destination="-1" eventType="touchUpInside" id="av9-JN-Bka"/>
                             </connections>
@@ -52,11 +58,13 @@
                         <constraint firstAttribute="trailing" secondItem="tVz-hJ-bF4" secondAttribute="trailing" constant="40" id="4uQ-0j-9l5"/>
                         <constraint firstAttribute="bottom" secondItem="O6k-r9-akw" secondAttribute="bottom" id="PsP-Xh-qOW"/>
                         <constraint firstItem="l90-8V-Xfs" firstAttribute="leading" secondItem="56g-y1-waQ" secondAttribute="leading" constant="20" id="WFK-bD-HBw"/>
+                        <constraint firstItem="RgQ-d5-GZw" firstAttribute="centerY" secondItem="O6k-r9-akw" secondAttribute="centerY" id="aUa-Pl-aHM"/>
                         <constraint firstItem="tVz-hJ-bF4" firstAttribute="top" secondItem="56g-y1-waQ" secondAttribute="top" id="fGl-CH-Fr2"/>
                         <constraint firstItem="l90-8V-Xfs" firstAttribute="centerY" secondItem="56g-y1-waQ" secondAttribute="centerY" id="kMC-Mp-GrH"/>
                         <constraint firstAttribute="bottom" secondItem="tVz-hJ-bF4" secondAttribute="bottom" id="r1m-rc-5g8"/>
                         <constraint firstItem="tVz-hJ-bF4" firstAttribute="leading" secondItem="l90-8V-Xfs" secondAttribute="trailing" constant="20" id="sOi-uO-Do8"/>
                         <constraint firstItem="O6k-r9-akw" firstAttribute="leading" secondItem="tVz-hJ-bF4" secondAttribute="trailing" id="uYF-9e-XhU"/>
+                        <constraint firstItem="RgQ-d5-GZw" firstAttribute="centerX" secondItem="O6k-r9-akw" secondAttribute="centerX" id="wIR-iJ-bQK"/>
                         <constraint firstAttribute="height" constant="50" id="wkL-Jy-ejh"/>
                         <constraint firstItem="O6k-r9-akw" firstAttribute="top" secondItem="56g-y1-waQ" secondAttribute="top" id="xan-Rb-DNa"/>
                         <constraint firstAttribute="trailing" secondItem="O6k-r9-akw" secondAttribute="trailing" id="zaf-eh-CZX"/>
@@ -171,6 +179,7 @@
         </view>
     </objects>
     <resources>
+        <image name="015" width="100" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
