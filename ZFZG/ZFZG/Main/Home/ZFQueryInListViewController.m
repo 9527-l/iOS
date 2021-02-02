@@ -121,6 +121,7 @@
     cell.bottomBtnDidClickBlock = ^(ZFQueryInListModel * _Nonnull model, NSInteger cellTag) {
         [weakself pushToOtherVCWithModel:model tag:cellTag];
     };
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -143,6 +144,10 @@
 }
 
 - (void)merchantManagerReturnSuccess:(NSDictionary *)merchantInfo other:(NSString *)other{
+    if ([NSObject isBlank:merchantInfo[@"merchantCode"]]) {
+        [MBProgressHUD showToast:@"数据异常"];
+        return;
+    }
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
     [parameters setValue:merchantInfo[@"merchantCode"] forKey:@"outer_mer_id"];
     [parameters setValue:merchantInfo[@"merchantName"] forKey:@"outer_mer_name"];
@@ -152,14 +157,23 @@
     }else if ([merchantStepProgess isEqual:@"1"] || [merchantStepProgess isEqual:@"3"]) {
         [parameters setValue:@"1" forKey:@"status"];
     }
-    
+//            取出之前上传失败的数据
+    NSDictionary *dict = [ZFSaveValueTool getDefaults:uploadFaileBusinessInfos];
+    NSMutableDictionary *saveDict = [NSMutableDictionary dictionaryWithCapacity:2];
+    if (![NSObject isBlank:dict]) {
+        [saveDict addEntriesFromDictionary:dict];
+    }
     WeakSelf(self);
     [[BasicNetWorking sharedSessionManager] POST:merchantSignin parameters:parameters success:^(id responseObject) {
+        if ([saveDict.allKeys containsObject:merchantInfo[@"merchantCode"]]) {
+            [saveDict removeObjectForKey:merchantInfo[@"merchantCode"]];
+        }
         [weakself dismissViewControllerAnimated:YES completion:nil];
-//        界面数据刷新
-//        [weakself loadData];
         } failure:^(NSError *error) {
 //            保存数据，再次打开app时上传
+            [saveDict setValue:merchantInfo forKey:merchantInfo[@"merchantCode"]];
+            
+            [ZFSaveValueTool saveDefaults:uploadFaileBusinessInfos Value:saveDict];
         }];
 }
 - (void)merchantManagerReturnError:(NSString *)msg{

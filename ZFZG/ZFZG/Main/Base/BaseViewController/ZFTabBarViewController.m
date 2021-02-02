@@ -21,7 +21,25 @@
     [super viewDidLoad];
     [self setupUI];
 }
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.selectedViewController beginAppearanceTransition: YES animated: animated];
+}
 
+-(void) viewDidAppear:(BOOL)animated
+{
+    [self.selectedViewController endAppearanceTransition];
+}
+
+-(void) viewWillDisappear:(BOOL)animated
+{
+    [self.selectedViewController beginAppearanceTransition: NO animated: animated];
+}
+
+-(void) viewDidDisappear:(BOOL)animated
+{
+    [self.selectedViewController endAppearanceTransition];
+}
 - (void)setupUI{
     [self addChildViewController:[[ZFHomeViewController alloc] init]  imageNamed:@"home" title:@"首页"];
     [self addChildViewController:[[ZFMineViewController alloc] init] imageNamed:@"management" title:@"我的"];

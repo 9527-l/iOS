@@ -92,6 +92,7 @@
     ZFBusinessListModel *model = [arr objectAtIndex:indexPath.row];
     ZFBusinessInfoViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([ZFBusinessInfoViewCell class]) forIndexPath:indexPath];
     cell.model = model;
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -27,6 +27,12 @@
     [super setNavBarView];
     self.navigationItem.title = @"修改密码";
 }
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    [self.view endEditing:YES];
+    
+}
+
 - (IBAction)sureBtnDidClick:(UIButton *)sender {
     if ([NSObject isBlank:self.oldPwdField.text] || [NSObject isBlank:self.pwdField.text] || [NSObject isBlank:self.againPwdField.text]) {
         [MBProgressHUD showToast:@"请输入密码"];

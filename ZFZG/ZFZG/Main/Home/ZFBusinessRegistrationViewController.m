@@ -28,6 +28,9 @@
     self.skipBtn.layer.cornerRadius = 8;
     self.skipBtn.layer.borderColor = MainColorBlue.CGColor;
     self.skipBtn.layer.borderWidth = 1;
+    
+    self.commitBtn.layer.cornerRadius = 8;
+    self.commitBtn.layer.masksToBounds = YES;
 }
 - (void)setNavBarView{
     [super setNavBarView];

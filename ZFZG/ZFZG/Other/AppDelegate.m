@@ -40,7 +40,7 @@
                 
         }];
     }
-    
+    [self uploadFaileData];
     return YES;
 }
 
@@ -70,5 +70,33 @@
     return YES;
 }
 
-
+- (void)uploadFaileData{
+//            取出之前上传失败的数据
+    NSDictionary *dict = [ZFSaveValueTool getDefaults:uploadFaileBusinessInfos];
+    NSMutableDictionary *saveDict = [NSMutableDictionary dictionaryWithCapacity:2];
+    if (![NSObject isBlank:dict]) {
+        [saveDict addEntriesFromDictionary:dict];
+    }
+    for (NSDictionary *tempDict in saveDict) {
+        if ([NSObject isBlank:tempDict[@"merchantCode"]]) {
+            [MBProgressHUD showToast:@"数据异常"];
+            continue;
+        }
+        NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
+        [parameters setValue:tempDict[@"merchantCode"] forKey:@"outer_mer_id"];
+        [parameters setValue:tempDict[@"merchantName"] forKey:@"outer_mer_name"];
+        NSString *merchantStepProgess = tempDict[@"merchantStepProgess"];
+        if ([merchantStepProgess isEqual:@"0"] || [merchantStepProgess isEqual:@"2"]) {
+            [parameters setValue:@"0" forKey:@"status"];
+        }else if ([merchantStepProgess isEqual:@"1"] || [merchantStepProgess isEqual:@"3"]) {
+            [parameters setValue:@"1" forKey:@"status"];
+        }
+        [[BasicNetWorking sharedSessionManager] POST:merchantSignin parameters:parameters success:^(id responseObject) {
+            [saveDict removeObjectForKey:tempDict[@"merchantCode"]];
+        } failure:^(NSError *error) {
+            
+        }];
+    }
+    
+}
 @end

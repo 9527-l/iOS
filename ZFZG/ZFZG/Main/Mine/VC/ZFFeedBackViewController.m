@@ -24,7 +24,11 @@
     self.commitBtn.layer.cornerRadius = 8;
     self.commitBtn.layer.masksToBounds = YES;
 }
-
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [super touchesBegan:touches withEvent:event];
+    [self.view endEditing:YES];
+    
+}
 - (void)setNavBarView{
     [super setNavBarView];
     self.navigationItem.title = @"意见反馈";

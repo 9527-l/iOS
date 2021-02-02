@@ -11,6 +11,7 @@
 #pragma mark -- 本地存储的Key
 static NSString *auth_token = @"auth_token";
 static NSString *refresh_token = @"refresh_token";
+static NSString *uploadFaileBusinessInfos = @"uploadFaileBusinessInfos";
 
 
 
