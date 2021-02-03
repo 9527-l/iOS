@@ -76,5 +76,13 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     return 10;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.section == 1) {
+        NSString * phone = [NSString stringWithFormat:@"telprompt://%@",self.phoneLab.text];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phone] options:@{} completionHandler:^(BOOL success) {
+            
+        }];
+    }
 
+}
 @end

@@ -27,7 +27,7 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, strong) UIScrollView *scrollerView;
 @property (nonatomic, strong) ZFMineHeaderView *headerView;
-
+@property (nonatomic, strong) UIView *bgView;
 @end
 
 @implementation ZFMineViewController
@@ -38,14 +38,40 @@ typedef enum : NSUInteger {
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self setUpUI];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userLoginOut) name:@"ChangePwd" object:nil];
+    
+}
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     [self loadData];
 }
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    [self setColorWithView:self.scrollerView size:CGSizeMake(Screen_Width, Screen_Height - kNavBarAndStatusBarAndTabBarHeight)];
     
+    [self setColorWithView:self.bgView size:CGSizeMake(Screen_Width - 30, Screen_Height - kNavBarAndStatusBarAndTabBarHeight)];
 }
 - (void)setNavBarView{
     self.navigationController.navigationBar.hidden = YES;
+}
+- (void)setColorWithView:(UIView *)view size:(CGSize)size{
+    UIColor *colorOne = [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0];
+    UIColor *colorTwo = [UIColor cjColorWithHexString:@"f7f7f7" alpha:0.8];
+    
+    NSArray *colors = [NSArray arrayWithObjects:(id)colorOne.CGColor, (id)colorTwo.CGColor, nil];
+    
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    
+    //设置开始和结束位置(通过开始和结束位置来控制渐变的方向)
+    
+    gradient.startPoint = CGPointMake(0, 0.3);
+    
+    gradient.endPoint = CGPointMake(0, 0.8);
+    
+    gradient.colors = colors;
+    
+    gradient.frame = CGRectMake(0, 0, size.width, size.height);
+    
+    [view.layer insertSublayer:gradient atIndex:0];
 }
 - (void)setUpUI{
     
@@ -62,50 +88,52 @@ typedef enum : NSUInteger {
         make.left.equalTo(self.scrollerView.mas_left);
         make.width.mas_equalTo(Screen_Width);
         make.height.mas_equalTo(kNavBarAndStatusBarHeight + 200);
+//        make.height.mas_equalTo(Screen_Height - kNavBarAndStatusBarAndTabBarHeight);
     }];
-    
-    UIView *bgView = [[UIView alloc] init];
-    bgView.backgroundColor = [UIColor whiteColor];
-    [self.scrollerView addSubview:bgView];
-    [bgView mas_makeConstraints:^(MASConstraintMaker *make) {
+
+    self.bgView = [[UIView alloc] init];
+    self.bgView.backgroundColor = [UIColor whiteColor];
+    [self.scrollerView addSubview:self.bgView];
+    [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.headerView.mas_bottom).offset(-130);
         make.left.equalTo(self.scrollerView.mas_left).offset(15);
         make.width.mas_offset(Screen_Width - 30);
         make.height.mas_equalTo(Screen_Height);
     }];
-    bgView.layer.cornerRadius = 8;
-    bgView.layer.masksToBounds = YES;
+    self.bgView.layer.cornerRadius = 12;
+    self.bgView.layer.masksToBounds = YES;
     
     ZFMineListView *list1 = [self createListViewWithImageName:@"pwd" title:@"修改密码" showArrow:YES event:ChangePwdClickEvent];
-    [bgView addSubview:list1];
+    [self.bgView addSubview:list1];
     [list1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(bgView.mas_top).offset(30);
-        make.left.equalTo(bgView.mas_left);
-        make.width.mas_equalTo(bgView.mas_width);
+        make.top.equalTo(self.bgView.mas_top).offset(30);
+        make.left.equalTo(self.bgView.mas_left);
+        make.width.mas_equalTo(self.bgView.mas_width);
         make.height.mas_equalTo(80);
     }];
     ZFMineListView *list2 = [self createListViewWithImageName:@"msg" title:@"联系我们" showArrow:YES event:ContactClickEvent];
-    [bgView addSubview:list2];
+    [self.bgView addSubview:list2];
     [list2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(list1.mas_bottom).offset(0);
-        make.left.equalTo(bgView.mas_left);
-        make.width.mas_equalTo(bgView.mas_width);
+        make.left.equalTo(self.bgView.mas_left);
+        make.width.mas_equalTo(self.bgView.mas_width);
         make.height.mas_equalTo(80);
     }];
     ZFMineListView *list3 = [self createListViewWithImageName:@"fankui" title:@"意见反馈" showArrow:YES event:FeedbackClickEvent];
-    [bgView addSubview:list3];
+    [self.bgView addSubview:list3];
     [list3 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(list2.mas_bottom).offset(0);
-        make.left.equalTo(bgView.mas_left);
-        make.width.mas_equalTo(bgView.mas_width);
+        make.left.equalTo(self.bgView.mas_left);
+        make.width.mas_equalTo(self.bgView.mas_width);
         make.height.mas_equalTo(80);
     }];
     ZFMineListView *list4 = [self createListViewWithImageName:@"exit" title:@"退出登录" showArrow:YES event:ExitClickEvent];
-    [bgView addSubview:list4];
+    list4.sepLineView.hidden = YES;
+    [self.bgView addSubview:list4];
     [list4 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(list3.mas_bottom).offset(0);
-        make.left.equalTo(bgView.mas_left);
-        make.width.mas_equalTo(bgView.mas_width);
+        make.left.equalTo(self.bgView.mas_left);
+        make.width.mas_equalTo(self.bgView.mas_width);
         make.height.mas_equalTo(80);
     }];
 }
@@ -175,7 +203,7 @@ typedef enum : NSUInteger {
 - (UIScrollView *)scrollerView{
     if (!_scrollerView) {
         _scrollerView = [[UIScrollView alloc] init];
-        _scrollerView.backgroundColor = [UIColor cjColorAlphaWithHexString:@"f2f2f2"];
+        _scrollerView.backgroundColor = [UIColor cjColorWithHexString:@"f7f7f7" alpha:0.8];
     }
     return _scrollerView;
 }

@@ -140,6 +140,7 @@
 		84961E1325C79D2B0038DAA8 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 84961DD725C79D2A0038DAA8 /* UIImageView+WebCache.m */; };
 		84961E1425C79D2B0038DAA8 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 84961DDA25C79D2A0038DAA8 /* UIView+WebCacheOperation.m */; };
 		84961E1525C79D2B0038DAA8 /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 84961DDE25C79D2A0038DAA8 /* UIButton+WebCache.m */; };
+		84961EAE25CAC6430038DAA8 /* ZFCopyLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84961EAD25CAC6430038DAA8 /* ZFCopyLabel.m */; };
 		84A207E125C4300B0029986B /* LBXScanNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A207DE25C4300A0029986B /* LBXScanNativeViewController.m */; };
 		84A207E225C4300B0029986B /* QQScanNativeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A207E025C4300B0029986B /* QQScanNativeViewController.m */; };
 		84A207E825C430130029986B /* LBXScanBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84A207E725C430130029986B /* LBXScanBaseViewController.m */; };
@@ -426,6 +427,8 @@
 		84961DDD25C79D2A0038DAA8 /* UIImage+MultiFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+MultiFormat.h"; sourceTree = "<group>"; };
 		84961DDE25C79D2A0038DAA8 /* UIButton+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WebCache.m"; sourceTree = "<group>"; };
 		84961DDF25C79D2A0038DAA8 /* UIImage+GIF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GIF.h"; sourceTree = "<group>"; };
+		84961EAC25CAC6430038DAA8 /* ZFCopyLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZFCopyLabel.h; sourceTree = "<group>"; };
+		84961EAD25CAC6430038DAA8 /* ZFCopyLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZFCopyLabel.m; sourceTree = "<group>"; };
 		84A207DD25C4300A0029986B /* LBXScanNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBXScanNativeViewController.h; sourceTree = "<group>"; };
 		84A207DE25C4300A0029986B /* LBXScanNativeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBXScanNativeViewController.m; sourceTree = "<group>"; };
 		84A207DF25C4300B0029986B /* QQScanNativeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QQScanNativeViewController.h; sourceTree = "<group>"; };
@@ -772,6 +775,7 @@
 		84635D902565094A0050FE15 /* Subclass */ = {
 			isa = PBXGroup;
 			children = (
+				84961E9C25CAC0230038DAA8 /* UILabel */,
 				84635D92256509970050FE15 /* TextView */,
 				84635D91256509890050FE15 /* Button */,
 			);
@@ -1135,6 +1139,15 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		84961E9C25CAC0230038DAA8 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				84961EAC25CAC6430038DAA8 /* ZFCopyLabel.h */,
+				84961EAD25CAC6430038DAA8 /* ZFCopyLabel.m */,
+			);
+			path = UILabel;
+			sourceTree = "<group>";
+		};
 		84A207DC25C42FFA0029986B /* ScanVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1455,6 +1468,7 @@
 				1A62934625613293007C638C /* ZFMineViewController.m in Sources */,
 				84961DE325C79D2A0038DAA8 /* TZAssetModel.m in Sources */,
 				84961E1025C79D2A0038DAA8 /* SDImageCache.m in Sources */,
+				84961EAE25CAC6430038DAA8 /* ZFCopyLabel.m in Sources */,
 				846114E125BA8023009986F5 /* ZFHomeThreeViewCell.m in Sources */,
 				845CE17125BD7C70006A4F8A /* ZFBusinessRegistrationViewController.m in Sources */,
 				84961DE925C79D2A0038DAA8 /* TZImageManager.m in Sources */,

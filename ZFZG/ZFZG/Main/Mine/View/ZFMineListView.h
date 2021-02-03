@@ -11,6 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZFMineListView : UIView
 @property (nonatomic, copy) void (^viewDidClickBlock)(void);
+@property (weak, nonatomic) IBOutlet UIView *sepLineView;
 - (void) setUIWithImageName:(NSString *)iconName title:(NSString *)title showArrow:(BOOL)showArrow;
 @end
 

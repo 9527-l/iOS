@@ -12,7 +12,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLab;
 @property (weak, nonatomic) IBOutlet UIImageView *arrowImageView;
-@property (weak, nonatomic) IBOutlet UIView *sepLineView;
+
 @end
 
 @implementation ZFMineListView

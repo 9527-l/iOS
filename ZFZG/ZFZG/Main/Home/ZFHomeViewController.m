@@ -196,16 +196,16 @@
         NSInteger selectIndex = 0;
         switch (indexPath.row) {
             case 1:
-                selectIndex = 2;
+                selectIndex = 0;
                 break;
             case 2:
                 selectIndex = 1;
                 break;
             case 3:
-                selectIndex = 3;
+                selectIndex = 2;
                 break;
             case 4:
-                selectIndex = 0;
+                selectIndex = 3;
                 break;
             default:
                 break;

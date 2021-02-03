@@ -41,7 +41,7 @@
 //    self.listContainerView.initListPercent = 0.5;
     [self.view addSubview:self.listContainerView];
 
-    self.titles = @[@"待提交",@"待审核",@"通过",@"失败"];
+    self.titles = @[@"通过",@"待审核",@"失败",@"待提交"];
     
     self.categoryView = [[JXCategoryTitleView alloc] init];
     //优化关联listContainer，以后后续比如defaultSelectedIndex等属性，才能同步给listContainer

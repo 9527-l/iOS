@@ -32,7 +32,7 @@
     self.topBtn.userInteractionEnabled = YES;
     self.bottomBtn.userInteractionEnabled = YES;
     switch (cellTag) {
-        case 0:
+        case 3:
         {
             [self setBtnTitle:@"完善资料" bottomBtnTitle:@"继续提交" topBtnTitleColor:color bottomBtnTitleColor:color];
         }
@@ -45,12 +45,12 @@
 
         }
             break;
-        case 2:
+        case 0:
         {
             [self setBtnTitle:@"审核通过" bottomBtnTitle:@"查看详情" topBtnTitleColor:color1 bottomBtnTitleColor:color1];
         }
             break;
-        case 3:
+        case 2:
         {
             [self setBtnTitle:@"审核失败" bottomBtnTitle:@"修改提交" topBtnTitleColor:color2 bottomBtnTitleColor:color2];
         }

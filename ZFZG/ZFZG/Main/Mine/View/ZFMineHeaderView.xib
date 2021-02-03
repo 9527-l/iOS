@@ -18,33 +18,33 @@
                     <rect key="frame" x="0.0" y="0.0" width="335" height="291"/>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="ft2-TK-FVc">
-                    <rect key="frame" x="15" y="80" width="50" height="50"/>
+                    <rect key="frame" x="15" y="80" width="60" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="50" id="BRW-Up-aeJ"/>
-                        <constraint firstAttribute="width" constant="50" id="KTl-61-n8a"/>
+                        <constraint firstAttribute="height" constant="60" id="BRW-Up-aeJ"/>
+                        <constraint firstAttribute="width" constant="60" id="KTl-61-n8a"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="科技有限公司" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZb-Uu-1id">
-                    <rect key="frame" x="75" y="85" width="98" height="19.5"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="科技有限公司" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZb-Uu-1id">
+                    <rect key="frame" x="85" y="98" width="235" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐码ID:123456" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lH0-a1-afU">
-                    <rect key="frame" x="75" y="110.5" width="110" height="17"/>
+                    <rect key="frame" x="85" y="128" width="110" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="eyY-4N-35S">
-                    <rect key="frame" x="310" y="95" width="10" height="20"/>
+                    <rect key="frame" x="310" y="100" width="10" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="AYt-6g-Ivd"/>
                         <constraint firstAttribute="width" constant="10" id="KMD-GR-Wrm"/>
                     </constraints>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thU-DN-n8M">
-                    <rect key="frame" x="15" y="80" width="305" height="50"/>
+                    <rect key="frame" x="15" y="80" width="305" height="60"/>
                     <connections>
                         <action selector="viewDidClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="RtP-71-aYf"/>
                     </connections>
@@ -63,11 +63,12 @@
                 <constraint firstItem="lH0-a1-afU" firstAttribute="top" secondItem="vZb-Uu-1id" secondAttribute="bottom" constant="6" id="aHv-LC-Bnn"/>
                 <constraint firstItem="KOB-sQ-z7B" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cgj-ep-hcp"/>
                 <constraint firstItem="thU-DN-n8M" firstAttribute="trailing" secondItem="eyY-4N-35S" secondAttribute="trailing" id="jIc-gU-E5a"/>
+                <constraint firstAttribute="trailing" secondItem="vZb-Uu-1id" secondAttribute="trailing" constant="15" id="jpL-tM-n1V"/>
                 <constraint firstItem="ft2-TK-FVc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="kGj-8p-ouD"/>
                 <constraint firstAttribute="trailing" secondItem="KOB-sQ-z7B" secondAttribute="trailing" id="sfL-bG-Crg"/>
                 <constraint firstAttribute="bottom" secondItem="KOB-sQ-z7B" secondAttribute="bottom" id="sw2-cW-tCU"/>
                 <constraint firstItem="thU-DN-n8M" firstAttribute="bottom" secondItem="ft2-TK-FVc" secondAttribute="bottom" id="v1I-GC-xWn"/>
-                <constraint firstItem="vZb-Uu-1id" firstAttribute="top" secondItem="ft2-TK-FVc" secondAttribute="top" constant="5" id="zJb-rz-56E"/>
+                <constraint firstItem="vZb-Uu-1id" firstAttribute="centerY" secondItem="ft2-TK-FVc" secondAttribute="centerY" id="zu8-gO-hbc"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

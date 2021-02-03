@@ -42,16 +42,16 @@
     NSString *status = 0;
     switch (self.index) {
         case 0:
-            status = @"0";
+            status = @"1";
             break;
         case 1:
             status = @"3";
             break;
         case 2:
-            status = @"1";
+            status = @"2";
             break;
         case 3:
-            status = @"2";
+            status = @"0";
             break;
         default:
             break;
@@ -81,14 +81,15 @@
 }
 - (void)pushToOtherVCWithModel:(ZFQueryInListModel *)model tag:(NSInteger)tag{
     
-    if (tag == 2) {
+    if (tag == 0) {
+//        通过
         ZFBusinessInfoViewController *vc = [[ZFBusinessInfoViewController alloc] init];
         vc.outer_device_no = model.outer_device_no;
         [self.navigationController pushViewController:vc animated:YES];
-    }else if (tag == 0){
+    }else if (tag == 3){
 //        待提交
         [self commitInfoWithOuterMerId:model.outer_mer_id];
-    }else if (tag == 3){
+    }else if (tag == 2){
 //        失败
         [self commitInfoWithOuterMerId:model.outer_mer_id];
     }

@@ -10,7 +10,7 @@
 @interface ZFBusinessInfoViewCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel *leftLab;
-@property (weak, nonatomic) IBOutlet UILabel *rightLab;
+@property (weak, nonatomic) IBOutlet ZFCopyLabel *rightLab;
 
 @end
 
