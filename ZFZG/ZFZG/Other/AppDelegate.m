@@ -36,7 +36,9 @@
                     
                 
         } failure:^(NSError *error) {
-                    
+            if (error.code == -101) {
+                [ZFPresentLoginVcTool presentLoginVC:rootVC];
+            }
                 
         }];
     }

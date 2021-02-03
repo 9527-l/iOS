@@ -8,7 +8,7 @@
 
 #import "BasicNetWorking.h"
 #import "MBProgressHUD+MJ.h"
-
+#import "ZFNavigationController.h"
 @implementation BasicNetWorking
 
 + (instancetype)sharedSessionManager {
@@ -48,10 +48,32 @@
 - (void)GET:(NSString *)urlString parameters:(id)parameters success:(void (^) (id responseObject))success failure:(void (^) (NSError *error))failure
 {
     [self GET:urlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (success) {
-            success(responseObject);
+        BOOL successValue = [responseObject[@"success"] boolValue];
+        if (successValue) {
+            if (success) {
+                success(responseObject);
+            }
+        }else{
+            [MBProgressHUD showToast:responseObject[@"message"]];
+            if (failure) {
+                NSString *domain = @"com.MyCompany.MyApplication.ErrorDomain";
+                NSString *desc = responseObject[@"message"];
+                NSDictionary *userInfo = @{NSLocalizedDescriptionKey : desc };
+                NSError *error = [NSError errorWithDomain:domain code:-101 userInfo:userInfo];
+                failure(error);
+            }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (error.code == -1001) {
+            [MBProgressHUD showToast:@"请求超时，请稍后重试！"];
+        }else if (error.code == 401){
+            ZFNavigationController *vc = (ZFNavigationController *)[[[UIApplication sharedApplication].delegate window] rootViewController];
+            [ZFPresentLoginVcTool presentLoginVC:vc.rt_navigationController.rt_visibleViewController];
+            
+        }else{
+            [MBProgressHUD showToast:@"网络请求失败，请稍后重试！"];
+        }
+        
         if (failure) {
             failure(error);
         }
@@ -84,6 +106,10 @@
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         if (error.code == -1001) {
             [MBProgressHUD showToast:@"请求超时，请稍后重试！"];
+        }else if (error.code == 401){
+            ZFNavigationController *vc = (ZFNavigationController *)[[[UIApplication sharedApplication].delegate window] rootViewController];
+            [ZFPresentLoginVcTool presentLoginVC:vc.rt_navigationController.rt_visibleViewController];
+            
         }else{
             [MBProgressHUD showToast:@"网络请求失败，请稍后重试！"];
         }

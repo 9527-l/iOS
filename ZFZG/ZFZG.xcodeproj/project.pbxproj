@@ -1674,7 +1674,44 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZFZG/SDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.qtopay.jjb;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"InputKit\"",
+					"-l\"JXCategoryView\"",
+					"-l\"LBXPermission\"",
+					"-l\"LBXScan\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"RTRootNavigationController\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"WMPageController\"",
+					"-l\"WebViewJavascriptBridge\"",
+					"-l\"YYModel\"",
+					"-l\"YYText\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebKit\"",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.qtopay.jjbaaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1704,7 +1741,44 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZFZG/SDK",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = net.qtopay.jjb;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"InputKit\"",
+					"-l\"JXCategoryView\"",
+					"-l\"LBXPermission\"",
+					"-l\"LBXScan\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"RTRootNavigationController\"",
+					"-l\"SVProgressHUD\"",
+					"-l\"WMPageController\"",
+					"-l\"WebViewJavascriptBridge\"",
+					"-l\"YYModel\"",
+					"-l\"YYText\"",
+					"-framework",
+					"\"AVFoundation\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebKit\"",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.qtopay.jjbaaa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = 1;
