@@ -48,7 +48,7 @@ typedef enum : NSUInteger {
     [super viewDidAppear:animated];
     [self setColorWithView:self.scrollerView size:CGSizeMake(Screen_Width, Screen_Height - kNavBarAndStatusBarAndTabBarHeight)];
     
-    [self setColorWithView:self.bgView size:CGSizeMake(Screen_Width - 30, Screen_Height - kNavBarAndStatusBarAndTabBarHeight)];
+    [self setColorWithView:self.bgView size:CGSizeMake(Screen_Width - 60, Screen_Height - kNavBarAndStatusBarAndTabBarHeight)];
 }
 - (void)setNavBarView{
     self.navigationController.navigationBar.hidden = YES;
@@ -95,9 +95,9 @@ typedef enum : NSUInteger {
     self.bgView.backgroundColor = [UIColor whiteColor];
     [self.scrollerView addSubview:self.bgView];
     [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.headerView.mas_bottom).offset(-130);
-        make.left.equalTo(self.scrollerView.mas_left).offset(15);
-        make.width.mas_offset(Screen_Width - 30);
+        make.top.equalTo(self.headerView.mas_bottom).offset(-100);
+        make.left.equalTo(self.scrollerView.mas_left).offset(30);
+        make.width.mas_offset(Screen_Width - 60);
         make.height.mas_equalTo(Screen_Height);
     }];
     self.bgView.layer.cornerRadius = 12;
