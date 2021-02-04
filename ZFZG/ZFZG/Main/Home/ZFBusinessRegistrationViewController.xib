@@ -97,7 +97,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bq0-vV-yeE">
-                    <rect key="frame" x="0.0" y="169" width="414" height="50"/>
+                    <rect key="frame" x="0.0" y="169.5" width="414" height="50"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号码 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJq-0g-ecJ">
                             <rect key="frame" x="20" y="15.5" width="78.5" height="19.5"/>
@@ -123,7 +123,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fMJ-Vm-bfh">
-                    <rect key="frame" x="0.0" y="229" width="414" height="33.5"/>
+                    <rect key="frame" x="0.0" y="229.5" width="414" height="33.5"/>
                     <string key="text">进件时候登记商户信息，方便后期维护
 前期未登记可在商户管理页添加</string>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -131,7 +131,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLw-Mi-j9e">
-                    <rect key="frame" x="20" y="272.5" width="374" height="50"/>
+                    <rect key="frame" x="20" y="273" width="374" height="50"/>
                     <color key="backgroundColor" red="0.035294117649999998" green="0.4039215686" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="sgS-jH-EzR"/>
@@ -145,7 +145,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XC8-3s-Y8q">
-                    <rect key="frame" x="20" y="332.5" width="374" height="50"/>
+                    <rect key="frame" x="20" y="333" width="374" height="50"/>
                     <state key="normal" title="跳过"/>
                     <connections>
                         <action selector="skipBtnDidClick:" destination="-1" eventType="touchUpInside" id="tHh-go-g8X"/>
@@ -171,7 +171,7 @@
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="bq0-vV-yeE" secondAttribute="trailing" id="bjH-HK-jhc"/>
                 <constraint firstItem="56g-y1-waQ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="15" id="cPJ-h4-1J4"/>
                 <constraint firstItem="XC8-3s-Y8q" firstAttribute="height" secondItem="CLw-Mi-j9e" secondAttribute="height" id="faw-LT-GXe"/>
-                <constraint firstItem="bq0-vV-yeE" firstAttribute="top" secondItem="2Vo-go-hoh" secondAttribute="bottom" id="kzE-35-jQB"/>
+                <constraint firstItem="bq0-vV-yeE" firstAttribute="top" secondItem="2Vo-go-hoh" secondAttribute="bottom" constant="0.5" id="kzE-35-jQB"/>
                 <constraint firstItem="fMJ-Vm-bfh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="uTg-gK-LXY"/>
                 <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="CLw-Mi-j9e" secondAttribute="trailing" constant="20" id="yGD-ER-XLI"/>
             </constraints>

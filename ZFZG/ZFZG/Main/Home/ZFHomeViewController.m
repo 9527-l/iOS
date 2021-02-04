@@ -63,6 +63,10 @@
     self.tableView.backgroundColor = [UIColor cjColorAlphaWithHexString:@"f2f2f2"];
 }
 - (void)loadData{
+    NSString *token = [ZFSaveValueTool getToken];
+    if ([NSObject isBlank:token]) {
+        return;
+    }
     WeakSelf(self)
 //    status:签约状态 0=待提交 1=成功 2=失败 3=待审核
     NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
