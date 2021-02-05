@@ -53,18 +53,20 @@
     //设置文字样式
     NSMutableDictionary *textAtts = [NSMutableDictionary dictionary];
     textAtts[NSForegroundColorAttributeName] = [UIColor grayColor];
+    textAtts[NSFontAttributeName] = [UIFont systemFontOfSize:14];
     
     NSMutableDictionary *selectTextAtts = [NSMutableDictionary dictionary];
     selectTextAtts[NSForegroundColorAttributeName] = MainColorBlue;
+    selectTextAtts[NSFontAttributeName] = [UIFont systemFontOfSize:14];
 
     [childController.tabBarItem setTitleTextAttributes:textAtts forState:UIControlStateNormal];
     [childController.tabBarItem setTitleTextAttributes:selectTextAtts forState:UIControlStateSelected];
     
     //设置tabBarItem的图标
     //声明：这张图片按照原来的样子显示出来，不要自动渲染成其他颜色（默认蓝色）
-    UIImage *normalImage = [UIImage createNewImage:[UIImage imageNamed:imageName] multiple:0.2];
+    UIImage *normalImage = [UIImage createNewImage:[UIImage imageNamed:imageName] multiple:0.25];
     childController.tabBarItem.image = normalImage;
-    childController.tabBarItem.selectedImage = [UIImage createNewImage:[[UIImage imageNamed:[NSString stringWithFormat:@"%@_select", imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] multiple:0.2];
+    childController.tabBarItem.selectedImage = [UIImage createNewImage:[[UIImage imageNamed:[NSString stringWithFormat:@"%@_select", imageName]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] multiple:0.25];
     
     [self addChildViewController:nav];
     

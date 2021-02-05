@@ -15,27 +15,27 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6KX-ri-l6x">
-                    <rect key="frame" x="30" y="31.5" width="20" height="20"/>
+                    <rect key="frame" x="20" y="31.5" width="20" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="MG9-yx-8WQ"/>
                         <constraint firstAttribute="width" constant="20" id="YJC-Pn-em4"/>
                     </constraints>
                 </imageView>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="MBw-mm-f0N">
-                    <rect key="frame" x="437" y="31.5" width="10" height="20"/>
+                    <rect key="frame" x="432" y="31.5" width="10" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="10" id="0NV-Bq-rdY"/>
                         <constraint firstAttribute="height" constant="20" id="aZK-zU-se7"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEE-qZ-WwS">
-                    <rect key="frame" x="70" y="32" width="39" height="19.5"/>
+                    <rect key="frame" x="60" y="32" width="39" height="19.5"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vX9-me-meh">
-                    <rect key="frame" x="70" y="82" width="377" height="1"/>
+                    <rect key="frame" x="60" y="82" width="382" height="1"/>
                     <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="1" id="HTt-Hg-J7V"/>
@@ -59,11 +59,11 @@
                 <constraint firstItem="MBw-mm-f0N" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bZW-p4-Oqu"/>
                 <constraint firstAttribute="bottom" secondItem="5e7-Oa-8Wj" secondAttribute="bottom" id="eZo-Id-8fA"/>
                 <constraint firstItem="AEE-qZ-WwS" firstAttribute="centerY" secondItem="6KX-ri-l6x" secondAttribute="centerY" id="ehE-eW-fT1"/>
-                <constraint firstAttribute="trailing" secondItem="MBw-mm-f0N" secondAttribute="trailing" constant="15" id="k6O-so-iu3"/>
+                <constraint firstAttribute="trailing" secondItem="MBw-mm-f0N" secondAttribute="trailing" constant="20" id="k6O-so-iu3"/>
                 <constraint firstItem="5e7-Oa-8Wj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kgF-z4-PYa"/>
                 <constraint firstItem="6KX-ri-l6x" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="lRu-j1-gHD"/>
                 <constraint firstItem="AEE-qZ-WwS" firstAttribute="leading" secondItem="6KX-ri-l6x" secondAttribute="trailing" constant="20" id="paO-vK-fLw"/>
-                <constraint firstItem="6KX-ri-l6x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="zM3-BT-EY1"/>
+                <constraint firstItem="6KX-ri-l6x" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="zM3-BT-EY1"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

@@ -48,7 +48,7 @@ typedef enum : NSUInteger {
     [super viewDidAppear:animated];
     [self setColorWithView:self.scrollerView size:CGSizeMake(Screen_Width, Screen_Height - kNavBarAndStatusBarAndTabBarHeight)];
     
-    [self setColorWithView:self.bgView size:CGSizeMake(Screen_Width - 60, Screen_Height - kNavBarAndStatusBarAndTabBarHeight)];
+    [self setColorWithView:self.bgView size:CGSizeMake(Screen_Width - 20, Screen_Height - kNavBarAndStatusBarAndTabBarHeight)];
 }
 - (void)setNavBarView{
     self.navigationController.navigationBar.hidden = YES;
@@ -95,9 +95,9 @@ typedef enum : NSUInteger {
     self.bgView.backgroundColor = [UIColor whiteColor];
     [self.scrollerView addSubview:self.bgView];
     [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.headerView.mas_bottom).offset(-100);
-        make.left.equalTo(self.scrollerView.mas_left).offset(30);
-        make.width.mas_offset(Screen_Width - 60);
+        make.top.equalTo(self.headerView.mas_bottom).offset(-120);
+        make.left.equalTo(self.scrollerView.mas_left).offset(10);
+        make.width.mas_offset(Screen_Width - 20);
         make.height.mas_equalTo(Screen_Height);
     }];
     self.bgView.layer.cornerRadius = 12;
@@ -106,7 +106,7 @@ typedef enum : NSUInteger {
     ZFMineListView *list1 = [self createListViewWithImageName:@"pwd" title:@"修改密码" showArrow:YES event:ChangePwdClickEvent];
     [self.bgView addSubview:list1];
     [list1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.bgView.mas_top).offset(30);
+        make.top.equalTo(self.bgView.mas_top).offset(0);
         make.left.equalTo(self.bgView.mas_left);
         make.width.mas_equalTo(self.bgView.mas_width);
         make.height.mas_equalTo(80);
