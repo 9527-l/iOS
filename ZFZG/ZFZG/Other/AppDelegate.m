@@ -9,6 +9,7 @@
 #import "ZFTabBarViewController.h"
 #import "ZFNavigationController.h"
 #import "IQKeyboardManager.h"
+
 @interface AppDelegate ()
 
 @end
@@ -26,6 +27,7 @@
     [[IQKeyboardManager sharedManager] setEnable:YES];
     
     id token = [ZFSaveValueTool getDefaults:auth_token];
+    self.isShowLoginVC = NO;
     if ([NSObject isBlank:token]) {
         [ZFPresentLoginVcTool presentLoginVC:rootVC];
     }else{

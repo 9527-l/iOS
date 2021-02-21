@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *arrowImageView;
 @property (weak, nonatomic) IBOutlet UIButton *btn;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *titleLabTopCon;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *iconTopCon;
 
 @end
 
@@ -22,6 +23,7 @@
     if (self = [super init]) {
         self = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
         self.titleLabTopCon.constant = kStatusBarHeight;
+        self.iconTopCon.constant = kStatusBarHeight + 36;
     }
     return  self;
 }

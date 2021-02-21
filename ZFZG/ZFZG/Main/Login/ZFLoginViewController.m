@@ -110,7 +110,8 @@
                 [ZFSaveValueTool saveDefaults:refresh_token Value:refreshTokenStr];
             }
             [weakself dismissViewControllerAnimated:YES completion:^{
-                            
+                AppDelegate *myDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+                myDelegate.isShowLoginVC = NO;
             }];
         }else{
             [MBProgressHUD showToast:@"获取token失败"];

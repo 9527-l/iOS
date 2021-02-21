@@ -31,6 +31,7 @@
 #import <LBXScanViewController.h>
 #import <LBXScanView.h>
 #import "ZFCopyLabel.h"
+#import "AppDelegate.h"
 //#import <AFNetworking.h>
 //#import <AFNetworking/AFNetworkReachabilityManager.h>
 //LBXScan 如果需要使用LBXScanViewController控制器代码，那么下载了那些模块，请定义对应的宏

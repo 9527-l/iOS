@@ -87,6 +87,7 @@
                 <outlet property="btn" destination="thU-DN-n8M" id="VC7-vQ-98Y"/>
                 <outlet property="codeLab" destination="lH0-a1-afU" id="3vf-Fi-46u"/>
                 <outlet property="iconImageView" destination="ft2-TK-FVc" id="4NX-bv-LZb"/>
+                <outlet property="iconTopCon" destination="kGj-8p-ouD" id="Muh-uQ-gsi"/>
                 <outlet property="nameLab" destination="vZb-Uu-1id" id="VbL-WN-ml8"/>
                 <outlet property="titleLabTopCon" destination="r5T-e7-GXW" id="ki7-PB-p6n"/>
             </connections>

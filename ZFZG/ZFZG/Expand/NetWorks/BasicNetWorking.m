@@ -64,12 +64,16 @@
             }
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        if (error.code == -1001) {
-            [MBProgressHUD showToast:@"请求超时，请稍后重试！"];
-        }else if (error.code == 401){
+        NSHTTPURLResponse * responses = (NSHTTPURLResponse *)task.response;   //或者task.response
+        NSLog(@"%ld",(long)responses.statusCode);
+        if (responses.statusCode == 401) {
+            //自己想要进行的操作
             ZFNavigationController *vc = (ZFNavigationController *)[[[UIApplication sharedApplication].delegate window] rootViewController];
             [ZFPresentLoginVcTool presentLoginVC:vc.rt_navigationController.rt_visibleViewController];
-            
+            return;
+        }
+        if (error.code == -1001) {
+            [MBProgressHUD showToast:@"请求超时，请稍后重试！"];
         }else{
             [MBProgressHUD showToast:@"网络请求失败，请稍后重试！"];
         }
@@ -104,12 +108,16 @@
         
 
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        if (error.code == -1001) {
-            [MBProgressHUD showToast:@"请求超时，请稍后重试！"];
-        }else if (error.code == 401){
+        NSHTTPURLResponse * responses = (NSHTTPURLResponse *)task.response;   //或者task.response
+        NSLog(@"%ld",(long)responses.statusCode);
+        if (responses.statusCode == 401) {
+            //自己想要进行的操作
             ZFNavigationController *vc = (ZFNavigationController *)[[[UIApplication sharedApplication].delegate window] rootViewController];
             [ZFPresentLoginVcTool presentLoginVC:vc.rt_navigationController.rt_visibleViewController];
-            
+            return;
+        }
+        if (error.code == -1001) {
+            [MBProgressHUD showToast:@"请求超时，请稍后重试！"];
         }else{
             [MBProgressHUD showToast:@"网络请求失败，请稍后重试！"];
         }
