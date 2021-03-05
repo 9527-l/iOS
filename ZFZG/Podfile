@@ -20,7 +20,7 @@ target 'ZFZG' do #工程名字
      pod 'YYModel'
      pod 'YYText'
      ## H5桥接
-     pod 'WebViewJavascriptBridge'
+#     pod 'WebViewJavascriptBridge'
      ## 输入限制
      pod 'InputKit', '~> 1.1.15'
      ## 权限请求
