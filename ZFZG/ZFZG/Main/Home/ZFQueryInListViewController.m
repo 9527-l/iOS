@@ -164,18 +164,19 @@
     if (![NSObject isBlank:dict]) {
         [saveDict addEntriesFromDictionary:dict];
     }
-    WeakSelf(self);
+//    WeakSelf(self);
     [[BasicNetWorking sharedSessionManager] POST:merchantSignin parameters:parameters success:^(id responseObject) {
         if ([saveDict.allKeys containsObject:merchantInfo[@"merchantCode"]]) {
             [saveDict removeObjectForKey:merchantInfo[@"merchantCode"]];
         }
-        [weakself dismissViewControllerAnimated:YES completion:nil];
+        
         } failure:^(NSError *error) {
 //            保存数据，再次打开app时上传
             [saveDict setValue:merchantInfo forKey:merchantInfo[@"merchantCode"]];
             
             [ZFSaveValueTool saveDefaults:uploadFaileBusinessInfos Value:saveDict];
         }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)merchantManagerReturnError:(NSString *)msg{
     [MBProgressHUD showToast:msg];

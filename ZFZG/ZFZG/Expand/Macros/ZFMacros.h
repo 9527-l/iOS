@@ -11,7 +11,7 @@
 /*
  ************* 项目环境配置 *************
  */
-#define HOST_TYPE 0  //0开发  1灰度  2正式
+#define HOST_TYPE 2  //0开发  1灰度  2正式
 #if HOST_TYPE == 0
 #define kHOSTURL @"http://test-api.qtopay.net/"
 #elif HOST_TYPE == 1
