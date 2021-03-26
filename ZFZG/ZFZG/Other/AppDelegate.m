@@ -81,22 +81,30 @@
     if (![NSObject isBlank:dict]) {
         [saveDict addEntriesFromDictionary:dict];
     }
-    for (NSDictionary *tempDict in saveDict) {
-        if ([NSObject isBlank:tempDict[@"merchantCode"]]) {
+    NSDictionary *tempDict = saveDict.copy;
+    for (NSString *tempStr in tempDict.allKeys) {
+        if ([NSObject isBlank:tempDict[tempStr]]) {
             [MBProgressHUD showToast:@"数据异常"];
             continue;
         }
+        NSDictionary *item = tempDict[tempStr];
         NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithCapacity:2];
-        [parameters setValue:tempDict[@"merchantCode"] forKey:@"outer_mer_id"];
-        [parameters setValue:tempDict[@"merchantName"] forKey:@"outer_mer_name"];
-        NSString *merchantStepProgess = tempDict[@"merchantStepProgess"];
+        [parameters setValue:item[@"merchantCode"] forKey:@"outer_mer_id"];
+        [parameters setValue:item[@"merchantName"] forKey:@"outer_mer_name"];
+        NSString *merchantStepProgess = item[@"merchantStepProgess"];
         if ([merchantStepProgess isEqual:@"0"] || [merchantStepProgess isEqual:@"2"]) {
             [parameters setValue:@"0" forKey:@"status"];
         }else if ([merchantStepProgess isEqual:@"1"] || [merchantStepProgess isEqual:@"3"]) {
             [parameters setValue:@"1" forKey:@"status"];
         }
         [[BasicNetWorking sharedSessionManager] POST:merchantSignin parameters:parameters success:^(id responseObject) {
-            [saveDict removeObjectForKey:tempDict[@"merchantCode"]];
+            [saveDict removeObjectForKey:tempStr];
+            if ([NSObject isBlank:saveDict]) {
+                [ZFSaveValueTool removeDefaults:uploadFaileBusinessInfos];
+            }else{
+                [ZFSaveValueTool saveDefaults:uploadFaileBusinessInfos Value:saveDict];
+            }
+            
         } failure:^(NSError *error) {
             
         }];

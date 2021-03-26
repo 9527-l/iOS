@@ -18,7 +18,7 @@
         }else if ([object isKindOfClass:[NSArray class]]){
             return [object isEqualToArray:@[]];
         }else if ([object isKindOfClass:[NSDictionary class]]){
-            return [object isEqualToArray:@{}];
+            return [object isEqualToDictionary:@{}];
         }
         return NO;
 
