@@ -106,14 +106,15 @@
     if (![NSObject isBlank:dict]) {
         [saveDict addEntriesFromDictionary:dict];
     }
-//    WeakSelf(self);
+    WeakSelf(self);
     [[BasicNetWorking sharedSessionManager] POST:merchantSignin parameters:parameters success:^(id responseObject) {
             if ([saveDict.allKeys containsObject:merchantInfo[@"merchantCode"]]) {
                 [saveDict removeObjectForKey:merchantInfo[@"merchantCode"]];
                 [ZFSaveValueTool saveDefaults:uploadFaileBusinessInfos Value:saveDict];
             }
             if ([parameters[@"status"] isEqual:@"3"]){
-                [self dismissViewControllerAnimated:YES completion:nil];
+//                [self dismissViewControllerAnimated:YES completion:nil];
+                [weakself.navigationController popToRootViewControllerAnimated:YES];
             }
         } failure:^(NSError *error) {
 //            保存数据，再次打开app时上传
