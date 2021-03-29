@@ -156,7 +156,7 @@
     if ([merchantStepProgess isEqual:@"0"] || [merchantStepProgess isEqual:@"2"]) {
         [parameters setValue:@"0" forKey:@"status"];
     }else if ([merchantStepProgess isEqual:@"1"] || [merchantStepProgess isEqual:@"3"]) {
-        [parameters setValue:@"1" forKey:@"status"];
+        [parameters setValue:@"3" forKey:@"status"];
     }
 //            取出之前上传失败的数据
     NSDictionary *dict = [ZFSaveValueTool getDefaults:uploadFaileBusinessInfos];
@@ -166,10 +166,13 @@
     }
 //    WeakSelf(self);
     [[BasicNetWorking sharedSessionManager] POST:merchantSignin parameters:parameters success:^(id responseObject) {
-        if ([saveDict.allKeys containsObject:merchantInfo[@"merchantCode"]]) {
-            [saveDict removeObjectForKey:merchantInfo[@"merchantCode"]];
-            [ZFSaveValueTool saveDefaults:uploadFaileBusinessInfos Value:saveDict];
-        }
+            if ([saveDict.allKeys containsObject:merchantInfo[@"merchantCode"]]) {
+                [saveDict removeObjectForKey:merchantInfo[@"merchantCode"]];
+                [ZFSaveValueTool saveDefaults:uploadFaileBusinessInfos Value:saveDict];
+            }
+            if ([parameters[@"status"] isEqual:@"3"]){
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
         
         } failure:^(NSError *error) {
 //            保存数据，再次打开app时上传
@@ -177,7 +180,7 @@
             
             [ZFSaveValueTool saveDefaults:uploadFaileBusinessInfos Value:saveDict];
         }];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 - (void)merchantManagerReturnError:(NSString *)msg{
     [MBProgressHUD showToast:msg];
